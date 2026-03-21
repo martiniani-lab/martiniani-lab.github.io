@@ -1,0 +1,25 @@
+---
+interface Props {
+  title: string;
+  subtitle: string;
+  image: string;
+  link: string;
+  color?: string;
+}
+
+const { title, subtitle, image, link, color } = Astro.props;
+
+// Dynamic image import
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/research/*.{jpg,jpeg,png,webp}');
+const imagePath = `/src/assets/images/${image}`;
+const imageModule = images[imagePath] ? await images[imagePath]() : null;
+const bgUrl = imageModule ? imageModule.default.src : '';
+---
+
+<article style={`background-image: url('${bgUrl}');${color ? ` --tile-accent: ${color};` : ''}`}>
+  <div class="content">
+    <h3>{title}</h3>
+    <p>{subtitle}</p>
+  </div>
+  <a href={link} class="tile-link" target="_blank" rel="noopener" aria-label={`${title}: ${subtitle}`}></a>
+</article>

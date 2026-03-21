@@ -1,0 +1,22 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import VideoEmbed from '../components/VideoEmbed.astro';
+import { loadGallery } from '../lib/data';
+import { join } from 'node:path';
+
+const videos = loadGallery(join(process.cwd(), 'src/content/gallery.yaml'));
+---
+
+<PageLayout
+  title="Video Gallery — Martiniani Lab"
+  description="Video gallery from Martiniani Lab — research visualizations and the APS DSOFT Gallery of Soft Matter Prize-winning entry."
+  heading="Video Gallery"
+>
+  <div class="row gtr-200">
+    {videos.map(video => (
+      <div class="col-6" style="margin-bottom: 2em;">
+        <VideoEmbed title={video.title} youtubeId={video.youtubeId} description={video.description} />
+      </div>
+    ))}
+  </div>
+</PageLayout>

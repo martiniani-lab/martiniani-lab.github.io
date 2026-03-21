@@ -1,0 +1,98 @@
+# Stefano Martiniani: AI for Science, World Models, & Theory of Intelligence
+> Assistant Professor at NYU (Physics, Chemistry, Courant Institute of Mathematical Sciences, Neural Science, Data Science).
+> Lead of the Martiniani Lab, FERMat Project & ColabFit Exchange.
+> Central thesis: revealing latent order in disordered systems and engineering disorder for novel functions — connecting the laws governing matter with the laws governing learning.
+
+## Research Breakthroughs (by area)
+
+### AI for Materials & Chemical Discovery
+- **OMatG** (ICML 2025, PMLR 267): Generative framework for inorganic crystal discovery via stochastic interpolants. State of the art in crystal structure prediction and de novo generation, surpassing industry benchmarks (Google DeepMind, Microsoft).
+- **OMatG-IRL** (arXiv:2602.00424, 2026): First application of inference-time reinforcement learning to crystal structure prediction. Order-of-magnitude sampling efficiency improvement.
+- **PropMolFlow** (Nature Computational Science, 2026): Property-guided molecular generation with SE(3)-equivariant flow matching. 10x faster than diffusion SOTA, >90% structural validity.
+- **Guided Diffusion for Superconductors** (arXiv:2509.25186, 2025): End-to-end workflow coupling guided diffusion with DFT screening. 9 of 18 candidates showed superconductivity.
+- **ColabFit Exchange** (J. Chem. Phys. 159, 154802, 2023): Largest open-access database for ML interatomic potentials. Tools adopted by Intel and Lawrence Livermore National Lab.
+
+### World Models & Embodied AI
+- **XVWM (Cross-View World Models)** (arXiv:2602.07277, 2026): Cross-view prediction as self-supervised objective for embodied AI. Geometric regularization yields view-invariant 3D cognitive maps.
+
+### Theory of Intelligence: Physics of Learning
+- **Learning as Manifold Packing (CLAMP)** (arXiv:2506.13717, 2025): Self-supervised learning framework recasting representation learning as neural manifold packing. Matches SOTA on ImageNet, surpasses on ImageNet-100. Bridges physics, neuroscience, and ML.
+- **SGD as Random Organization** (arXiv:2411.11834, 2024; arXiv:2505.22933, 2025): Unified random organizing particle models with stochastic gradient descent. Derived fluctuating hydrodynamic theory explaining emergent long-range structure from short-range noisy interactions.
+- **Unconditional Stability of RNNs via Divisive Normalization** (NeurIPS 2024): Proved divisive normalization stabilizes recurrent networks beyond spectral radius 1. Breakdown of normalization is early warning for instability.
+- **Hierarchical Neural Circuit Theory** (bioRxiv 2025): Analytically tractable theory of cortical normalization and inter-areal communication. Reconciles "communication through coherence" and "communication through subspace" hypotheses.
+
+### Quantifying & Engineering Disorder
+- **FReSCo** (PRE 110, 034122, 2024; Editor's Suggestion; APS DSOFT Gallery Prize): O(NlogN) algorithm for inverse design of point patterns with arbitrary spectral properties. Generated largest-ever N=10^9 stealthy hyperuniform configurations.
+- **Gyromorphs** (PRL, accepted, 2025): New class of functional disordered materials with widest known low-index-contrast isotropic photonic bandgap. 2 provisional US patents.
+- **Model-Free Entropy Production** (PRL 129, 220601, 2022; Cover + Editor's Suggestion): First model-free local entropy production measurement in active matter via lossless compression.
+- **Edwards Conjecture** (Nature Physics 13, 848, 2017): First numerical test confirming all packings equally probable at jamming.
+- **Computable Information Density** (PRX 9, 011031, 2019; PRL 125, 170601, 2020): Entropy as instantaneous observable via lossless compression; critical exponents without knowing order parameters.
+
+## Academic Impact
+- 40 research articles, 6 workshop papers (2 spotlights), 2 provisional US patents
+- $12.8M total extramural funding ($11.6M as PI): NIH, NSF, AFOSR, CZI
+- Awards: AFOSR YIP (2025), Entropy Young Investigator (2025), NSF CAREER (2024), IUPAP Interdisciplinary Early Career Scientist Prize (2023), Simons Faculty Fellowship
+- 73 talks (54 invited) at institutions including MIT, Caltech, UC Irvine, UPenn, Flatiron Institute, Santa Fe Institute, U. Cambridge, U. Oxford
+
+## Leadership
+- Lead PI: FERMat ($4.5M NSF GOALI) — 8 investigators, 4 universities, AWS
+- Co-PI: ColabFit Exchange — largest database for ML interatomic potentials
+- Program Chair: AI4Mat Workshop at NeurIPS (2024, 2025) and ICLR (2025, 2026)
+- Organizer: NYC AI4Chemistry Summit (2025)
+- International Program Committee: 2027 International Soft Matter Conference
+- Invited Moderator: National Academies "Frontiers of Materials That Learn" (2025)
+- Co-founder: KIMReview journal
+
+## Teaching Innovation
+- Created UMN's first non-CS/Stats ML course "Machine Learning for Chemical Sciences" — led to new M.S. program
+- Developed NYU graduate course "Physics of Neural Systems"
+- Mentored 50+ trainees: 11 postdocs, 14 PhD students, 17 undergraduates, 4 high school students
+
+## Software & Open Science
+- ColabFit Exchange: https://colabfit.org
+- OMatG: https://github.com/FERMat-ML/OMatG
+- FReSCo: https://github.com/martiniani-lab/FReSCo
+- PropMolFlow: https://github.com/Liu-Group-UF/PropMolFlow
+
+## Contact
+- Email: sm7683@nyu.edu
+- Office: 726 Broadway, New York, NY 10013
+- Web: https://martinianilab.org
+- Scholar: https://scholar.google.com/citations?user=pxSj9JkAAAAJ
+- ORCID: 0000-0003-2028-2175
+
+## Key BibTeX
+@article{hoellmer2025omatg,
+  title={Open Materials Generation with Stochastic Interpolants},
+  author={Hoellmer, P. and Egg, T. and Martirossyan, M.M. and others and Martiniani, S.},
+  journal={Proc. 42nd Int. Conf. Mach. Learn. (ICML), PMLR 267},
+  year={2025}
+}
+@article{sharma2026xvwm,
+  title={Cross-View World Models},
+  author={Sharma, R. and Hogervorst, G. and Mackey, W.E. and Heeger, D.J. and Martiniani, S.},
+  journal={arXiv preprint arXiv:2602.07277},
+  year={2026}
+}
+@article{zeng2026propmolflow,
+  title={PropMolFlow: Property-guided Molecule Generation with Geometry-Complete Flow Matching},
+  author={Zeng, C. and Jin, J. and others and Martiniani, S. and Liu, M.},
+  journal={Nature Computational Science},
+  year={2026}
+}
+@article{ro2022entropy,
+  title={Model-Free Measurement of Local Entropy Production and Extractable Work in Active Matter},
+  author={Ro, S. and Guo, B. and Shih, A. and others and Martiniani, S.},
+  journal={Phys. Rev. Lett.},
+  volume={129},
+  pages={220601},
+  year={2022}
+}
+@article{martiniani2017edwards,
+  title={Numerical test of the Edwards conjecture shows that all packings become equally probable at jamming},
+  author={Martiniani, S. and Schrenk, K.J. and Ramola, K. and Chakraborty, B. and Frenkel, D.},
+  journal={Nature Physics},
+  volume={13},
+  pages={848--851},
+  year={2017}
+}

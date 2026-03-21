@@ -1,0 +1,134 @@
+# Press — Martiniani Lab
+
+# Covers
+- category: cover
+  title: "PRL Vol 129 Issue 22"
+  image: "prl-cover.jpg"
+  url: "https://journals.aps.org/prl/covers/129/22"
+  source: "Physical Review Letters"
+
+- category: cover
+  title: "PCCP Vol 19 Issue 20"
+  image: "pccp-cover.jpg"
+  url: "https://pubs.rsc.org/en/content/articlelanding/2017/cp/c7cp90109g#!divAbstract"
+  source: "Physical Chemistry Chemical Physics"
+
+# Editorials, Columns, Viewpoints
+- category: editorial
+  title: "Physics 17, 134 (2024)"
+  image: "physics-train.jpg"
+  url: "https://physics.aps.org/articles/v17/134"
+  source: "Physics Magazine"
+  date: "2024-01-01"
+
+- category: editorial
+  title: "Physics 17, 41 (2024)"
+  image: "mind_pic10.jpg"
+  url: "https://physics.aps.org/articles/v17/41"
+  source: "Physics Magazine"
+  date: "2024-01-01"
+  extra_url: "https://engage.aps.org/dsoft/gallery/gallery/mm24-gallery"
+  extra_label: "2024 Gallery of Soft Matter Prize"
+
+- category: editorial
+  title: "Physics 15, 179 (2022)"
+  image: "mind_pic1.png"
+  url: "https://physics.aps.org/articles/v15/179"
+  source: "Physics Magazine"
+  date: "2022-01-01"
+
+- category: editorial
+  title: "Physics Today online (2019)"
+  image: "press/press_1.jpg"
+  url: "https://physicstoday.scitation.org/do/10.1063/PT.6.1.20190301a/full/"
+  source: "Physics Today"
+  date: "2019-03-01"
+
+- category: editorial
+  title: "Nature 546, 575 (2017)"
+  image: "press/press_2.png"
+  url: "https://www.nature.com/articles/546575b"
+  source: "Nature"
+  date: "2017-06-01"
+
+- category: editorial
+  title: "Physics Today 70, 9, 20 (2017)"
+  image: "press/press_3.jpg"
+  url: "https://physicstoday.scitation.org/doi/10.1063/PT.3.3682"
+  source: "Physics Today"
+  date: "2017-09-01"
+  extra_url: "https://physicstoday.scitation.org/do/10.1063/pt.6.1.20170724a/full/"
+  extra_label: "Physics Today online"
+
+- category: editorial
+  title: "Nature Materials 15, 1227 (2016)"
+  image: "press/press_4.jpg"
+  url: "https://www.nature.com/articles/nmat4817"
+  source: "Nature Materials"
+  date: "2016-11-01"
+
+# Podcasts
+- category: podcast
+  title: "Intelligenza/Italia, Si puo fare"
+  image: "press/220923-intelligenza-artificiale-citta-square.jpg"
+  url: "https://www.radio24.ilsole24ore.com/programmi/paese-migliore/puntata/trasmissione-26-novembre-2023-090500-2404283322854718"
+  source: "Radio24"
+  date: "2023-11-26"
+  description: "From min 20"
+
+# Newspapers & Magazines
+- category: newspaper
+  title: "Numerical protocol for local entropy production"
+  image: "press/physorg.png"
+  url: "https://phys.org/news/2022-12-numerical-protocol-local-entropy-production.html"
+  source: "Phys.org"
+  date: "2022-12-01"
+
+- category: newspaper
+  title: "Number of ways to arrange 128 balls exceeds atoms in universe"
+  image: "press/newscientist.png"
+  url: "https://www.newscientist.com/article/2075593-number-of-ways-to-arrange-128-balls-exceeds-atoms-in-universe/"
+  source: "New Scientist"
+  date: "2016-01-01"
+
+- category: newspaper
+  title: "Extreme numbers: the unimaginably large and small pop up in recent experiments"
+  image: "press/theconv.png"
+  url: "https://theconversation.com/extreme-numbers-the-unimaginably-large-and-small-pop-up-in-recent-experiments-54717"
+  source: "The Conversation"
+  date: "2016-01-01"
+
+- category: newspaper
+  title: "Method effective in high-dimensional space"
+  image: "press/physorg.png"
+  url: "https://phys.org/news/2016-10-method-effective-high-dimensional-space.html"
+  source: "Phys.org"
+  date: "2016-10-01"
+
+- category: newspaper
+  title: "128 pallon arvoituksen"
+  image: "press/tekknika.jpg"
+  url: "https://www.tekniikkatalous.fi/uutiset/mahdollisuuksia-enemman-kuin-maailmankaikkeudessa-atomeja-tutkijat-ratkaisivat-128-pallon-arvoituksen/e12f2d59-cefd-33b6-b784-9231aa73c95e"
+  source: "Tekniikka & Talous"
+  date: "2016-01-01"
+
+- category: newspaper
+  title: "Op hoeveel manieren kun je 128 tennisballen ordenen?"
+  image: "press/scientiasnl.png"
+  url: "https://scientias.nl/op-hoeveel-manieren-kun-je-128-tennisballen-ordenen/"
+  source: "Scientias.nl"
+  date: "2016-01-01"
+
+- category: newspaper
+  title: "Ways to arrange tennis balls — apparently impossible calculation"
+  image: "press/physorg.png"
+  url: "https://phys.org/news/2016-01-ways-tennis-balls-apparently-impossible.html"
+  source: "Phys.org"
+  date: "2016-01-01"
+
+- category: newspaper
+  title: "Dagli universi paralleli alle valanghe, le prime misure impossibili"
+  image: "press/ansa.png"
+  url: "https://www.ansa.it/scienza/notizie/rubriche/fisica/2016/02/01/dagli-universi-paralleli-alle-valanghe-le-prime-misure-impossibili_64b85171-dd0b-4799-9ba3-5fa7eed58486.html"
+  source: "ANSA"
+  date: "2016-02-01"

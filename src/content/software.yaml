@@ -1,0 +1,88 @@
+# Software — Martiniani Lab
+
+- name: "ColabFit"
+  description: "A framework to facilitate the training and use of machine learning (ML) models in materials science and chemistry including interatomic potentials. Includes an online exchange for datasets used to train ML models and a portable format for deploying ML models to simulation platforms using the OpenKIM system."
+  image: "colabfit-shot.png"
+  url: "https://colabfit.org/"
+  featured: true
+  order: 1
+
+- name: "FReSCo"
+  description: "Fast Reciprocal Space Correlator"
+  image: "fresco.jpg"
+  url: "https://github.com/martiniani-lab/FReSCo"
+  github: "https://github.com/martiniani-lab/FReSCo"
+  featured: true
+  order: 2
+
+- name: "KLIFF-Torch"
+  description: "PyTorch extension of the KLIFF interatomic model fitting package"
+  image: "kliff-shot.png"
+  url: "https://github.com/ipcamit/kliff"
+  github: "https://github.com/ipcamit/kliff"
+  featured: false
+  order: 3
+
+- name: "libdescriptor"
+  description: "High performance descriptor library with Enzyme AD"
+  image: "libdescriptor-shot.png"
+  url: "https://github.com/ipcamit/colabfit-descriptor-library"
+  github: "https://github.com/ipcamit/colabfit-descriptor-library"
+  featured: false
+  order: 4
+
+- name: "basinerror"
+  description: "Accurate identification of basins of attraction"
+  image: "basinerror-shot.png"
+  url: "https://github.com/martiniani-lab/basinerror"
+  github: "https://github.com/martiniani-lab/basinerror"
+  featured: false
+  order: 5
+
+- name: "sweetsourcod"
+  description: "The sweet source-coding library (for entropy estimation)"
+  image: "ssc-shot.png"
+  url: "https://github.com/martiniani-lab/sweetsourcod"
+  github: "https://github.com/martiniani-lab/sweetsourcod"
+  featured: false
+  order: 6
+
+- name: "pele"
+  description: "Python Energy Landscape Explorer"
+  image: "pele-shot.png"
+  url: "https://github.com/martiniani-lab/pele"
+  github: "https://github.com/martiniani-lab/pele"
+  featured: false
+  order: 7
+
+- name: "mcpele"
+  description: "Monte Carlo library for pele"
+  image: "mcpele-shot.png"
+  url: "https://github.com/martiniani-lab/mcpele"
+  github: "https://github.com/martiniani-lab/mcpele"
+  featured: false
+  order: 8
+
+- name: "nested sampling"
+  description: "Parallel Nested Sampling implementation"
+  image: "ns-shot.png"
+  url: "https://github.com/js850/nested_sampling"
+  github: "https://github.com/js850/nested_sampling"
+  featured: false
+  order: 9
+
+- name: "PyCG_DESCENT"
+  description: "Python wrapper for the Hager and Zhang CG_DESCENT algorithm"
+  image: "cg-shot.png"
+  url: "https://github.com/martiniani-lab/PyCG_DESCENT"
+  github: "https://github.com/martiniani-lab/PyCG_DESCENT"
+  featured: false
+  order: 10
+
+- name: "sens"
+  description: "Superposition Enhanced Nested Sampling"
+  image: "sens-shot.png"
+  url: "https://github.com/smcantab/sens"
+  github: "https://github.com/smcantab/sens"
+  featured: false
+  order: 11

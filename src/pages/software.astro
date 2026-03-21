@@ -1,0 +1,31 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import { loadSoftware } from '../lib/data';
+import { join } from 'node:path';
+
+const software = loadSoftware(join(process.cwd(), 'src/content/software.yaml'));
+---
+
+<PageLayout
+  title="Software — Martiniani Lab"
+  description="Open-source software from Martiniani Lab: ColabFit Exchange, OMatG, FReSCo, PropMolFlow — tools for AI-driven materials and molecular discovery."
+  heading="Software"
+>
+  <div class="row gtr-200">
+    {software.map(item => (
+      <div class="col-6" style="margin-bottom: 2em;">
+        {item.image && (
+          <div class="image fit" style="margin-bottom: 1em;">
+            <img src={`/images/${item.image}`} alt={item.name} loading="lazy" />
+          </div>
+        )}
+        <h3><a href={item.url} target="_blank" rel="noopener">{item.name}</a></h3>
+        <p>{item.description}</p>
+        <div class="pub-links">
+          <a href={item.url} target="_blank" rel="noopener">Website</a>
+          {item.github && <a href={item.github} target="_blank" rel="noopener">GitHub</a>}
+        </div>
+      </div>
+    ))}
+  </div>
+</PageLayout>

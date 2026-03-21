@@ -1,0 +1,35 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import PublicationEntry from '../components/PublicationEntry.astro';
+import { parseBibtex, getPublished, getPreprints } from '../lib/bibtex';
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
+
+const bibPath = join(process.cwd(), 'src/content/publications/references.bib');
+const bibContent = readFileSync(bibPath, 'utf-8');
+const allPubs = parseBibtex(bibContent);
+const preprints = getPreprints(allPubs);
+const published = getPublished(allPubs);
+---
+
+<PageLayout
+  title="Publications — Martiniani Lab"
+  description="40+ publications from Martiniani Lab — OMatG, PropMolFlow, XVWM, CLAMP, and foundational work in entropy, information theory, disordered materials, and neural dynamics."
+  heading="Publications"
+>
+  {preprints.length > 0 && (
+    <section>
+      <h3>Preprints</h3>
+      {preprints.map(pub => (
+        <PublicationEntry pub={pub} />
+      ))}
+    </section>
+  )}
+
+  <section style="margin-top: 3em;">
+    <h3>Published</h3>
+    {published.map(pub => (
+      <PublicationEntry pub={pub} />
+    ))}
+  </section>
+</PageLayout>

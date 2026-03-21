@@ -1,0 +1,169 @@
+# Alumni — Martiniani Lab
+
+# Ph.D. students
+- category: graduate
+  name: "Aaron Shih"
+  degree: "Ph.D."
+  field: "Physics"
+  year: 2025
+  institution: "NYU"
+
+- category: graduate
+  name: "Shivang Rawat"
+  degree: "Ph.D."
+  field: "Physics"
+  year: 2025
+  institution: "NYU"
+
+- category: graduate
+  name: "Alexander Golinski"
+  degree: "Ph.D."
+  field: "Chemical Engineering"
+  year: 2021
+  institution: "UMN"
+  currentPosition: "Research Biotechnologist at Cargill"
+  linkedin: "https://www.linkedin.com/in/alexander-golinski/"
+  image: "team/alex.jpg"
+
+# High school students
+- category: highschool
+  name: "Tom Zhang"
+  year: 2023
+  institution: "Staples High School"
+  currentPosition: "Physics student at Caltech"
+  linkedin: "https://www.linkedin.com/in/tom-zhang-99524a220/"
+
+- category: highschool
+  name: "Juhee Park"
+  year: 2023
+  institution: "Fort Lee High School"
+  note: "ColabFit intern"
+  currentPosition: "Chemical Engineering at Carnegie Mellon University"
+
+# Undergraduates
+- category: undergraduate
+  name: "Sandya Appiah"
+  degree: "B.S."
+  field: "Chemical Engineering"
+  year: 2021
+  institution: "UMN"
+  currentPosition: "Ph.D. Student in ChEn at Rensselaer Polytechnic Institute"
+  linkedin: "https://www.linkedin.com/in/sandhya-appiah/"
+
+- category: undergraduate
+  name: "Remie Bougie"
+  degree: "B.S. Hon"
+  field: "Chemical Engineering"
+  year: 2022
+  institution: "UMN"
+  currentPosition: "Engineer at Takeda"
+  linkedin: "https://www.linkedin.com/in/remi-bougie-41a547193/"
+
+- category: undergraduate
+  name: "Bryce Johnson"
+  degree: "B.S."
+  field: "Physics"
+  year: 2021
+  institution: "UMN"
+  currentPosition: "Ph.D. Student in CS at University of Wisconsin-Madison"
+  linkedin: "https://www.linkedin.com/in/brycejoh/"
+
+- category: undergraduate
+  name: "Jiwon Kim"
+  degree: "B.S. Hon"
+  field: "Chemical Engineering"
+  year: 2021
+  institution: "UMN"
+  currentPosition: "Lab Tech at 3M"
+  linkedin: "https://www.linkedin.com/in/jiwon-kim-108328198/"
+
+- category: undergraduate
+  name: "Kovic Odhiambo"
+  degree: "B.S."
+  field: "Statistics"
+  year: 2021
+  institution: "UMN"
+  currentPosition: "ML Engineer at Interos"
+  linkedin: "https://www.linkedin.com/in/kovic-odhiambo/"
+
+- category: undergraduate
+  name: "Daniel Ribeiro"
+  degree: "B.S."
+  field: "Chemical Engineering"
+  year: 2021
+  institution: "UMN"
+  currentPosition: "Automation Engineer at Atlas Prediction Control"
+  linkedin: "https://www.linkedin.com/in/daniel-ribeiro-748039193/"
+
+- category: undergraduate
+  name: "Diya Saha"
+  degree: "B.S."
+  field: "Chemical Engineering"
+  year: 2021
+  institution: "UMN"
+  currentPosition: "Engineering Intern at EcoWater Systems"
+  linkedin: "https://www.linkedin.com/in/diya-saha-572b5b171/"
+
+- category: undergraduate
+  name: "Vijay Vallurupalli"
+  degree: "B.S."
+  field: "Materials Science and Engineering"
+  year: 2022
+  institution: "UMN"
+  currentPosition: "R&D Engineer at HP"
+  linkedin: "https://www.linkedin.com/in/vijay-vallurupalli-695b26170/"
+
+- category: undergraduate
+  name: "Fei Xie"
+  degree: "B.A."
+  field: "Mathematics & Economics"
+  year: 2023
+  institution: "NYU"
+  currentPosition: "M.S. in Biostatistics at Yale"
+
+- category: undergraduate
+  name: "Carmel Pe'er"
+  degree: "B.A."
+  field: "Mathematics"
+  year: 2024
+  institution: "Harvey Mudd College"
+  linkedin: "https://www.linkedin.com/in/carmel-pe-er-baaaa51bb/"
+
+# Masters
+- category: masters
+  name: "Mohammed Zayyam"
+  degree: "M.S."
+  field: "Financial Mathematics"
+  year: 2021
+  institution: "UMN"
+  currentPosition: "Technical Consultant at FIS"
+  linkedin: "https://www.linkedin.com/in/mohammed-zayyam-18746a156/"
+
+# Interns
+- category: intern
+  name: "Joshua Vita"
+  degree: "Ph.D."
+  field: "Materials Science"
+  year: 2023
+  institution: "UIUC"
+  note: "ColabFit intern"
+  currentPosition: "Postdoctoral researcher at Lawrence Livermore National Laboratory"
+  linkedin: "https://www.linkedin.com/in/joshua-vita/"
+
+- category: intern
+  name: "Dylan Bruesehoff"
+  degree: "B.S."
+  field: "Aerospace Engineering"
+  year: 2024
+  institution: "UMN"
+  note: "ColabFit intern"
+  linkedin: "https://www.linkedin.com/in/dylan-bruesehoff/"
+
+- category: intern
+  name: "Alexander (Quanming) Tao"
+  degree: "B.S."
+  field: "Physics"
+  year: 2022
+  institution: "UMN"
+  note: "ColabFit intern"
+  linkedin: "https://www.linkedin.com/in/alexander-tao-7a4782204/"

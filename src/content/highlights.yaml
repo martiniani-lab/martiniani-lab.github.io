@@ -1,0 +1,42 @@
+# Homepage research tiles — edit this to change what's featured
+# Each tile links to a paper, project, or page
+
+- title: "AI for Materials"
+  subtitle: "OMatG: Open Materials Generation"
+  image: research/mind_pic8.png
+  link: https://arxiv.org/abs/2501.02364
+
+- title: "World Models"
+  subtitle: "Cross-View World Models (XVWM)"
+  image: research/mind_pic4.png
+  link: https://arxiv.org/abs/2602.07277
+
+- title: "Theory of Intelligence"
+  subtitle: "Learning as Neural Manifold Packing"
+  image: research/mind_pic9.png
+  link: https://arxiv.org/abs/2506.13717
+
+- title: "Molecular Generation"
+  subtitle: "PropMolFlow — Nature Comp. Sci."
+  image: research/mind_pic6.png
+  link: https://arxiv.org/abs/2505.21469
+
+- title: "Disordered Photonics"
+  subtitle: "Gyromorphs — Widest Isotropic Bandgap"
+  image: research/mind_pic3.png
+  link: https://arxiv.org/abs/2404.07141
+
+- title: "Information & Entropy"
+  subtitle: "Model-Free Entropy Production (PRL)"
+  image: research/mind_pic1.png
+  link: https://doi.org/10.1103/PhysRevLett.129.220601
+
+- title: "Software"
+  subtitle: "ColabFit Exchange — ML Potentials Database"
+  image: research/colabfit-shot.png
+  link: https://colabfit.org
+
+- title: "Active Matter"
+  subtitle: "Edwards Conjecture — Nature Physics"
+  image: research/mind_pic0.png
+  link: https://doi.org/10.1038/nphys4168

@@ -1,0 +1,19 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import NewsItem from '../components/NewsItem.astro';
+import { loadNews } from '../lib/data';
+import { join } from 'node:path';
+
+// Same source as homepage — single source of truth
+const allNews = loadNews(join(process.cwd(), 'src/content/news.yaml'));
+---
+
+<PageLayout
+  title="News — Martiniani Lab"
+  description="Latest news from Martiniani Lab at NYU — awards, publications, conference presentations, and research milestones."
+  heading="News"
+>
+  {allNews.map(item => (
+    <NewsItem date={item.date} text={item.text} link={item.link} />
+  ))}
+</PageLayout>

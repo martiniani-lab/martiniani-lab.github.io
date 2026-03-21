@@ -1,0 +1,44 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import { loadPress, getPressByCategory } from '../lib/data';
+import { join } from 'node:path';
+
+const press = loadPress(join(process.cwd(), 'src/content/press.yaml'));
+const groups = getPressByCategory(press);
+
+const categoryLabels: Record<string, string> = {
+  cover: 'Journal Covers',
+  editorial: 'Editorials & Features',
+  podcast: 'Podcasts & Radio',
+  newspaper: 'Newspapers & Media',
+};
+
+const categoryOrder = ['cover', 'editorial', 'podcast', 'newspaper'];
+---
+
+<PageLayout
+  title="Covers, Press & Podcasts — Martiniani Lab"
+  description="Press coverage of Martiniani Lab research — featured in Nature, Physics Today, New Scientist, Radio24, and on PRL and PCCP covers."
+  heading="Covers, Press & Podcasts"
+>
+  {categoryOrder.filter(cat => groups[cat]).map(cat => (
+    <section style="margin-bottom: 3em;">
+      <h3>{categoryLabels[cat]}</h3>
+      <div class="row gtr-50">
+        {groups[cat].map(item => (
+          <div class="col-4" style="margin-bottom: 1.5em;">
+            {item.image && (
+              <a href={item.url} target="_blank" rel="noopener" class="image fit" style="margin-bottom: 0.5em;">
+                <img src={`/images/${item.image}`} alt={item.title} loading="lazy" />
+              </a>
+            )}
+            <p>
+              <a href={item.url} target="_blank" rel="noopener">{item.title}</a>
+              {item.source && <span style="font-size: 0.85em; color: rgba(255,255,255,0.5);"> — {item.source}</span>}
+            </p>
+          </div>
+        ))}
+      </div>
+    </section>
+  ))}
+</PageLayout>

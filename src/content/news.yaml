@@ -1,0 +1,248 @@
+- date: 2026-01-15
+  text: "Stefano is Program Chair for the AI4Mat Workshop at ICLR 2026."
+
+- date: 2026-01-01
+  text: "PropMolFlow published in Nature Computational Science."
+
+- date: 2025-10-01
+  text: "Stefano is an invited moderator at the National Academies \"Frontiers of Materials That Learn\" workshop."
+
+- date: 2025-09-01
+  text: "Gyromorphs accepted at Physical Review Letters."
+
+- date: 2025-08-01
+  text: "Robot-swarm cohesion published in PNAS."
+
+- date: 2025-07-01
+  text: "OMatG accepted at ICML 2025."
+
+- date: 2025-06-15
+  text: "Stefano is an organizer of the NYC AI4Chemistry Summit."
+
+- date: 2025-06-01
+  text: "Stefano is Program Chair for the AI4Mat Workshop at NeurIPS 2025."
+
+- date: 2025-05-01
+  text: "FReSCo is published as an Editor's Suggestion in Physical Review E and wins the APS DSOFT Gallery Prize."
+
+- date: 2025-03-15
+  text: "Stefano receives the Entropy Young Investigator Award (2025)."
+
+- date: 2025-02-28
+  text: "Stefano is a recipient of the 2025 Air Force Office of Scientific Research Young Investigator Program (AFOSR YIP) Award."
+
+- date: 2025-01-11
+  text: "Stefano delivers an invited lecture at the 2025 Berkeley Statistical Mechanics meeting."
+
+- date: 2024-12-20
+  text: "Stefano receives 2024 NSF CAREER Award for project \"CAREER: Quantifying the Complexity of Materials Landscapes by Basin Sampling\"."
+
+- date: 2024-12-14
+  text: "Congratulations to Satyam whose paper \"Transport and energetics of bacterial rectification\" has been published in the [Proceedings of the National Academy of Sciences](https://www.pnas.org/doi/10.1073/pnas.2411608121)!"
+
+- date: 2024-12-14
+  text: "Eric delivers a Spotlight talk at [AI4Mat Workshop NeurIPS 2024](https://sites.google.com/view/ai4mat/ai4mat-neurips-2024?authuser=0) on [\"Advancing the ColabFit Exchange towards a Web-scale Data Source for Machine Learning Interatomic Potentials\"](https://openreview.net/forum?id=b8qZpGJIkw)."
+
+- date: 2024-12-14
+  text: "Stefano co-hosts as Program Chair the [AI4Mat Workshop at NeurIPS 2024](https://sites.google.com/view/ai4mat/ai4mat-neurips-2024?authuser=0) in Vancouver."
+
+- date: 2024-12-13
+  text: "Shivang presents his poster on Dynamic Normalization at NeurIPS 2024 in Vancouver."
+
+- date: 2024-12-03
+  text: "Stefano delivers a talk in the Dept. of Chemistry at NYU."
+
+- date: 2024-12-01
+  text: "2 provisional US patents filed on correlated disordered materials."
+
+- date: 2024-11-20
+  text: "Congratulations to Shivang whose paper \"Element-wise and recursive solutions for the power spectral density of biological stochastic dynamical systems at fixed points\" has been published in [Physical Review Research](https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.6.043179)."
+
+- date: 2024-11-18
+  text: "New paper by Guanming is out on arXiv! [\"Absorbing state dynamics of stochastic gradient descent\"](https://arxiv.org/abs/2411.11834)."
+
+- date: 2024-11-09
+  text: "Stefano delivers a talk on Generative AI for Materials Design at the AI Alliance NYC meetup (hosted by Lightning AI)."
+
+- date: 2024-10-13
+  text: "Stefano delivers a talk (remotely) at the award ceremony for the IUPAP Interdisciplinary Early Career Scientist Prize, during the 33rd IUPAP General Assembly in Haikou, China."
+
+- date: 2024-10-11
+  text: "New paper by Mathias and Aaron is out on arXiv! [\"Gyromorphs: a new class of functional disordered materials\"](https://arxiv.org/abs/2410.09023)."
+
+- date: 2024-10-07
+  text: "Two workshop papers are accepted at AI4Mat NeurIPS 2024! [\"Advancing the ColabFit Exchange towards a Web-scale Data Source for Machine Learning Interatomic Potentials\"](https://openreview.net/forum?id=b8qZpGJIkw) and [\"Benchmarking of Universal Machine Learning Interatomic Potentials for Structural Relaxation\"](https://openreview.net/forum?id=fNyXCCZ0g6)."
+
+- date: 2024-10-06
+  text: "Stefano receives from NYU \"The David Iakobachvili Interdisciplinary Science Research Award\" with Paul Chaikin to pursue research in nonequilibrium statistical mechanics."
+
+- date: 2024-10-04
+  text: "Stefano delivers the Computational Mathematics seminar at the Courant Institute, NYU."
+
+- date: 2024-09-25
+  text: "Congratulations to Shivang whose paper \"Unconditional stability of a recurrent neural circuit implementing divisive normalization\" has been published in [NeurIPS 2024](https://openreview.net/forum?id=5lLb7aXRN9)."
+
+- date: 2024-09-23
+  text: "Stefano is awarded CZI Neuroscience Collaboration Supplement as co-I with Abhishek Kumar (MBL) and Andre Fenton (NYU) for project \"PKMzeta organization in persistent memory and non-memory identified spines\"."
+
+- date: 2024-09-20
+  text: "Stefano delivers the Swartz seminar on computational and theoretical neuroscience at the Center for Neural Science, NYU."
+
+- date: 2024-09-18
+  text: "New paper by Praharsh and Mathias is out on arXiv! [\"Mirages in the Energy Landscape of Soft Sphere Packings\"](https://arxiv.org/abs/2409.12113)."
+
+- date: 2024-09-13
+  text: "Congratulations to Aaron and Mathias whose paper \"Fast generation of spectrally shaped disorder\" has been published in [Physical Review E](https://journals.aps.org/pre/abstract/10.1103/PhysRevE.110.034122) as an Editor's Suggestion and featured in [Physics Magazine](https://physics.aps.org/articles/v17/134)!"
+
+- date: 2024-09-06
+  text: "New paper by Mathias is out on arXiv! [\"A geometric condition for robot-swarm cohesion and cluster-flock transition\"](https://arxiv.org/abs/2409.04618)."
+
+- date: 2024-09-05
+  text: "New review paper in collaboration with Yuanqing Wang is out on arXiv! [\"On the design space between molecular mechanics and machine learning force fields\"](https://arxiv.org/abs/2409.01931)."
+
+- date: 2024-08-26
+  text: "Stefano delivers a talk at the 2024 Energy Landscapes meeting in Lovran, Croatia."
+
+- date: 2024-08-18
+  text: "Stefano delivers an invited talk at the ACS Fall Meeting Symposium: Elevating Biomolecular Simulations With Data-Driven Approaches in Denver (CO)."
+
+- date: 2024-07-27
+  text: "Stefano co-hosts as Program Chair the [AI4Mat workshop at BOKU Vienna](https://sites.google.com/view/ai4mat/ai4mat-vienna-2024/ai4mat-vienna-2024-program?authuser=0)."
+
+- date: 2024-07-26
+  text: "Stefano delivers Living and Active Matter (SLAM) Seminar at the Institute of Science and Technology Austria (ISTA), Vienna."
+
+- date: 2024-07-11
+  text: "Stefano takes part in \"Fireside Chat: AI Across Biological Scales\" at the 2024 CZI Neuroscience Meeting in Monterey (CA)."
+
+- date: 2024-07-08
+  text: "Amit's workshop paper is accepted at AI4Mat Vienna 2024! [\"KUSP: Python server for deploying ML interatomic potentials\"](https://openreview.net/forum?id=lQAnpCF7nq)."
+
+- date: 2024-03-06
+  text: "Aaron, Mathias and Stefano win the 2024 APS Gallery of Soft Matter Prize describing the [FReSCo algorithm](https://arxiv.org/abs/2305.15693). See the [video](https://www.youtube.com/watch?v=A-CNb0IMXQw) and Physics magazine [article](https://physics.aps.org/articles/v17/41)."
+
+- date: 2024-02-21
+  text: "Stefano is a co-recipient of the Chan-Zuckerberg Initiative (CZI) [Collaborative Pair Pilot Project Award](https://chanzuckerberg.com/science/programs-resources/neurodegeneration-challenge/projects/?award=collaborative-pairs-pilot-project-cycle-2-phase-1) with Prof. Andre Fenton from NYU's Center for Neural Science."
+
+- date: 2024-01-29
+  text: "Stefano becomes Affiliate Faculty of the [NYU Center for Data Science](https://cds.nyu.edu/affilfaculty/)."
+
+- date: 2023-12-15
+  text: "New major update to [FReSCo](https://arxiv.org/abs/2305.15693) by Aaron and Mathias, now generalized to arbitrary fields OR point patterns, in real and Fourier space, using either periodic OR free boundary conditions, all at high speed O(NlogN). With these variants, we can design a field with desired correlations while obeying other constraints, e.g. conserved total mass, or point patterns with Bragg-peak-like features at arbitrary positions. Thus we obtain 2d and 3d quasicrystals nondeterministically from simple optimization!"
+
+- date: 2023-11-25
+  text: "Stefano participates as a guest on the program \"Si puo fare\" by Radio24 (radio station of the Italian financial newspaper of record \"Il Sole 24 Ore\", 2.2M listeners per day) to talk about Artificial Intelligence and foundation models for materials discovery. The interview is available from minute 20 of this [podcast](https://www.radio24.ilsole24ore.com/programmi/paese-migliore/puntata/trasmissione-26-novembre-2023-090500-2404283322854718)."
+
+- date: 2023-11-18
+  text: "Stefano delivers a talk as part of the minisymposium on \"Suppression and Variability in Visual Cortex\" at the Society for Neuroscience annual meeting in Washington D.C., titled \"ORGaNICs: A Recurrent Circuit Theory of Normalization\"."
+
+- date: 2023-11-13
+  text: "Stefano delivers a colloquium at the Center for Computational Neuroscience, Flatiron Institute, titled \"Recurrent Circuit Theory of Cortical Communication\"."
+
+- date: 2023-10-09
+  text: "Stefano receives the 2023 [Interdisciplinary Early Career Scientist Prize](https://iupap.org/awards/interdisciplinary-early-career-scientist-award/) from the International Union of Pure and Applied Physics (IUPAP) \"for groundbreaking contributions to the understanding of the statistical mechanics of active and amorphous systems via the development of uniquely original approaches for quantifying order, entropy and entropy production in systems far from equilibrium, including granular and active matter, neural networks and biological systems.\""
+
+- date: 2023-09-29
+  text: "Shivang presents a [spotlight talk](https://www.neuromonster.org/sessions-poster-2-2023) and Asit a poster at the [2023 Mathematics of Neuroscience conference](https://www.neuromonster.org/home-2023)."
+
+- date: 2023-09-19
+  text: "U.S. Senate Majority Leader Chuck Schumer and U.S. Senator Kirsten Gillibrand announce the FERMat project in a joint [press-release](https://www.gillibrand.senate.gov/news/press/release/schumer-gillibrand-announce-4-5-million-for-development-of-machine-learning-at-nyu/)."
+
+- date: 2023-09-15
+  text: "The Martiniani Lab receives a $4.5M NSF 5-year GOALI award to develop FERMat, a foundation model for molecular and material property prediction, and ML interatomic potentials for modeling atomic behavior. This project will be performed in collaboration with a team of 6 co-PIs at U. Minnesota, U. Florida, and BYU, and 1 industry co-PI at Amazon Web Services."
+
+- date: 2023-09-05
+  text: "Mathias writes a [Viewpoint](https://physics.aps.org/articles/v16/146) for Physics (APS) titled \"Active Particles Push the Boundaries of Two-Dimensional Solids\"."
+
+- date: 2023-08-29
+  text: "The Martiniani Lab receives a 4-year multi-PI NEI R01 with David Heeger on \"Recurrent Circuit Model of Neural Response Dynamics in V1\"!"
+
+- date: 2023-08-16
+  text: "New paper by Satyam is out on arXiv! In [\"Bacteria Through Obstacles: Unifying Fluxes, Entropy Production, and Extractable Work in Living Active Matter\"](https://arxiv.org/abs/2308.08421) we combine experiments, simulation, and theory to reveal the interrelationship between local fluxes, time irreversibility, and extractable work in a living system far from equilibrium, in a single expression. En route, we introduce an analytically-tractable mechanical model of bacterial rectification, and a generalized mass transfer relation for bacterial rectification."
+
+- date: 2023-08-12
+  text: "Satyam presents a poster at the [Soft Condensed Matter Physics GRC](https://www.grc.org/soft-condensed-matter-physics-conference/2023/) and [GRS](https://www.grc.org/soft-condensed-matter-physics-grs-conference/2023/); titled \"Bacteria Through Obstacles: Unifying Fluxes, Entropy Production, and Extractable Work in Living Active Matter\"."
+
+- date: 2023-08-08
+  text: "KIM REVIEW's first commentary is out! [KIM REVIEW](https://kimreview.org/), co-edited by Daan Frenkel and Steve Plimpton, publishes commentaries on important articles related to classical molecular simulations of hard and soft matter materials. It was co-founded by Stefano alongside Ellad Tadmor, Ryan Elliot, and Ron Miller."
+
+- date: 2023-07-27
+  text: "Mathematics undergraduates Carmel Pe'er, Orion Yang, and Charlie Chen from the Martiniani Lab present their work at the final symposium of the Applied Math Summer Undergraduate Research Experience organized by the Courant Institute."
+
+- date: 2023-07-19
+  text: "Stefano delivers an invited talk at the virtual workshop [Machine Learning Potentials - StAtus and FuturE](https://www.eventbrite.com/e/machine-learning-potentials-status-and-future-mlp-safe-tickets-629310262937); titled \"ColabFit: An Integrated Platform for Designing, Training, Sharing, and Deploying Machine Learning Interatomic Potentials at Scale.\""
+
+- date: 2023-07-12
+  text: "Stefano delivers an invited talk (virtual) at the [Complexity Conclave](https://sites.google.com/view/comconclave2023/home?authuser=0) in Santa Fe, NM; titled \"Play. Pause. Rewind. Linking local entropy production, fluxes, and extractable work in active matter.\""
+
+- date: 2023-07-03
+  text: "Stefano organizes a 2-weeks working group at the [Aspen Center for Physics](https://www.aspenphys.org/), CO on \"Theory and circuits of cortical function and corticocortical communication\" with Adam Kohn, David Heeger, Jason MacLean, Ruben Coen-Cagli."
+
+- date: 2023-06-19
+  text: "New paper by Josh, Eric, Amit, Gregory, and the rest of the ColabFit team is out on arXiv! In [\"ColabFit Exchange: open-access datasets for data-driven interatomic potentials\"](https://arxiv.org/abs/2306.11071) we introduce the [ColabFit Exchange](https://colabfit.org/), the first database providing open access to a large collection of systematically organized datasets from multiple domains that is especially designed for IP development."
+
+- date: 2023-06-06
+  text: "Stefano delivers a long talk at the [Energy Landscape conference](https://eland2023.inria.fr/) in Porquerolles, France; titled \"From Slices to Volumes: Unveiling the Geometry of High-Dimensional Energy Landscapes.\""
+
+- date: 2023-05-31
+  text: "New paper by Shivang is out on arXiv! In [\"Explicit Rational Function Solutions for the Power Spectral Density of Stochastic Linear Time-Invariant Systems\"](https://doi.org/10.48550/arXiv.2305.19890) we introduce a Leverrier-Faddeev-type algorithm for the exact computation of the rational function coefficients of noise power spectra, as well as closed form analytical solutions for individual entries of the power spectral density matrix."
+
+- date: 2023-05-25
+  text: "New paper by Aaron and Mathias is out on arXiv! In [\"Fast Generation of Spectrally-Shaped Disorder\"](https://doi.org/10.48550/arXiv.2305.15693) we introduce an algorithm for generating point/packing structures with arbitrary spectral properties in O(NlogN) and perform the largest-ever numerical study of the single scattering photonic response of hyperuniform structures."
+
+- date: 2023-05-24
+  text: "Mathematics undergraduates Carmel Pe'er, Orion Yang, and Charlie Chen join the Martiniani Lab for the Applied Math Summer Undergraduate Research Experience organized by the Courant Institute."
+
+- date: 2023-05-22
+  text: "Stefano delivers the [Chemical Engineering Seminar](https://www.caltech.edu/campus-life-events/calendar/prof-stefano-martiniani-seminar-1) at Caltech."
+
+- date: 2023-05-21
+  text: "Stefano delivers the [Physical Chemistry seminar](https://www.chem.uci.edu/node/24689) at University of California Irvine."
+
+- date: 2023-05-11
+  text: "Stefano delivers an invited complex systems seminar at Northwestern, titled \"Cortical circuit theory of interareal communication\"."
+
+- date: 2023-05-03
+  text: "Stefano delivers the Condensed Matter Physics seminar at UMass Amherst."
+
+- date: 2023-04-06
+  text: "Stefano delivers a talk about [ColabFit](https://colabfit.org/) at the Mach conference 2023 in Baltimore, MD."
+
+- date: 2023-03-31
+  text: "Stefano writes a commentary for the Journal Club for Condensed Matter Physics titled [\"Bit-propelled active matter\"](https://doi.org/10.36471/JCCM_March_2023_03)."
+
+- date: 2023-03-23
+  text: "Stefano delivers an invited talk about the [OpenKIM](https://openkim.org/)/[ColabFit](https://colabfit.org/) platform for the [SciML webinar series](https://www.cmu.edu/aced/sciML.html) organized by the ACED Arpa-E team at Carnegie Mellon University."
+
+- date: 2023-03-21
+  text: "Stefano delivers an invited talk as part of the Levich Seminar series at the Levich Institute, CCNY."
+
+- date: 2023-03-10
+  text: "Shivang presents a poster at COSYNE 2023 titled \"Coherence influences the dimensionality of communication subspaces\"."
+
+- date: 2023-03-08
+  text: "Aaron, Praharsh, Satyam, and Shivang deliver talks at APS March meeting spanning energy landscapes, theoretical neuroscience, active matter, and disordered photonics."
+
+- date: 2023-03-07
+  text: "Stefano delivers an invited talk in the APS March meeting focus session \"Information Theory and Physics\"."
+
+- date: 2023-03-05
+  text: "Stefano delivers a lecture on information theory in physics at the APS March meeting GSNP short course \"Adventures with computational modelling and information theory: from grains to bits\"."
+
+- date: 2023-01-23
+  text: "Mathias Casiulis and Tom Zhang's article \"Estimating random close packing in polydisperse and bidisperse hard spheres via an equilibrium model of crowding\" is now out in [J. Chem. Phys.](https://aip.scitation.org/doi/abs/10.1063/5.0137111)."
+
+- date: 2023-01-18
+  text: "Stefano delivers a [Computation in Science seminar](https://compinsci.psd.uchicago.edu/2023.html) at the University of Chicago."
+
+- date: 2022-12-18
+  text: "Stefano delivers an invited talk at the 123rd Statistical Mechanics Conference (Rutgers University)."
+
+- date: 2022-12-14
+  text: "Stefano delivers a [Colloquium](https://www.simonsfoundation.org/event/ccm-colloquium-stefano-martiniani-nyu-2/) at the Flatiron Institute's Center for Computational Mathematics."
+
+- date: 2022-11-24
+  text: "Shivang Rawat's abstract \"Coherence influences the dimensionality of communication subspaces\" has been accepted at COSYNE 2023."
+
+- date: 2022-11-21
+  text: "Our article on \"Model-free measurement of local entropy production and extractable work in active matter\" is out on the cover of Phys. Rev. Lett. and it has been selected as an Editor's Suggestion and for a [Viewpoint in Physics](https://physics.aps.org/articles/v15/179)."

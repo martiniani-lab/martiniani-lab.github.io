@@ -1,0 +1,31 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import { loadFunding } from '../lib/data';
+import { join } from 'node:path';
+
+const funding = loadFunding(join(process.cwd(), 'src/content/funding.yaml'));
+---
+
+<PageLayout
+  title="Funding — Martiniani Lab"
+  description="Research funding supporting the Martiniani Lab — $12.8M from NIH, NSF, AFOSR, CZI across materials AI, neuroscience, and statistical physics."
+  heading="Funding"
+>
+  <div class="row gtr-200">
+    {funding.map(item => (
+      <div class="col-4" style="margin-bottom: 2em; text-align: center;">
+        {item.image && (
+          <div style="margin-bottom: 1em;">
+            <img src={`/images/${item.image}`} alt={item.agency} loading="lazy" style="max-height: 80px; margin: 0 auto;" />
+          </div>
+        )}
+        <h3 style="font-size: 0.9em;">{item.name}</h3>
+        <p style="font-size: 0.85em;">
+          {item.agency} · {item.role} · {item.years}
+          {item.amount && <><br />{item.amount}</>}
+        </p>
+        {item.description && <p style="font-size: 0.8em;">{item.description}</p>}
+      </div>
+    ))}
+  </div>
+</PageLayout>

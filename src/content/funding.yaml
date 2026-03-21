@@ -1,0 +1,96 @@
+# Funding — Martiniani Lab
+
+# Major awards
+- agency: "Simons Foundation"
+  name: "Simons Foundation Faculty Fellowship"
+  image: "funding/simons-vid-crop.gif"
+  role: "PI"
+
+- agency: "Chan-Zuckerberg Initiative"
+  name: "Neuroscience Collaborative Pair Pilot Project Award"
+  image: "funding/czi-logo-minified.png"
+  role: "PI"
+
+- agency: "AFOSR"
+  name: "2025 AFOSR Young Investigator Program Award"
+  image: "funding/afosr-logo.jpg"
+  role: "PI"
+  years: "2025"
+
+# NSF grants
+- agency: "NSF"
+  name: "CAREER"
+  awardNumber: "2443027"
+  url: "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2443027"
+  image: "funding/nsf.jpg"
+  role: "PI"
+
+- agency: "NSF"
+  name: "CSSI"
+  awardNumber: "2311632"
+  url: "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2311632&HistoricalAwards=false"
+  image: "funding/nsf.jpg"
+  role: "PI"
+
+- agency: "NSF"
+  name: "EAGER"
+  awardNumber: "2132995"
+  url: "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2132995&HistoricalAwards=false"
+  image: "funding/nsf.jpg"
+  role: "PI"
+
+- agency: "NSF"
+  name: "CESER"
+  awardNumber: "2039575"
+  url: "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2039575&HistoricalAwards=false"
+  image: "funding/nsf.jpg"
+  role: "Co-PI"
+
+# NIH grants
+- agency: "NIH"
+  name: "NIMH R01"
+  awardNumber: "R01MH137669"
+  url: "https://reporter.nih.gov/search/do3OtgD6hkmqElMyPrhyVQ/project-details/10944348"
+  image: "funding/nih.png"
+  role: "PI"
+
+- agency: "NIH"
+  name: "NEI R01"
+  awardNumber: "R01EY035242"
+  url: "https://reporter.nih.gov/search/3RH3O1-dl0ejvWk3EFZwrg/project-details/10710967"
+  image: "funding/nih.png"
+  role: "PI"
+
+- agency: "NIH"
+  name: "NIGMS R01"
+  awardNumber: "GM146372"
+  url: "https://reporter.nih.gov/search/4_7AlxKWlkqXSvhvaE_G1w/project-details/10681310"
+  image: "funding/nih.png"
+  role: "Co-I"
+
+# Funding announcements
+- agency: "NYU Arts & Science"
+  name: "FERMat"
+  image: "funding/nyu_as.png"
+  url: "https://as.nyu.edu/features/impact-makers/2023/martiniani-machine-learning.html"
+  years: "2023"
+  description: "NYU Arts & Science funding announcement for FERMat"
+  announcementOnly: true
+
+- agency: "U.S. Senate"
+  name: "Schumer and Gillibrand announce FERMat"
+  image: "press/gillibrand-logo.jpg"
+  url: "https://www.gillibrand.senate.gov/news/press/release/schumer-gillibrand-announce-4-5-million-for-development-of-machine-learning-at-nyu/"
+  amount: "$4.5M"
+  years: "2023"
+  description: "U.S. Senators Schumer and Gillibrand announce $4.5M for development of machine learning at NYU"
+  announcementOnly: true
+
+- agency: "UMN Data Science"
+  name: "ColabFit NSF award"
+  image: "press/umn-logo.png"
+  url: "https://cse.umn.edu/datascience/news/collaborative-umn-research-team-awarded-113-million-nsf"
+  amount: "$1.13M"
+  years: "2021"
+  description: "Collaborative UMN research team awarded $1.13 million from NSF for ColabFit"
+  announcementOnly: true

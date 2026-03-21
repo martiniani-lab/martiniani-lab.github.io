@@ -1,0 +1,32 @@
+# Teaching — Martiniani Lab
+
+- institution: "New York University"
+  years: "2022-present"
+  courses:
+    - name: "Mathematical Physics"
+      code: "PHYS-UA 106"
+      semesters: "Spring 2024"
+    - name: "Physics of Neural Systems"
+      code: "PHYS-GA 2061"
+      semesters: "Spring 2023"
+    - name: "Thermodynamics and Kinetics"
+      code: "CHEM-UA 2061"
+      semesters: "Fall 2022, Fall 2024"
+
+- institution: "University of Minnesota"
+  years: "2019-2021"
+  courses:
+    - name: "Numerical Methods for Chemical Engineering"
+      code: "CHEN 3201"
+      semesters: "Spring 2020, Spring 2021, Fall 2021"
+    - name: "Quantitative Analysis, Design and Synthesis of Biotechnological Systems"
+      code: "CHEN 8754"
+      role: "contributor"
+      semesters: "Spring 2021"
+      note: "Delivered 2.5h of content on \"Information theory for biochemical signal pathways\""
+    - name: "Data Driven Discovery for the Chemical Sciences"
+      code: "CHEN 5595"
+      semesters: "Fall 2020"
+    - name: "Thermodynamics of Materials"
+      code: "MATS 3001"
+      semesters: "Fall 2019"

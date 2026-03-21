@@ -1,0 +1,68 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import TeamMember from '../components/TeamMember.astro';
+import { loadTeam, getTeamByRole } from '../lib/data';
+import { join } from 'node:path';
+
+const team = loadTeam(join(process.cwd(), 'src/content/team.yaml'));
+const groups = getTeamByRole(team);
+
+const roleLabels: Record<string, string> = {
+  pi: 'Principal Investigator',
+  postdoc: 'Postdocs and Research Scientists',
+  graduate: 'Graduate Students',
+  staff: 'Research Staff',
+  undergraduate: 'Undergraduates',
+};
+
+// Find PI for the spotlight section
+const pi = groups['pi']?.[0];
+const otherGroups = Object.entries(groups).filter(([role]) => role !== 'pi');
+---
+
+<PageLayout
+  title="Team — Martiniani Lab"
+  description="Meet the ~20 researchers at Martiniani Lab, NYU — led by Stefano Martiniani, working across AI for materials, world models, neural circuit theory, and statistical physics."
+  heading="The Team"
+>
+  <!-- Group photo -->
+  <div style="margin-bottom: 2em;">
+    <img src="/images/team/group.jpg" alt="Martiniani Lab group photo" style="width: 100%; border-radius: 4px;" loading="eager" />
+  </div>
+
+  <!-- PI Spotlight -->
+  {pi && (
+    <section class="spotlights" style="margin-bottom: 3em;">
+      <section>
+        <div class="image">
+          <img src="/images/team/stefano.jpg" alt="Stefano Martiniani" />
+        </div>
+        <div class="content">
+          <div class="inner">
+            <header class="minor">
+              <h3>Principal Investigator</h3>
+            </header>
+            <p>{pi.bio || `Dr. Martiniani is an Assistant Professor of Physics, Chemistry, Mathematics, and Neural Science at New York University from 2022. He is a core member of NYU's Center for Soft Matter Research and the Simons Center for Computational Physical Chemistry, and an affiliate of the Center for Data Science. He holds a Ph.D. in Chemistry and an M.Phil in Scientific Computing from the Cavendish Laboratory at the University of Cambridge (advisor: Daan Frenkel), and a B.Sc. in Chemistry from Imperial College London.`}</p>
+            <p>Prior to joining NYU, Stefano was an assistant professor of Chemical Engineering and Materials Science at the University of Minnesota (2019-2021), and a postdoc jointly with Paul Chaikin (NYU) and Dov Levine (Technion) (2017-2019). His awards include the AFOSR YIP Award, NSF CAREER Award, Chan-Zuckerberg Initiative Neuroscience Pair Pilot Award, the inaugural Interdisciplinary Early Career Scientist Prize from IUPAP, Simons Foundation Faculty Fellowship, Gates Cambridge Scholarship, and the Outstanding Ph.D. Thesis Award from the University of Cambridge. For details, see <a href="/pdf/cv.pdf" target="_blank">CV</a>.</p>
+          </div>
+        </div>
+      </section>
+    </section>
+  )}
+
+  <!-- Team groups -->
+  {otherGroups.map(([role, members]) => (
+    <section style="margin-bottom: 3em;">
+      <h3>{roleLabels[role] || role}</h3>
+      <div class="team-grid">
+        {members.map(m => (
+          <TeamMember name={m.name} image={m.image} title={m.title} />
+        ))}
+      </div>
+    </section>
+  ))}
+
+  <ul class="actions">
+    <li><a href="/alumni" class="button next">Alumni</a></li>
+  </ul>
+</PageLayout>

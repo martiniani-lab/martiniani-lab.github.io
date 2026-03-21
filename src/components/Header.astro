@@ -1,0 +1,79 @@
+---
+interface Props {
+  transparent?: boolean;
+}
+
+const { transparent = false } = Astro.props;
+
+const navLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/#about', label: 'About us' },
+  { href: '/team', label: 'Team' },
+  { href: '/news', label: 'News' },
+  { href: '/publications', label: 'Publications' },
+  { href: '/software', label: 'Software' },
+  { href: '/gallery', label: 'Video Gallery' },
+  { href: '/press', label: 'Covers, Press & Podcasts' },
+  { href: '/funding', label: 'Funding' },
+  { href: '/alumni', label: 'Alumni' },
+];
+---
+
+<header id="header" class={transparent ? 'alt' : ''}>
+  <a href="/" class="logo"><strong>Martiniani</strong> <span>Lab</span></a>
+  <nav>
+    <button id="menu-toggle" aria-label="Open navigation menu" aria-expanded="false">Menu</button>
+  </nav>
+</header>
+
+<div class="menu-overlay" id="menu-overlay"></div>
+<nav id="menu" aria-label="Main navigation">
+  <button class="close" id="menu-close" aria-label="Close navigation menu">&times;</button>
+  <ul class="links">
+    {navLinks.map(link => (
+      <li><a href={link.href}>{link.label}</a></li>
+    ))}
+  </ul>
+  <ul class="actions stacked">
+    <li><a href="/pdf/cv.pdf" target="_blank" class="button primary fit">CV</a></li>
+  </ul>
+</nav>
+
+<script is:inline>
+  // Menu toggle (replaces jQuery)
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('menu');
+  const overlay = document.getElementById('menu-overlay');
+  const close = document.getElementById('menu-close');
+
+  function openMenu() {
+    menu.classList.add('visible');
+    overlay.classList.add('visible');
+    toggle.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMenu() {
+    menu.classList.remove('visible');
+    overlay.classList.remove('visible');
+    toggle.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+
+  toggle.addEventListener('click', openMenu);
+  close.addEventListener('click', closeMenu);
+  overlay.addEventListener('click', closeMenu);
+
+  // Header transparency on scroll (replaces jQuery scrollex)
+  const header = document.getElementById('header');
+  if (header.classList.contains('alt')) {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        header.classList.toggle('scrolled', !entry.isIntersecting);
+      },
+      { threshold: 0, rootMargin: '-50px 0px 0px 0px' }
+    );
+    const banner = document.getElementById('banner');
+    if (banner) observer.observe(banner);
+  }
+</script>

@@ -1,0 +1,118 @@
+---
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://martinianilab.org/#org",
+      "name": "Martiniani Lab",
+      "url": "https://martinianilab.org",
+      "parentOrganization": {
+        "@type": "EducationalOrganization",
+        "name": "New York University",
+        "department": [
+          { "@type": "Organization", "name": "Department of Physics" },
+          { "@type": "Organization", "name": "Department of Chemistry" },
+          { "@type": "Organization", "name": "Courant Institute of Mathematical Sciences" },
+          { "@type": "Organization", "name": "Center for Neural Science" },
+          { "@type": "Organization", "name": "Center for Data Science" },
+        ]
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://martinianilab.org/#stefano",
+      "name": "Stefano Martiniani",
+      "jobTitle": "Assistant Professor",
+      "affiliation": { "@id": "https://martinianilab.org/#org" },
+      "email": "sm7683@nyu.edu",
+      "url": "https://martinianilab.org",
+      "sameAs": [
+        "https://scholar.google.com/citations?user=pxSj9JkAAAAJ",
+        "https://orcid.org/0000-0003-2028-2175",
+        "https://github.com/martiniani-lab",
+        "https://www.linkedin.com/in/smartiniani/",
+        "https://www.researchgate.net/profile/Stefano-Martiniani"
+      ],
+      "knowsAbout": [
+        "Generative AI for Materials",
+        "World Models",
+        "Statistical Physics",
+        "Machine Learning Interatomic Potentials",
+        "AI for Science",
+        "Crystal Structure Prediction",
+        "Molecular Generation",
+        "Active Matter",
+        "Information Theory",
+        "Embodied AI",
+        "Neural Circuit Theory",
+        "Divisive Normalization",
+        "Energy Landscapes",
+        "Disordered Photonic Materials",
+        "Self-Supervised Learning",
+        "Stochastic Gradient Descent Theory"
+      ]
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Open Materials Generation with Stochastic Interpolants",
+      "author": [{ "@id": "https://martinianilab.org/#stefano" }],
+      "datePublished": "2025",
+      "isPartOf": { "@type": "PublicationEvent", "name": "ICML 2025, PMLR 267" }
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Cross-View World Models",
+      "author": [{ "@id": "https://martinianilab.org/#stefano" }],
+      "datePublished": "2026",
+      "sameAs": "https://arxiv.org/abs/2602.07277"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "PropMolFlow: Property-guided Molecule Generation with Geometry-Complete Flow Matching",
+      "author": [{ "@id": "https://martinianilab.org/#stefano" }],
+      "datePublished": "2026",
+      "isPartOf": { "@type": "Periodical", "name": "Nature Computational Science" }
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Model-Free Measurement of Local Entropy Production and Extractable Work in Active Matter",
+      "author": [{ "@id": "https://martinianilab.org/#stefano" }],
+      "datePublished": "2022",
+      "isPartOf": { "@type": "Periodical", "name": "Physical Review Letters" },
+      "sameAs": "https://doi.org/10.1103/PhysRevLett.129.220601"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Numerical test of the Edwards conjecture shows that all packings become equally probable at jamming",
+      "author": [{ "@id": "https://martinianilab.org/#stefano" }],
+      "datePublished": "2017",
+      "isPartOf": { "@type": "Periodical", "name": "Nature Physics" },
+      "sameAs": "https://doi.org/10.1038/nphys4168"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "ColabFit Exchange",
+      "url": "https://colabfit.org",
+      "author": [{ "@id": "https://martinianilab.org/#stefano" }],
+      "description": "Largest open-access database for machine learning interatomic potentials"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "FReSCo",
+      "url": "https://github.com/martiniani-lab/FReSCo",
+      "author": [{ "@id": "https://martinianilab.org/#stefano" }],
+      "description": "O(NlogN) algorithm for inverse design of point patterns with arbitrary spectral properties"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "OMatG",
+      "url": "https://github.com/FERMat-ML/OMatG",
+      "author": [{ "@id": "https://martinianilab.org/#stefano" }],
+      "description": "Open Materials Generation with Stochastic Interpolants"
+    }
+  ]
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />

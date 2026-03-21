@@ -1,0 +1,30 @@
+name: Sync Publications
+
+on:
+  schedule:
+    - cron: '0 0 * * 0'  # Weekly, Sunday midnight UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install requests
+      - run: python scripts/sync-publications.py
+      - name: Create PR if changes
+        uses: peter-evans/create-pull-request@v6
+        with:
+          title: 'Update publications from Semantic Scholar'
+          body: |
+            Automated weekly sync of publications from Semantic Scholar API.
+            Review the changes to `references.bib` before merging.
+          branch: auto/sync-pubs
+          commit-message: 'chore: sync publications from Semantic Scholar'

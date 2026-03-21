@@ -1,0 +1,42 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import { loadAlumni, getAlumniByCategory } from '../lib/data';
+import { join } from 'node:path';
+
+const alumni = loadAlumni(join(process.cwd(), 'src/content/alumni.yaml'));
+const groups = getAlumniByCategory(alumni);
+
+const categoryLabels: Record<string, string> = {
+  postdoc: 'Former Postdocs & Research Scientists',
+  graduate: 'Former Graduate Students',
+  undergraduate: 'Former Undergraduates',
+  visitor: 'Former Visitors',
+};
+
+const categoryOrder = ['postdoc', 'graduate', 'undergraduate', 'visitor'];
+---
+
+<PageLayout
+  title="Alumni — Martiniani Lab"
+  description="Alumni of the Martiniani Lab — PhD graduates, postdocs, and undergraduate researchers who have gone on to industry, postdocs, and top universities."
+  heading="Alumni"
+>
+  {categoryOrder.filter(cat => groups[cat]).map(cat => (
+    <section style="margin-bottom: 3em;">
+      <h3>{categoryLabels[cat]}</h3>
+      <ul style="list-style: disc; padding-left: 1.5em;">
+        {groups[cat].map(member => (
+          <li style="margin-bottom: 0.5em;">
+            {member.linkedin ? (
+              <a href={member.linkedin} target="_blank" rel="noopener">{member.name}</a>
+            ) : (
+              <span>{member.name}</span>
+            )}
+            {member.degree && <span> ({member.degree}{member.year ? `, ${member.year}` : ''})</span>}
+            {member.currentPosition && <span style="font-size: 0.85em; color: rgba(255,255,255,0.5);"> — {member.currentPosition}</span>}
+          </li>
+        ))}
+      </ul>
+    </section>
+  ))}
+</PageLayout>

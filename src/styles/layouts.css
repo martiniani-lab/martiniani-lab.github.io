@@ -1,0 +1,332 @@
+/* Martiniani Lab — Layout Styles */
+
+/* Header */
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2em;
+  height: 3.25em;
+  background: rgba(36, 41, 67, 0.95);
+  backdrop-filter: blur(10px);
+  transition: background 0.3s;
+}
+
+#header.alt {
+  background: transparent;
+  backdrop-filter: none;
+}
+
+#header.scrolled {
+  background: rgba(36, 41, 67, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+#header .logo {
+  font-weight: var(--font-weight-semibold);
+  font-size: 1em;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--color-text-strong);
+  text-decoration: none;
+  border-bottom: none;
+}
+
+#header .logo span {
+  color: var(--color-text);
+}
+
+#header nav a {
+  font-size: 0.7em;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--color-text-strong);
+  border-bottom: none;
+  padding: 0.5em;
+}
+
+/* Menu overlay */
+#menu {
+  position: fixed;
+  top: 0;
+  right: -20em;
+  width: 20em;
+  height: 100vh;
+  background: var(--color-bg-darker);
+  padding: 3em 2em;
+  z-index: 1001;
+  overflow-y: auto;
+  transition: right 0.5s;
+}
+
+#menu.visible {
+  right: 0;
+}
+
+#menu .links {
+  list-style: none;
+}
+
+#menu .links li {
+  border-top: 1px solid var(--border-color);
+}
+
+#menu .links li:first-child {
+  border-top: none;
+}
+
+#menu .links a {
+  display: block;
+  padding: 0.75em 0;
+  font-size: 0.9em;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--color-text-strong);
+  border-bottom: none;
+}
+
+#menu .links a:hover {
+  color: var(--color-accent);
+}
+
+#menu .close {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  width: 3em;
+  height: 3em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: var(--color-text-strong);
+  font-size: 1.5em;
+}
+
+/* Menu overlay backdrop */
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s;
+}
+
+.menu-overlay.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Banner (hero) */
+#banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 6em 4em 4em;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+#banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(36, 41, 67, 0.65);
+}
+
+#banner .inner {
+  position: relative;
+  z-index: 1;
+  max-width: var(--max-width);
+}
+
+#banner h1 {
+  font-size: 3.25em;
+  margin-bottom: 0;
+  line-height: 1.1;
+}
+
+#banner p {
+  font-size: 1.25em;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: var(--color-text);
+  margin-top: 0.5em;
+}
+
+/* Page banner (smaller, for sub-pages) */
+.page-banner {
+  padding: 8em 4em 4em;
+  background: var(--color-bg-alt);
+}
+
+.page-banner .inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+/* Main content */
+main {
+  padding-top: 3.25em; /* header height */
+}
+
+main .inner {
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+
+/* Section spacing */
+section {
+  padding: 4em 0;
+}
+
+section header.major {
+  margin-bottom: 2em;
+}
+
+section header.major h2 {
+  margin-bottom: 0.25em;
+}
+
+section header.major h2::after {
+  content: '';
+  display: block;
+  width: 4em;
+  height: 2px;
+  background: var(--color-accent);
+  margin-top: 0.5em;
+}
+
+/* Footer */
+#footer {
+  background: var(--color-bg-darker);
+  padding: 3em 0;
+}
+
+#footer .inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+#footer .icons {
+  display: flex;
+  gap: 1em;
+  list-style: none;
+  margin-bottom: 1.5em;
+}
+
+#footer .icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  color: var(--color-text);
+  border-bottom: 1px solid var(--border-color);
+  transition: color 0.2s, border-color 0.2s;
+}
+
+#footer .icons a:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+#footer .icons a svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+
+#footer .copyright {
+  list-style: none;
+  display: flex;
+  gap: 1em;
+  font-size: 0.8em;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+#footer .copyright a {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* Contact section */
+.contact-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3em;
+  padding: 3em 0;
+}
+
+.contact-info h3 {
+  margin-bottom: 0.5em;
+}
+
+.contact-info p {
+  font-size: 0.9em;
+}
+
+/* Responsive layouts */
+@media (max-width: 1280px) {
+  #banner {
+    padding: 5em 3em 3em;
+  }
+  #banner h1 {
+    font-size: 2.5em;
+  }
+}
+
+@media (max-width: 980px) {
+  #banner {
+    min-height: 75vh;
+    padding: 4em 2em 2em;
+  }
+  #banner h1 {
+    font-size: 2em;
+  }
+  .page-banner {
+    padding: 6em 2em 2em;
+  }
+  .contact-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 736px) {
+  #header {
+    padding: 0 1em;
+  }
+  #banner {
+    min-height: 50vh;
+    padding: 3.5em 1.5em 1.5em;
+  }
+  #banner h1 {
+    font-size: 1.5em;
+  }
+  #banner p {
+    font-size: 0.85em;
+  }
+  .page-banner {
+    padding: 5em 1.5em 1.5em;
+  }
+  main .inner {
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+}

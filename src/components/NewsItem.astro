@@ -1,0 +1,24 @@
+---
+interface Props {
+  date: string;
+  text: string;
+  link?: string;
+}
+
+const { date, text, link } = Astro.props;
+
+const formatted = new Date(date + 'T00:00:00').toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+---
+
+<article class="news-item">
+  <span class="news-date">{formatted}</span>
+  {link ? (
+    <p><a href={link} target="_blank" rel="noopener">{text}</a></p>
+  ) : (
+    <p set:html={text} />
+  )}
+</article>

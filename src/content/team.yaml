@@ -1,0 +1,159 @@
+# Martiniani Lab Team
+
+# --- Principal Investigator ---
+- name: "Stefano Martiniani"
+  role: pi
+  image: stefano.jpg
+  title: "Assistant Professor of Physics, Chemistry, Mathematics, and Neural Science"
+  order: 1
+  bio: >
+    Dr. Martiniani is an Assistant Professor of Physics, Chemistry, Mathematics,
+    and Neural Science at New York University from 2022. He is a core member of
+    NYU's Center for Soft Matter Research and the Simons Center for Computational
+    Physical Chemistry, and an affiliate of the Center for Data Science. He holds
+    a Ph.D. in Chemistry and an M.Phil in Scientific Computing from the Cavendish
+    Laboratory at the University of Cambridge (advisor: Daan Frenkel), and a B.Sc.
+    in Chemistry from Imperial College London. Prior to joining NYU, Stefano was
+    an assistant professor of Chemical Engineering and Materials Science at the
+    University of Minnesota (2019-2021), and a postdoc jointly with Paul Chaikin
+    (NYU) and Dov Levine (Technion) (2017-2019). His awards include the AFOSR YIP
+    Award, NSF CAREER Award, Chan-Zuckerberg Initiative Neuroscience Pair Pilot
+    Award, the inaugural Interdisciplinary Early Career Scientist Prize from the
+    International Union of Pure and Applied Physics (IUPAP), Simons Foundation
+    Faculty Fellowship (NYU), Gates Cambridge Scholarship, and the Outstanding
+    Ph.D. Thesis Award from the University of Cambridge. He has been an NSF
+    investigator since 2020, and an NIH investigator since 2022.
+
+# --- Postdocs and Research Scientists (alphabetical) ---
+- name: "Mathias Casiulis"
+  role: postdoc
+  image: mathias.jpg
+  order: 1
+
+- name: "Eric Fuemmeler"
+  role: postdoc
+  image: eric.jpg
+  order: 2
+
+- name: "Amit Gupta"
+  role: postdoc
+  image: amit.jpg
+  order: 3
+
+- name: "JiYeon Han"
+  role: postdoc
+  image: ""
+  order: 4
+
+- name: "Philipp Hoellmer"
+  role: postdoc
+  image: philipp.jpg
+  order: 5
+
+- name: "Tianhao Li"
+  role: postdoc
+  image: ""
+  title: "Simons Center Fellow"
+  order: 6
+
+- name: "Maya Martirossyan"
+  role: postdoc
+  image: maya-crop.jpg
+  order: 7
+
+- name: "Kathryn Mcclain"
+  role: postdoc
+  image: ""
+  order: 8
+
+- name: "Flaviano Morone"
+  role: postdoc
+  image: flaviano-crop.jpg
+  title: "Research Scientist"
+  order: 9
+
+- name: "Rishabh Sharma"
+  role: postdoc
+  image: ""
+  title: "Simons Center Fellow"
+  order: 10
+
+- name: "Guanming Zhang"
+  role: postdoc
+  image: guanming.jpg
+  order: 11
+
+# --- Graduate Students (alphabetical) ---
+- name: "Jacob Abraham"
+  role: graduate
+  image: ""
+  order: 1
+
+- name: "Satyam Anand"
+  role: graduate
+  image: satyam.jpg
+  order: 2
+
+- name: "Huijie Chen"
+  role: graduate
+  image: ""
+  order: 3
+
+- name: "Tom Egg"
+  role: graduate
+  image: tom.jpg
+  order: 4
+
+- name: "Elijah House"
+  role: graduate
+  image: ""
+  order: 5
+
+- name: "Ben Johnston"
+  role: graduate
+  image: ""
+  order: 6
+
+- name: "Mia Morrell"
+  role: graduate
+  image: ""
+  title: "co-advised"
+  order: 7
+
+- name: "Asit Pal"
+  role: graduate
+  image: asit.jpg
+  order: 8
+
+- name: "Akshada Pradhan"
+  role: graduate
+  image: ""
+  order: 9
+
+- name: "Zach Schmidt"
+  role: graduate
+  image: ""
+  order: 10
+
+- name: "Praharsh Suryadevara"
+  role: graduate
+  image: praharsh.jpg
+  order: 11
+
+- name: "Shannon Yu"
+  role: graduate
+  image: ""
+  title: "co-advised"
+  order: 12
+
+- name: "Shenga Zhao"
+  role: graduate
+  image: ""
+  title: "MS student"
+  order: 13
+
+# --- Research Staff ---
+- name: "Gregory Wolfe"
+  role: staff
+  image: gregory.jpg
+  order: 1
