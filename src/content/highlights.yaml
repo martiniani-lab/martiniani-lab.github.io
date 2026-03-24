@@ -11,10 +11,10 @@
   image: ""
   link: https://journals.aps.org/prl/abstract/10.1103/gqrx-7mn2
 
-- title: "Theory of Learning"
-  subtitle: "Learning as Neural Manifold Packing (NeurIPS)"
+- title: "World Models"
+  subtitle: "Cross-View World Models (XVWM)"
   image: ""
-  link: https://arxiv.org/abs/2506.13717
+  link: https://arxiv.org/abs/2602.07277
 
 - title: "Molecular Generation"
   subtitle: "PropMolFlow (Nat. Comp. Sci.)"
@@ -26,12 +26,12 @@
   image: ""
   link: https://doi.org/10.1103/PhysRevX.9.011031
 
-- title: "World Models"
-  subtitle: "Cross-View World Models (XVWM)"
+- title: "Theory of Learning"
+  subtitle: "Learning as Neural Manifold Packing (NeurIPS)"
   image: ""
-  link: https://arxiv.org/abs/2602.07277
+  link: https://arxiv.org/abs/2506.13717
 
-- title: "Active Matter"
+- title: "Soft Matter"
   subtitle: "Model-Free Measurement of Entropy Production (PRL)"
   image: ""
   link: https://doi.org/10.1103/PhysRevLett.129.220601

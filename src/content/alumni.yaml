@@ -11,19 +11,19 @@
   name: "Amit Gupta"
   year: 2025
   institution: "UMN"
-  currentPosition: "Working with Statespace"
+  currentPosition: "ML Engineer at AimLab"
 
 - category: postdoc
   name: "Maya Martirossyan"
   year: 2025
   institution: "NYU"
-  currentPosition: "Working at Lila Sciences"
+  currentPosition: "ML Engineer at Lila Sciences"
 
 - category: postdoc
   name: "Guanming Zhang"
   year: 2025
   institution: "NYU"
-  currentPosition: "KATL AI Lab, Hong Kong"
+  currentPosition: "ML Engineer at KATL AI Lab, Hong Kong"
 
 # Ph.D. students
 - category: graduate
@@ -40,6 +40,7 @@
   field: "Mathematics"
   year: 2025
   institution: "NYU"
+  currentPosition: "Postdoc at Université de Fribourg"
 
 - category: graduate
   name: "Shivang Rawat"
@@ -47,6 +48,7 @@
   field: "Mathematics"
   year: 2025
   institution: "NYU"
+  currentPosition: "Stealth NeuroAI startup"
 
 - category: graduate
   name: "Mia Morrell"

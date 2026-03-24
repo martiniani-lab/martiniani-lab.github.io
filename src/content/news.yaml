@@ -8,7 +8,16 @@
   text: "Stefano is Program Chair for the AI4Mat Workshop at ICLR 2026."
 
 - date: 2026-01-01
-  text: "PropMolFlow published in Nature Computational Science."
+  text: "PropMolFlow published in Nature Computational Science. Featured in a [News & Views](https://doi.org/10.1038/s43588-026-00961-7)."
+
+- date: 2025-11-15
+  text: "[Optics & Photonics News](https://www.optica-opn.org/home/newsroom/2025/november/gyromorphs_should_block_light_in_all_directions/) covers our gyromorphs PRL paper: \"Gyromorphs Should Block Light in All Directions\"."
+
+- date: 2025-11-10
+  text: "[SciTechDaily](https://scitechdaily.com/the-weird-hybrid-material-that-could-turbocharge-photonic-computing/) covers our gyromorphs paper: \"The Weird Hybrid Material That Could Turbocharge Photonic Computing\"."
+
+- date: 2025-08-15
+  text: "[EurekAlert (AAAS)](https://www.eurekalert.org/news-releases/1057691) covers our PNAS paper on robot-swarm cohesion: \"Scientists find curvy answer to harnessing 'swarm intelligence'\"."
 
 - date: 2026-01-01
   text: "Congratulations to Satyam and Guanming whose paper \"Emergent universal long-range structure in random-organizing systems\" has been accepted at [Nature Communications](https://doi.org/10.1038/s41467-026-68601-2)."

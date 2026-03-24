@@ -15,6 +15,13 @@
 
 # Editorials, Columns, Viewpoints
 - category: editorial
+  title: "News & Views: Nat. Comput. Sci. (2026)"
+  image: "press/natcompsci.png"
+  url: "https://doi.org/10.1038/s43588-026-00961-7"
+  source: "Nature Computational Science"
+  date: "2026-01-01"
+
+- category: editorial
   title: "Physics 17, 134 (2024)"
   image: "press/physics-train.jpg"
   url: "https://physics.aps.org/articles/v17/134"
@@ -77,6 +84,27 @@
   description: "From min 20"
 
 # Newspapers & Magazines
+- category: newspaper
+  title: "Gyromorphs Should Block Light in All Directions"
+  image: "press/opn.png"
+  url: "https://www.optica-opn.org/home/newsroom/2025/november/gyromorphs_should_block_light_in_all_directions/"
+  source: "Optics & Photonics News"
+  date: "2025-11-15"
+
+- category: newspaper
+  title: "The Weird Hybrid Material That Could Turbocharge Photonic Computing"
+  image: "press/scitechdaily.png"
+  url: "https://scitechdaily.com/the-weird-hybrid-material-that-could-turbocharge-photonic-computing/"
+  source: "SciTechDaily"
+  date: "2025-11-10"
+
+- category: newspaper
+  title: "Scientists find curvy answer to harnessing 'swarm intelligence'"
+  image: "press/eurekalert.png"
+  url: "https://www.eurekalert.org/news-releases/1057691"
+  source: "EurekAlert (AAAS)"
+  date: "2025-08-15"
+
 - category: newspaper
   title: "Numerical protocol for local entropy production"
   image: "press/physorg.png"

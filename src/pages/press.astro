@@ -57,9 +57,9 @@ const categoryOrder = ['cover', 'editorial', 'podcast', 'newspaper'];
       <p><h3>{categoryLabels[cat]}</h3></p>
       <div class="row gtr-200 gtr-uniform">
         {resolvedGroups[cat].map(item => (
-          <div class={categoryColClass[cat]} style="text-align: center;">
+          <div class={`${categoryColClass[cat]} press-item`} style="text-align: center;">
             {item.imgSrc && (
-              <span class="image fit"><img src={item.imgSrc} alt={item.title} loading="lazy" /></span>
+              <span class={`image fit ${cat === 'cover' ? 'cover-img' : ''}`}><img src={item.imgSrc} alt={item.title} loading="lazy" /></span>
             )}
             <p>
               <a href={item.url} target="_blank" rel="noopener">{item.title}</a>
@@ -74,3 +74,15 @@ const categoryOrder = ['cover', 'editorial', 'podcast', 'newspaper'];
     </div>
   ))}
 </PageLayout>
+
+<style is:global>
+  .cover-img {
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+  }
+  .cover-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+</style>

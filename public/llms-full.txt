@@ -195,9 +195,11 @@ Key papers:
 - Tue Feb 17 2026 19:00:00 GMT-0500 (Eastern Standard Time): New paper by Rishabh is out on arXiv! ["Cross-View World Models"](https://arxiv.org/abs/2602.07277) introduces cross-view prediction as a self-supervised objective for embodied AI.
 - Sat Jan 31 2026 19:00:00 GMT-0500 (Eastern Standard Time): New paper by Philipp is out on arXiv! ["Open Materials Generation with Stochastic Interpolants and Inference-Time Reinforcement Learning"](https://arxiv.org/abs/2602.00424) — first application of inference-time RL to crystal structure prediction.
 - Wed Jan 14 2026 19:00:00 GMT-0500 (Eastern Standard Time): Stefano is Program Chair for the AI4Mat Workshop at ICLR 2026.
-- Wed Dec 31 2025 19:00:00 GMT-0500 (Eastern Standard Time): PropMolFlow published in Nature Computational Science.
+- Wed Dec 31 2025 19:00:00 GMT-0500 (Eastern Standard Time): PropMolFlow published in Nature Computational Science. Featured in a [News & Views](https://doi.org/10.1038/s43588-026-00961-7).
 - Wed Dec 31 2025 19:00:00 GMT-0500 (Eastern Standard Time): Congratulations to Satyam and Guanming whose paper "Emergent universal long-range structure in random-organizing systems" has been accepted at [Nature Communications](https://doi.org/10.1038/s41467-026-68601-2).
 - Sat Dec 13 2025 19:00:00 GMT-0500 (Eastern Standard Time): Spotlight talk at AI4Mat NeurIPS 2025 on ["Inverse Design of Novel Superconductors via Guided Diffusion"](https://arxiv.org/abs/2509.25186).
+- Fri Nov 14 2025 19:00:00 GMT-0500 (Eastern Standard Time): [Optics & Photonics News](https://www.optica-opn.org/home/newsroom/2025/november/gyromorphs_should_block_light_in_all_directions/) covers our gyromorphs PRL paper: "Gyromorphs Should Block Light in All Directions".
+- Sun Nov 09 2025 19:00:00 GMT-0500 (Eastern Standard Time): [SciTechDaily](https://scitechdaily.com/the-weird-hybrid-material-that-could-turbocharge-photonic-computing/) covers our gyromorphs paper: "The Weird Hybrid Material That Could Turbocharge Photonic Computing".
 - Fri Oct 31 2025 20:00:00 GMT-0400 (Eastern Daylight Time): New paper by Mathias is out on arXiv! ["Spatial and Temporal Cluster Tomography of Active Matter"](https://arxiv.org/abs/2511.09444).
 - Tue Oct 14 2025 20:00:00 GMT-0400 (Eastern Daylight Time): Stefano delivers an invited talk at the MIT Mathematics in Physics Seminar.
 - Thu Oct 09 2025 20:00:00 GMT-0400 (Eastern Daylight Time): Stefano delivers a seminar at Vassar College.
@@ -209,9 +211,7 @@ Key papers:
 - Sun Aug 31 2025 20:00:00 GMT-0400 (Eastern Daylight Time): Stefano is a member of the International Program Committee for the 2027 International Soft Matter Conference.
 - Sun Aug 31 2025 20:00:00 GMT-0400 (Eastern Daylight Time): Stefano delivers an invited talk at the CAFE Workshop, AutoML Conference in New York.
 - Sun Aug 31 2025 20:00:00 GMT-0400 (Eastern Daylight Time): Gyromorphs accepted at Physical Review Letters.
-- Thu Jul 31 2025 20:00:00 GMT-0400 (Eastern Daylight Time): Robot-swarm cohesion published in PNAS.
-- Sun Jul 20 2025 20:00:00 GMT-0400 (Eastern Daylight Time): Workshop paper at GenBio ICML 2025: ["MolGuidance: A Comparative Study of Guidance Methods for Conditional Molecule Generation"](https://arxiv.org/abs/2505.21469).
-- Mon Jul 14 2025 20:00:00 GMT-0400 (Eastern Daylight Time): Stefano delivers an invited talk at StatPhys29 in Florence on "Emergent universal long-range structure in random-organizing systems".
+- Thu Aug 14 2025 20:00:00 GMT-0400 (Eastern Daylight Time): [EurekAlert (AAAS)](https://www.eurekalert.org/news-releases/1057691) covers our PNAS paper on robot-swarm cohesion: "Scientists find curvy answer to harnessing 'swarm intelligence'".
 
 ## Contact & Social
 
