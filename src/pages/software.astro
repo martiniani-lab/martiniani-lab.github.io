@@ -3,7 +3,31 @@ import PageLayout from '../layouts/PageLayout.astro';
 import { loadSoftware } from '../lib/data';
 import { join } from 'node:path';
 
-const software = loadSoftware(join(process.cwd(), 'src/content/software.yaml'));
+const allSoftware = loadSoftware(join(process.cwd(), 'src/content/software.yaml'));
+
+// Featured item (ColabFit) goes in spotlight; rest in grid
+const featured = allSoftware.find(s => s.featured && s.name === 'ColabFit');
+const gridSoftware = allSoftware.filter(s => s !== featured);
+
+// Glob software images
+const softwareImages = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/software/*.{jpg,jpeg,png,gif,webp}');
+const researchImages = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/research/*.{jpg,jpeg,png,gif,webp}');
+const allImages = { ...softwareImages, ...researchImages };
+
+async function resolveImage(imagePath: string): Promise<string> {
+  const fullPath = `/src/assets/images/${imagePath}`;
+  if (allImages[fullPath]) {
+    const mod = await allImages[fullPath]();
+    return mod.default.src;
+  }
+  return '';
+}
+
+const featuredImgSrc = featured?.image ? await resolveImage(featured.image) : '';
+const gridItems = await Promise.all(gridSoftware.map(async (item) => ({
+  ...item,
+  imgSrc: item.image ? await resolveImage(item.image) : '',
+})));
 ---
 
 <PageLayout
@@ -11,21 +35,38 @@ const software = loadSoftware(join(process.cwd(), 'src/content/software.yaml'));
   description="Open-source software from Martiniani Lab: ColabFit Exchange, OMatG, FReSCo, PropMolFlow — tools for AI-driven materials and molecular discovery."
   heading="Software"
 >
-  <div class="row gtr-200">
-    {software.map(item => (
-      <div class="col-6" style="margin-bottom: 2em;">
-        {item.image && (
-          <div class="image fit" style="margin-bottom: 1em;">
-            <img src={`/images/${item.image}`} alt={item.name} loading="lazy" />
+  {featured && (
+    <section class="spotlights" style="margin-bottom: 2em;">
+      <section>
+        <a href={featured.url} target="_blank" rel="noopener" class="image">
+          <img src={featuredImgSrc} alt={featured.name} />
+        </a>
+        <div class="content">
+          <div class="inner">
+            <header class="minor">
+              <h3>{featured.name}</h3>
+            </header>
+            <p>{featured.description}</p>
+            <ul class="actions">
+              <li><a href={featured.url} target="_blank" rel="noopener" class="button fit">Learn more</a></li>
+            </ul>
           </div>
-        )}
-        <h3><a href={item.url} target="_blank" rel="noopener">{item.name}</a></h3>
-        <p>{item.description}</p>
-        <div class="pub-links">
-          <a href={item.url} target="_blank" rel="noopener">Website</a>
-          {item.github && <a href={item.github} target="_blank" rel="noopener">GitHub</a>}
         </div>
-      </div>
-    ))}
+      </section>
+    </section>
+  )}
+
+  <div class="box alt">
+    <p><h3>Research software</h3></p>
+    <div class="row gtr-200 gtr-uniform">
+      {gridItems.map(item => (
+        <div class="col-4 col-6-small" style="text-align: center;">
+          {item.imgSrc && (
+            <span class="image fit"><img src={item.imgSrc} alt={item.name} loading="lazy" /></span>
+          )}
+          <p><a href={item.url} target="_blank" rel="noopener">{item.name}</a><br />{item.description}</p>
+        </div>
+      ))}
+    </div>
   </div>
 </PageLayout>

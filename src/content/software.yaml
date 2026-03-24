@@ -2,87 +2,118 @@
 
 - name: "ColabFit"
   description: "A framework to facilitate the training and use of machine learning (ML) models in materials science and chemistry including interatomic potentials. Includes an online exchange for datasets used to train ML models and a portable format for deploying ML models to simulation platforms using the OpenKIM system."
-  image: "colabfit-shot.png"
+  image: "software/colabfit-shot.png"
   url: "https://colabfit.org/"
   featured: true
   order: 1
 
 - name: "FReSCo"
   description: "Fast Reciprocal Space Correlator"
-  image: "fresco.jpg"
+  image: "software/fresco.jpg"
   url: "https://github.com/martiniani-lab/FReSCo"
   github: "https://github.com/martiniani-lab/FReSCo"
   featured: true
   order: 2
 
-- name: "KLIFF-Torch"
-  description: "PyTorch extension of the KLIFF interatomic model fitting package"
-  image: "kliff-shot.png"
-  url: "https://github.com/ipcamit/kliff"
-  github: "https://github.com/ipcamit/kliff"
-  featured: false
+- name: "OMatGenerate"
+  description: "Web tool for crystal structure prediction and de novo crystal generation using the OMatG model."
+  image: ""
+  url: "https://omatgenerate.users.hsrn.nyu.edu/"
+  featured: true
   order: 3
 
-- name: "libdescriptor"
-  description: "High performance descriptor library with Enzyme AD"
-  image: "libdescriptor-shot.png"
-  url: "https://github.com/ipcamit/colabfit-descriptor-library"
-  github: "https://github.com/ipcamit/colabfit-descriptor-library"
+- name: "MAGreeTe"
+  description: "Materials Analysis through Green's Tensor — computational tool for electromagnetic analysis of materials."
+  image: ""
+  url: "https://github.com/martiniani-lab/MAGreeTe"
+  github: "https://github.com/martiniani-lab/MAGreeTe"
   featured: false
   order: 4
 
-- name: "basinerror"
-  description: "Accurate identification of basins of attraction"
-  image: "basinerror-shot.png"
-  url: "https://github.com/martiniani-lab/basinerror"
-  github: "https://github.com/martiniani-lab/basinerror"
+- name: "dynamic-divisive-norm"
+  description: "PyTorch implementation of ORGaNICs — unconditionally stable recurrent neural circuits implementing divisive normalization (NeurIPS 2025)."
+  image: "software/dynamic-divisive-norm.svg"
+  url: "https://github.com/martiniani-lab/dynamic-divisive-norm"
+  github: "https://github.com/martiniani-lab/dynamic-divisive-norm"
   featured: false
   order: 5
 
-- name: "sweetsourcod"
-  description: "The sweet source-coding library (for entropy estimation)"
-  image: "ssc-shot.png"
-  url: "https://github.com/martiniani-lab/sweetsourcod"
-  github: "https://github.com/martiniani-lab/sweetsourcod"
+- name: "SPECTRE"
+  description: "Algorithms for calculating the power spectral density of stochastic dynamical systems at fixed points."
+  image: "software/spectre.svg"
+  url: "https://github.com/martiniani-lab/spectre"
+  github: "https://github.com/martiniani-lab/spectre"
   featured: false
   order: 6
 
-- name: "pele"
-  description: "Python Energy Landscape Explorer"
-  image: "pele-shot.png"
-  url: "https://github.com/martiniani-lab/pele"
-  github: "https://github.com/martiniani-lab/pele"
+- name: "KLIFF-Torch"
+  description: "PyTorch extension of the KLIFF interatomic model fitting package"
+  image: "software/kliff-shot.png"
+  url: "https://github.com/ipcamit/kliff"
+  github: "https://github.com/ipcamit/kliff"
   featured: false
   order: 7
 
-- name: "mcpele"
-  description: "Monte Carlo library for pele"
-  image: "mcpele-shot.png"
-  url: "https://github.com/martiniani-lab/mcpele"
-  github: "https://github.com/martiniani-lab/mcpele"
+- name: "libdescriptor"
+  description: "High performance descriptor library with Enzyme AD"
+  image: "software/libdescriptor-shot.png"
+  url: "https://github.com/openkim/libdescriptor"
+  github: "https://github.com/openkim/libdescriptor"
   featured: false
   order: 8
 
-- name: "nested sampling"
-  description: "Parallel Nested Sampling implementation"
-  image: "ns-shot.png"
-  url: "https://github.com/js850/nested_sampling"
-  github: "https://github.com/js850/nested_sampling"
+- name: "basinerror"
+  description: "Accurate identification of basins of attraction"
+  image: "software/basinerror-shot.png"
+  url: "https://github.com/martiniani-lab/basinerror"
+  github: "https://github.com/martiniani-lab/basinerror"
   featured: false
   order: 9
 
-- name: "PyCG_DESCENT"
-  description: "Python wrapper for the Hager and Zhang CG_DESCENT algorithm"
-  image: "cg-shot.png"
-  url: "https://github.com/martiniani-lab/PyCG_DESCENT"
-  github: "https://github.com/martiniani-lab/PyCG_DESCENT"
+- name: "sweetsourcod"
+  description: "The sweet source-coding library (for entropy estimation)"
+  image: "software/ssc-shot.png"
+  url: "https://github.com/martiniani-lab/sweetsourcod"
+  github: "https://github.com/martiniani-lab/sweetsourcod"
   featured: false
   order: 10
 
+- name: "pele"
+  description: "Python Energy Landscape Explorer"
+  image: "software/pele-shot.png"
+  url: "https://github.com/martiniani-lab/pele"
+  github: "https://github.com/martiniani-lab/pele"
+  featured: false
+  order: 11
+
+- name: "mcpele"
+  description: "Monte Carlo library for pele"
+  image: "software/mcpele-shot.png"
+  url: "https://github.com/martiniani-lab/mcpele"
+  github: "https://github.com/martiniani-lab/mcpele"
+  featured: false
+  order: 12
+
+- name: "nested sampling"
+  description: "Parallel Nested Sampling implementation"
+  image: "software/ns-shot.png"
+  url: "https://github.com/js850/nested_sampling"
+  github: "https://github.com/js850/nested_sampling"
+  featured: false
+  order: 13
+
+- name: "PyCG_DESCENT"
+  description: "Python wrapper for the Hager and Zhang CG_DESCENT algorithm"
+  image: "software/cg-shot.png"
+  url: "https://github.com/martiniani-lab/PyCG_DESCENT"
+  github: "https://github.com/martiniani-lab/PyCG_DESCENT"
+  featured: false
+  order: 14
+
 - name: "sens"
   description: "Superposition Enhanced Nested Sampling"
-  image: "sens-shot.png"
+  image: "software/sens-shot.png"
   url: "https://github.com/smcantab/sens"
   github: "https://github.com/smcantab/sens"
   featured: false
-  order: 11
+  order: 15

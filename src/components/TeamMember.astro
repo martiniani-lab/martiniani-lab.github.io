@@ -7,29 +7,30 @@ interface Props {
 
 const { name, image, title } = Astro.props;
 
-// If image is provided, build the import path
 const hasImage = image && image.length > 0;
 const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/team/*.{jpg,jpeg,png,webp}');
 const imagePath = hasImage ? `/src/assets/images/team/${image}` : null;
 const imageModule = imagePath && images[imagePath] ? await images[imagePath]() : null;
 ---
 
-<div class="team-member">
+<div class="col-4 col-6-small" style="text-align: center;">
   {imageModule ? (
-    <img
-      src={imageModule.default.src}
-      alt={name}
-      width={400}
-      height={400}
-      loading="lazy"
-      decoding="async"
-    />
+    <span class="image fit">
+      <img
+        src={imageModule.default.src}
+        alt={name}
+        loading="lazy"
+        decoding="async"
+      />
+    </span>
   ) : (
-    <div class="placeholder-avatar" aria-hidden="true">
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-      </svg>
-    </div>
+    <span class="image fit">
+      <div class="placeholder-avatar" aria-hidden="true">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+        </svg>
+      </div>
+    </span>
   )}
   <p><strong>{name}</strong></p>
   {title && <p style="font-size: 0.8em; color: rgba(255,255,255,0.5);">{title}</p>}

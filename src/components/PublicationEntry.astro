@@ -10,6 +10,14 @@ const { pub } = Astro.props;
 const authors = formatAuthors(pub.authors);
 const doiUrl = pub.doi ? `https://doi.org/${pub.doi}` : '';
 const arxivUrl = pub.arxiv ? `https://arxiv.org/abs/${pub.arxiv}` : '';
+
+// Parse markdown links in note field: [text](url) → <a> tags
+const renderedNote = pub.note
+  ? pub.note.replace(
+      /\[([^\]]+)\]\(([^)]+)\)/g,
+      '<a href="$2" target="_blank" rel="noopener">$1</a>'
+    )
+  : '';
 ---
 
 <article class="publication">
@@ -20,12 +28,12 @@ const arxivUrl = pub.arxiv ? `https://arxiv.org/abs/${pub.arxiv}` : '';
     {pub.volume && <span> <strong>{pub.volume}</strong></span>}
     {pub.pages && <span>, {pub.pages}</span>}
     {pub.year > 0 && <span> ({pub.year})</span>}
-    {pub.note && <span class="pub-note">{pub.note}</span>}
   </div>
+  {renderedNote && <div class="pub-note" set:html={renderedNote} />}
   <div class="pub-links">
     {doiUrl && <a href={doiUrl} target="_blank" rel="noopener">DOI</a>}
     {arxivUrl && <a href={arxivUrl} target="_blank" rel="noopener">arXiv</a>}
-    {pub.url && !doiUrl && <a href={pub.url} target="_blank" rel="noopener">Link</a>}
+    {pub.url && !doiUrl && !arxivUrl && <a href={pub.url} target="_blank" rel="noopener">Link</a>}
     {pub.localPdf && <a href={`/pdf/${pub.localPdf}`} target="_blank" rel="noopener">PDF</a>}
   </div>
 </article>

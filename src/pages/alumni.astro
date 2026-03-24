@@ -23,7 +23,7 @@ const categoryOrder = ['postdoc', 'graduate', 'undergraduate', 'visitor'];
 >
   {categoryOrder.filter(cat => groups[cat]).map(cat => (
     <section style="margin-bottom: 3em;">
-      <h3>{categoryLabels[cat]}</h3>
+      <h2>{categoryLabels[cat]}</h2>
       <ul style="list-style: disc; padding-left: 1.5em;">
         {groups[cat].map(member => (
           <li style="margin-bottom: 0.5em;">

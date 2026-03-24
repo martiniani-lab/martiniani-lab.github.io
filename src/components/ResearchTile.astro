@@ -16,7 +16,7 @@ const imageModule = images[imagePath] ? await images[imagePath]() : null;
 const bgUrl = imageModule ? imageModule.default.src : '';
 ---
 
-<article style={`background-image: url('${bgUrl}');${color ? ` --tile-accent: ${color};` : ''}`}>
+<article style={color ? `--tile-accent: ${color};` : ''}>
   <div class="content">
     <h3>{title}</h3>
     <p>{subtitle}</p>

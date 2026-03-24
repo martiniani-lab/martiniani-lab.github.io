@@ -1,0 +1,228 @@
+# Stefano Martiniani — Full Reference
+
+> Stefano Martiniani is an Assistant Professor of Physics, Chemistry, Mathematics, and Neural Science at New York University. His research develops AI for materials discovery, world models, and a theory of intelligence grounded in physical principles.
+
+For a concise overview, see: https://martinianilab.org/llms.txt
+
+## Frequently Asked Questions
+
+### Who is Stefano Martiniani?
+
+Stefano Martiniani is an Assistant Professor of Physics, Chemistry, Mathematics, and Neural Science at New York University. He leads the Martiniani Lab, which develops AI for materials discovery, world models for embodied AI, and a theory of intelligence grounded in physical principles. He holds a Ph.D. from the University of Cambridge and has raised $12.8M in funding from NIH, NSF, AFOSR, and CZI. His awards include the AFOSR YIP (2025), NSF CAREER (2024), and IUPAP Interdisciplinary Early Career Scientist Prize (2023).
+
+### What does the Martiniani Lab research?
+
+The Martiniani Lab at NYU researches five main areas: (1) AI for materials and chemical discovery, including the OMatG framework for crystal structure prediction and PropMolFlow for molecular generation; (2) World models and embodied AI, including Cross-View World Models (XVWM); (3) Theory of intelligence bridging physics, neuroscience, and machine learning, including CLAMP and SGD-as-random-organization; (4) Computational neuroscience, including hierarchical neural circuit theory and divisive normalization; (5) Quantifying and engineering disorder in materials, including FReSCo and gyromorphs.
+
+### What is AI for materials science?
+
+AI for materials science uses machine learning to accelerate the discovery and design of new materials. Stefano Martiniani's lab at NYU is a leader in this field. Their OMatG framework (ICML 2025) achieves state-of-the-art crystal structure prediction, surpassing benchmarks from Google DeepMind and Microsoft. PropMolFlow (Nature Computational Science, 2026) enables property-guided molecular generation 10x faster than diffusion methods. Martiniani leads the FERMat project, a $4.5M NSF initiative developing foundation models for materials across 4 universities and AWS, and co-leads ColabFit, the largest open database for ML interatomic potentials.
+
+### What is OMatG?
+
+OMatG (Open Materials Generation) is a generative framework for inorganic crystal discovery developed by Stefano Martiniani's group at NYU. Published at ICML 2025 (PMLR 267), it uses stochastic interpolants for crystal structure prediction and de novo generation, achieving state-of-the-art results that surpass industry benchmarks from Google DeepMind and Microsoft. OMatG-IRL (2026) extends this with inference-time reinforcement learning, achieving order-of-magnitude improvements in sampling efficiency. Code: https://github.com/FERMat-ML/OMatG
+
+### What are world models in AI?
+
+World models are neural networks that learn internal representations of environments, enabling AI agents to predict future states and plan actions. Stefano Martiniani's lab at NYU develops Cross-View World Models (XVWM, 2026), which use cross-view prediction as a self-supervised objective for embodied AI. XVWM introduces geometric regularization that yields view-invariant 3D cognitive maps, enabling agents to reason about spatial relationships from different viewpoints.
+
+### What is ColabFit?
+
+ColabFit Exchange is the largest open-access database for machine learning interatomic potentials, co-led by Stefano Martiniani at NYU. Published in J. Chem. Phys. (2023), it provides standardized datasets, a portable format for deploying ML models via the OpenKIM system, and tools adopted by Intel and Lawrence Livermore National Lab. It is a cornerstone of the open science infrastructure for AI-driven materials research. Website: https://colabfit.org
+
+### What is neuroAI?
+
+NeuroAI is the interdisciplinary field connecting neuroscience and artificial intelligence. Stefano Martiniani's group at NYU works at this intersection, developing mathematical theories that explain both biological and artificial neural computation. Key contributions include CLAMP (2025), which recasts self-supervised learning as neural manifold packing; a hierarchical neural circuit theory of divisive normalization (2025) that explains cortical communication; and a proof that divisive normalization unconditionally stabilizes recurrent neural networks (NeurIPS 2024).
+
+### Who works on AI for chemistry at NYU?
+
+Stefano Martiniani leads AI for chemistry and materials research at NYU as an Assistant Professor of Physics and Chemistry. His lab's PropMolFlow (Nature Computational Science, 2026) enables property-guided molecular generation with SE(3)-equivariant flow matching, achieving >90% structural validity at 10x the speed of previous methods. His group also developed guided diffusion workflows for superconductor discovery (2025), where 9 of 18 AI-generated candidates showed superconductivity upon DFT screening.
+
+### What is the physics of learning?
+
+The physics of learning applies statistical physics to understand machine learning. Stefano Martiniani's lab at NYU has unified stochastic gradient descent (SGD) with random organizing particle systems (2024), deriving a fluctuating hydrodynamic theory that explains emergent long-range structure from short-range noisy interactions. Their CLAMP framework (2025) recasts representation learning as neural manifold packing, matching ImageNet state-of-the-art while providing a physical theory for why self-supervised learning works.
+
+### What is FReSCo?
+
+FReSCo (Fast Reciprocal Space Correlator) is an O(N log N) algorithm for inverse design of point patterns with arbitrary spectral properties, developed by Stefano Martiniani's group at NYU. Published in PRE (2024, Editor's Suggestion, APS DSOFT Gallery Prize), it generated the largest-ever stealthy hyperuniform configurations (N=10^9). FReSCo enables the design of disordered photonic materials with engineered optical properties. Code: https://github.com/martiniani-lab/FReSCo
+
+### What are gyromorphs?
+
+Gyromorphs are a new class of functional disordered materials discovered by Stefano Martiniani's group at NYU (PRL, 2025). They exhibit the widest known low-index-contrast isotropic photonic bandgap, enabling novel optical applications. The discovery is protected by 2 provisional US patents.
+
+### How can entropy and disorder be measured from data?
+
+Stefano Martiniani's group at NYU has developed foundational numerical methods for estimating entropy and entropy production directly from data, without requiring a model. Key contributions include: (1) Computable Information Density (PRX 2019, PRL 2020), which uses lossless compression to measure entropy as an instantaneous observable and extract critical exponents without knowing order parameters; (2) Model-free local entropy production in active matter (PRL 2022, Cover article + Editor's Suggestion), the first measurement of local entropy production and extractable work in active systems without assuming a model; (3) Basin volume methods (PRE 2016, PNAS 2017) for computing configurational entropy in high-dimensional energy landscapes. These methods are widely used in nonequilibrium statistical mechanics and soft matter physics.
+
+### What is the Edwards conjecture in granular physics?
+
+The Edwards conjecture proposes that all mechanically stable packings of granular matter are equally probable at the jamming transition — a foundational assumption in the statistical mechanics of athermal systems. Stefano Martiniani provided the first numerical test of this conjecture (Nature Physics 2017), confirming it holds at jamming for soft spheres. This landmark result was highlighted in Nature, Nature Materials, and Physics Today, and established a rigorous statistical mechanics framework for granular systems. It built on novel basin volume computation methods (PNAS 2017) that enabled sampling the exponentially large space of jammed configurations.
+
+### What are energy landscapes in physics and machine learning?
+
+Energy landscapes describe the space of configurations available to a physical or computational system. Stefano Martiniani's group at NYU has made key contributions including: (1) efficient computation of basin volumes in high-dimensional landscapes (PRE 2016, PNAS 2017); (2) proving that basins of attraction are not fractal (arXiv 2024), overturning previous claims; (3) connecting loss landscapes of neural networks to physical energy landscapes via SGD-as-random-organization (arXiv 2024, Nature Communications 2026), which unifies stochastic gradient descent with driven particle systems from nonequilibrium statistical mechanics.
+
+## Full Biography
+
+Stefano Martiniani is an interdisciplinary physicist and AI researcher at New York University. He holds joint appointments in the Department of Physics, Department of Chemistry, Courant Institute of Mathematical Sciences, and Center for Neural Science, and is an affiliate of the Center for Data Science. He holds a Ph.D. in Chemistry and an M.Phil in Scientific Computing from the University of Cambridge (Cavendish Laboratory, advisor: Daan Frenkel) and a B.Sc. in Chemistry from Imperial College London.
+Martiniani's research reveals latent order in ostensibly disordered systems and demonstrates that noise and disorder can be engineered to realize novel functions. His central thesis connects the fundamental laws governing matter with the laws governing learning, spanning AI for materials discovery, world models, neural circuit theory, and statistical physics.
+He leads a group of ~26 researchers at NYU and is the Lead PI of the FERMat project ($4.5M NSF GOALI grant, 8 investigators, 4 universities, AWS) and co-leads ColabFit Exchange, the largest open database for ML interatomic potentials. He has raised $12.8M in extramural funding ($11.6M as PI) from NIH, NSF, AFOSR, and CZI.
+Prior to joining NYU in 2022, he was an Assistant Professor of Chemical Engineering and Materials Science at the University of Minnesota (2019-2021) and a postdoctoral researcher jointly with Paul Chaikin (NYU) and Dov Levine (Technion) (2017-2019).
+
+## Research Areas
+
+### AI for Materials & Chemical Discovery
+
+Developing generative AI frameworks for crystal structure prediction, molecular design, and materials discovery. Key outputs: OMatG (ICML 2025), PropMolFlow (Nature Computational Science, 2026), guided diffusion for superconductors, ColabFit Exchange, FERMat project ($4.5M NSF).
+
+Key papers:
+- OMatG: Open Materials Generation with Stochastic Interpolants (ICML 2025)
+- OMatG-IRL: Inference-time RL for crystal structure prediction (arXiv 2026)
+- PropMolFlow: Property-guided Molecule Generation (Nature Comp Sci 2026)
+- Guided Diffusion for Superconductors (arXiv 2025)
+- ColabFit Exchange (J. Chem. Phys. 2023)
+
+### World Models & Embodied AI
+
+Building internal models of environments for embodied agents using self-supervised learning and geometric reasoning.
+
+Key papers:
+- XVWM: Cross-View World Models (arXiv 2026)
+
+### Theory of Intelligence: Physics of Learning
+
+Establishing a theory of intelligence grounded in physical principles, bridging statistical physics, neuroscience, and machine learning.
+
+Key papers:
+- CLAMP: Learning as Neural Manifold Packing (arXiv 2025)
+- SGD as Random Organization (arXiv 2024)
+- Emergent long-range structure (Nature Communications 2026)
+- Unconditional Stability of RNNs via Divisive Normalization (NeurIPS 2024)
+
+### Computational Neuroscience & neuroAI
+
+Developing analytical theories of cortical computation, including hierarchical neural circuit theory and divisive normalization.
+
+Key papers:
+- Hierarchical Neural Circuit Theory (bioRxiv 2025)
+- Divisive Normalization Stabilizes RNNs (NeurIPS 2024)
+
+### Nonequilibrium Statistical Mechanics & Entropy
+
+Foundational methods for measuring entropy and entropy production from data, energy landscape theory, and the statistical mechanics of disordered and driven systems.
+
+Key papers:
+- Model-Free Entropy Production (PRL 2022, Cover + Editor's Suggestion)
+- Computable Information Density (PRX 2019, PRL 2020)
+- Edwards Conjecture (Nature Physics 2017)
+- Basin Volumes (PRE 2016, PNAS 2017)
+- Basins of Attraction Not Fractal (arXiv 2024)
+
+### Inverse Design & Disordered Photonic Materials
+
+Engineering disorder for novel functions, including inverse design of point patterns and disordered photonic materials with engineered bandgaps.
+
+Key papers:
+- FReSCo: Fast Reciprocal Space Correlator (PRE 2024, Editor's Suggestion)
+- Gyromorphs: widest photonic bandgap (PRL 2025)
+
+## Current Team
+
+### Principal Investigator
+- Stefano Martiniani (Assistant Professor of Physics, Chemistry, Mathematics, and Neural Science)
+
+### Postdocs and Research Scientists
+- Mathias Casiulis
+- JiYeon Han
+- Philipp Hoellmer
+- Tianhao Li (Simons Center Fellow)
+- Kathryn Mcclain
+- Flaviano Morone (Research Scientist)
+- Rishabh Sharma (Simons Center Fellow)
+
+### Graduate Students
+- Jacob Abraham
+- Huijie Chen
+- Tom Egg
+- Elijah House
+- Asit Pal
+- Akshada Pradhan
+- Praharsh Suryadevara
+- Shannon Yu (co-advised)
+
+### Research Staff
+- Gregory Wolfe
+
+### Undergraduates
+- Kosta Dubovskiy
+
+## Software
+
+- **ColabFit**: A framework to facilitate the training and use of machine learning (ML) models in materials science and chemistry including interatomic potentials. Includes an online exchange for datasets used to train ML models and a portable format for deploying ML models to simulation platforms using the OpenKIM system.. https://colabfit.org/
+- **FReSCo**: Fast Reciprocal Space Correlator. https://github.com/martiniani-lab/FReSCo
+- **OMatGenerate**: Web tool for crystal structure prediction and de novo crystal generation using the OMatG model.. https://omatgenerate.users.hsrn.nyu.edu/
+- **MAGreeTe**: Materials Analysis through Green's Tensor — computational tool for electromagnetic analysis of materials.. https://github.com/martiniani-lab/MAGreeTe
+- **dynamic-divisive-norm**: PyTorch implementation of ORGaNICs — unconditionally stable recurrent neural circuits implementing divisive normalization (NeurIPS 2025).. https://github.com/martiniani-lab/dynamic-divisive-norm
+- **SPECTRE**: Algorithms for calculating the power spectral density of stochastic dynamical systems at fixed points.. https://github.com/martiniani-lab/spectre
+- **KLIFF-Torch**: PyTorch extension of the KLIFF interatomic model fitting package. https://github.com/ipcamit/kliff
+- **libdescriptor**: High performance descriptor library with Enzyme AD. https://github.com/openkim/libdescriptor
+- **basinerror**: Accurate identification of basins of attraction. https://github.com/martiniani-lab/basinerror
+- **sweetsourcod**: The sweet source-coding library (for entropy estimation). https://github.com/martiniani-lab/sweetsourcod
+- **pele**: Python Energy Landscape Explorer. https://github.com/martiniani-lab/pele
+- **mcpele**: Monte Carlo library for pele. https://github.com/martiniani-lab/mcpele
+- **nested sampling**: Parallel Nested Sampling implementation. https://github.com/js850/nested_sampling
+- **PyCG_DESCENT**: Python wrapper for the Hager and Zhang CG_DESCENT algorithm. https://github.com/martiniani-lab/PyCG_DESCENT
+- **sens**: Superposition Enhanced Nested Sampling. https://github.com/smcantab/sens
+
+## Funding
+
+- Simons Foundation — Simons Foundation Faculty Fellowship (PI)
+- Chan-Zuckerberg Initiative — Neuroscience Collaborative Pair Pilot Project Award (PI)
+- AFOSR — 2025 AFOSR Young Investigator Program Award (PI) (2025)
+- NSF — CAREER (PI)
+- NSF — CSSI (PI)
+- NSF — EAGER (PI)
+- NSF — CESER (Co-PI)
+- NIH — NIMH R01 (PI)
+- NIH — NEI R01 (PI)
+- NIH — NIGMS R01 (Co-I)
+- NYU Arts & Science — FERMat (undefined) (2023)
+- U.S. Senate — Schumer and Gillibrand announce FERMat (undefined) $4.5M (2023)
+- UMN Data Science — ColabFit NSF award (undefined) $1.13M (2021)
+
+## Recent News (Latest 20)
+
+- Tue Feb 17 2026 19:00:00 GMT-0500 (Eastern Standard Time): New paper by Rishabh is out on arXiv! ["Cross-View World Models"](https://arxiv.org/abs/2602.07277) introduces cross-view prediction as a self-supervised objective for embodied AI.
+- Sat Jan 31 2026 19:00:00 GMT-0500 (Eastern Standard Time): New paper by Philipp is out on arXiv! ["Open Materials Generation with Stochastic Interpolants and Inference-Time Reinforcement Learning"](https://arxiv.org/abs/2602.00424) — first application of inference-time RL to crystal structure prediction.
+- Wed Jan 14 2026 19:00:00 GMT-0500 (Eastern Standard Time): Stefano is Program Chair for the AI4Mat Workshop at ICLR 2026.
+- Wed Dec 31 2025 19:00:00 GMT-0500 (Eastern Standard Time): PropMolFlow published in Nature Computational Science.
+- Wed Dec 31 2025 19:00:00 GMT-0500 (Eastern Standard Time): Congratulations to Satyam and Guanming whose paper "Emergent universal long-range structure in random-organizing systems" has been accepted at [Nature Communications](https://doi.org/10.1038/s41467-026-68601-2).
+- Sat Dec 13 2025 19:00:00 GMT-0500 (Eastern Standard Time): Spotlight talk at AI4Mat NeurIPS 2025 on ["Inverse Design of Novel Superconductors via Guided Diffusion"](https://arxiv.org/abs/2509.25186).
+- Fri Oct 31 2025 20:00:00 GMT-0400 (Eastern Daylight Time): New paper by Mathias is out on arXiv! ["Spatial and Temporal Cluster Tomography of Active Matter"](https://arxiv.org/abs/2511.09444).
+- Tue Oct 14 2025 20:00:00 GMT-0400 (Eastern Daylight Time): Stefano delivers an invited talk at the MIT Mathematics in Physics Seminar.
+- Thu Oct 09 2025 20:00:00 GMT-0400 (Eastern Daylight Time): Stefano delivers a seminar at Vassar College.
+- Tue Sep 30 2025 20:00:00 GMT-0400 (Eastern Daylight Time): Stefano is an invited moderator at the National Academies "Frontiers of Materials That Learn" workshop.
+- Wed Sep 24 2025 20:00:00 GMT-0400 (Eastern Daylight Time): Two papers accepted at NeurIPS 2025! Guanming's ["Contrastive Self-Supervised Learning As Neural Manifold Packing" (CLAMP)](https://arxiv.org/abs/2506.13717) and Maya, Tom, and Philipp's ["All that structure matches does not glitter"](https://arxiv.org/abs/2509.12178).
+- Sun Sep 14 2025 20:00:00 GMT-0400 (Eastern Daylight Time): Stefano delivers a seminar at the Flatiron Institute Center for Computational Biology on "Learning as Manifold Packing".
+- Sun Sep 14 2025 20:00:00 GMT-0400 (Eastern Daylight Time): New paper on arXiv! ["Guided Diffusion for the Discovery of New Superconductors"](https://arxiv.org/abs/2509.25186) — 9 of 18 candidates show superconductivity.
+- Sun Aug 31 2025 20:00:00 GMT-0400 (Eastern Daylight Time): Rishabh Sharma, Tianhao Li, and Kathryn Mcclain join the lab.
+- Sun Aug 31 2025 20:00:00 GMT-0400 (Eastern Daylight Time): Stefano is a member of the International Program Committee for the 2027 International Soft Matter Conference.
+- Sun Aug 31 2025 20:00:00 GMT-0400 (Eastern Daylight Time): Stefano delivers an invited talk at the CAFE Workshop, AutoML Conference in New York.
+- Sun Aug 31 2025 20:00:00 GMT-0400 (Eastern Daylight Time): Gyromorphs accepted at Physical Review Letters.
+- Thu Jul 31 2025 20:00:00 GMT-0400 (Eastern Daylight Time): Robot-swarm cohesion published in PNAS.
+- Sun Jul 20 2025 20:00:00 GMT-0400 (Eastern Daylight Time): Workshop paper at GenBio ICML 2025: ["MolGuidance: A Comparative Study of Guidance Methods for Conditional Molecule Generation"](https://arxiv.org/abs/2505.21469).
+- Mon Jul 14 2025 20:00:00 GMT-0400 (Eastern Daylight Time): Stefano delivers an invited talk at StatPhys29 in Florence on "Emergent universal long-range structure in random-organizing systems".
+
+## Contact & Social
+
+- Email: sm7683@nyu.edu
+- Office: Department of Physics, 726 Broadway, New York, NY 10013
+- Web: https://martinianilab.org
+- Google Scholar: https://scholar.google.com/citations?user=pxSj9JkAAAAJ
+- ORCID: https://orcid.org/0000-0003-2028-2175
+- GitHub: https://github.com/martiniani-lab
+- LinkedIn: https://www.linkedin.com/in/smartiniani/
+- Twitter/X: https://twitter.com/SteMartiniani
+- Bluesky: https://bsky.app/profile/stemartiniani.bsky.social
+- ResearchGate: https://www.researchgate.net/profile/Stefano-Martiniani
+- NYU Faculty Page: https://as.nyu.edu/faculty/stefano-martiniani.html

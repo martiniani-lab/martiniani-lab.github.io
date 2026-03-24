@@ -17,14 +17,16 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: pip install requests
-      - run: python scripts/sync-publications.py
+      - run: pip install scholarly 'httpx<0.28' func-timeout
+      - run: python scripts/fetch_scholar.py
+        env:
+          SCRAPERAPI_KEY: ${{ secrets.SCRAPERAPI_KEY }}
       - name: Create PR if changes
         uses: peter-evans/create-pull-request@v6
         with:
-          title: 'Update publications from Semantic Scholar'
+          title: 'Update publications from Google Scholar'
           body: |
-            Automated weekly sync of publications from Semantic Scholar API.
+            Automated weekly sync of publications from Google Scholar.
             Review the changes to `references.bib` before merging.
           branch: auto/sync-pubs
-          commit-message: 'chore: sync publications from Semantic Scholar'
+          commit-message: 'chore: sync publications from Google Scholar'

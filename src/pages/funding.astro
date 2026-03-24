@@ -3,7 +3,78 @@ import PageLayout from '../layouts/PageLayout.astro';
 import { loadFunding } from '../lib/data';
 import { join } from 'node:path';
 
-const funding = loadFunding(join(process.cwd(), 'src/content/funding.yaml'));
+const allFunding = loadFunding(join(process.cwd(), 'src/content/funding.yaml'));
+const grants = allFunding.filter(f => !f.announcementOnly);
+const announcements = allFunding.filter(f => f.announcementOnly);
+
+// Glob all funding and press images for logos
+const fundingImages = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/funding/*.{jpg,jpeg,png,gif,svg,webp}');
+const pressImages = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/press/*.{jpg,jpeg,png,gif,svg,webp}');
+const allImages = { ...fundingImages, ...pressImages };
+
+async function resolveImage(imagePath: string): Promise<string> {
+  const fullPath = `/src/assets/images/${imagePath}`;
+  if (allImages[fullPath]) {
+    const mod = await allImages[fullPath]();
+    return mod.default.src;
+  }
+  return '';
+}
+
+// Group grants by agency to match original layout
+// Simons, CZI, AFOSR each get their own card; NSF combined; NIH combined
+type GrantCard = {
+  agency: string;
+  imgSrc: string;
+  html: string;
+};
+
+const cards: GrantCard[] = [];
+
+// Individual awards
+const individualAgencies = ['Simons Foundation', 'Chan-Zuckerberg Initiative', 'AFOSR'];
+for (const agency of individualAgencies) {
+  const grant = grants.find(g => g.agency === agency);
+  if (grant) {
+    cards.push({
+      agency: grant.agency,
+      imgSrc: await resolveImage(grant.image),
+      html: grant.name,
+    });
+  }
+}
+
+// NSF grants combined
+const nsfGrants = grants.filter(g => g.agency === 'NSF');
+if (nsfGrants.length > 0) {
+  cards.push({
+    agency: 'NSF',
+    imgSrc: await resolveImage(nsfGrants[0].image),
+    html: nsfGrants.map(g => {
+      const link = g.url ? `<a href="${g.url}" target="_blank">${g.awardNumber}</a>` : (g.awardNumber || '');
+      return `${g.name} ${link} (${g.role})`;
+    }).join(',<br/>'),
+  });
+}
+
+// NIH grants combined
+const nihGrants = grants.filter(g => g.agency === 'NIH');
+if (nihGrants.length > 0) {
+  cards.push({
+    agency: 'NIH',
+    imgSrc: await resolveImage(nihGrants[0].image),
+    html: nihGrants.map(g => {
+      const link = g.url ? `<a href="${g.url}" target="_blank">${g.awardNumber}</a>` : (g.awardNumber || '');
+      return `${g.name} ${link} (${g.role})`;
+    }).join(',<br/>'),
+  });
+}
+
+// Resolve announcement images
+const announcementCards = await Promise.all(announcements.map(async (a) => ({
+  ...a,
+  imgSrc: await resolveImage(a.image),
+})));
 ---
 
 <PageLayout
@@ -11,21 +82,32 @@ const funding = loadFunding(join(process.cwd(), 'src/content/funding.yaml'));
   description="Research funding supporting the Martiniani Lab — $12.8M from NIH, NSF, AFOSR, CZI across materials AI, neuroscience, and statistical physics."
   heading="Funding"
 >
-  <div class="row gtr-200">
-    {funding.map(item => (
-      <div class="col-4" style="margin-bottom: 2em; text-align: center;">
-        {item.image && (
-          <div style="margin-bottom: 1em;">
-            <img src={`/images/${item.image}`} alt={item.agency} loading="lazy" style="max-height: 80px; margin: 0 auto;" />
-          </div>
-        )}
-        <h3 style="font-size: 0.9em;">{item.name}</h3>
-        <p style="font-size: 0.85em;">
-          {item.agency} · {item.role} · {item.years}
-          {item.amount && <><br />{item.amount}</>}
-        </p>
-        {item.description && <p style="font-size: 0.8em;">{item.description}</p>}
-      </div>
-    ))}
+  <div class="box alt">
+    <div class="row gtr-200 gtr-uniform">
+      {cards.map(card => (
+        <div class="col-3 col-6-small" style="text-align: center;">
+          <span class="image fit"><img src={card.imgSrc} alt={card.agency} loading="lazy" /></span>
+          <p set:html={card.html} />
+        </div>
+      ))}
+    </div>
   </div>
+
+  {announcements.length > 0 && (
+    <div class="box alt">
+      <p><h3>Funding announcements</h3></p>
+      <div class="row gtr-200 gtr-uniform">
+        {announcementCards.map(a => (
+          <div class={a.agency === 'NYU Arts & Science' ? 'col-2 col-3-small' : 'col-3 col-4-small'} style="text-align: center;">
+            <span class="image fit"><img src={a.imgSrc} alt={a.agency} loading="lazy" /></span>
+            <p><a href={a.url} target="_blank" rel="noopener">
+              {a.agency === 'NYU Arts & Science' && `NYU Arts & Science, FERMat (${a.years})`}
+              {a.agency === 'U.S. Senate' && `U.S. Senators Schumer and Gillibrand announce FERMat (${a.years})`}
+              {a.agency === 'UMN Data Science' && `UMN Data Science, ColabFit (${a.years})`}
+            </a></p>
+          </div>
+        ))}
+      </div>
+    </div>
+  )}
 </PageLayout>

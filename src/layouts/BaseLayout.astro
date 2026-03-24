@@ -24,8 +24,11 @@ const { title, description, ogImage, transparentHeader = false } = Astro.props;
     </BaseHead>
   </head>
   <body>
-    <Header transparent={transparentHeader} />
-    <slot />
-    <Footer />
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <div id="wrapper">
+      <Header transparent={transparentHeader} />
+      <slot />
+      <Footer />
+    </div>
   </body>
 </html>

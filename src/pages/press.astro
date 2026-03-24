@@ -6,11 +6,42 @@ import { join } from 'node:path';
 const press = loadPress(join(process.cwd(), 'src/content/press.yaml'));
 const groups = getPressByCategory(press);
 
+// Glob images from press/ and research/ directories
+const pressImages = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/press/*.{jpg,jpeg,png,gif,webp}');
+const researchImages = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/research/*.{jpg,jpeg,png,gif,webp}');
+const allImages = { ...pressImages, ...researchImages };
+
+async function resolveImage(imagePath: string): Promise<string> {
+  const fullPath = `/src/assets/images/${imagePath}`;
+  if (allImages[fullPath]) {
+    const mod = await allImages[fullPath]();
+    return mod.default.src;
+  }
+  return '';
+}
+
+// Pre-resolve all images
+const resolvedGroups: Record<string, Array<any>> = {};
+for (const [cat, items] of Object.entries(groups)) {
+  resolvedGroups[cat] = await Promise.all(items.map(async (item: any) => ({
+    ...item,
+    imgSrc: item.image ? await resolveImage(item.image) : '',
+  })));
+}
+
 const categoryLabels: Record<string, string> = {
-  cover: 'Journal Covers',
-  editorial: 'Editorials & Features',
-  podcast: 'Podcasts & Radio',
-  newspaper: 'Newspapers & Media',
+  cover: 'Covers',
+  editorial: 'Editorials, Columns, Viewpoints',
+  podcast: 'Podcasts',
+  newspaper: 'Selected Newspapers & Magazines',
+};
+
+// Match original column widths per category
+const categoryColClass: Record<string, string> = {
+  cover: 'col-4 col-6-small',
+  editorial: 'col-4 col-6-small',
+  podcast: 'col-4 col-6-small',
+  newspaper: 'col-3 col-4-small',
 };
 
 const categoryOrder = ['cover', 'editorial', 'podcast', 'newspaper'];
@@ -19,26 +50,27 @@ const categoryOrder = ['cover', 'editorial', 'podcast', 'newspaper'];
 <PageLayout
   title="Covers, Press & Podcasts — Martiniani Lab"
   description="Press coverage of Martiniani Lab research — featured in Nature, Physics Today, New Scientist, Radio24, and on PRL and PCCP covers."
-  heading="Covers, Press & Podcasts"
+  heading="Covers & Press"
 >
-  {categoryOrder.filter(cat => groups[cat]).map(cat => (
-    <section style="margin-bottom: 3em;">
-      <h3>{categoryLabels[cat]}</h3>
-      <div class="row gtr-50">
-        {groups[cat].map(item => (
-          <div class="col-4" style="margin-bottom: 1.5em;">
-            {item.image && (
-              <a href={item.url} target="_blank" rel="noopener" class="image fit" style="margin-bottom: 0.5em;">
-                <img src={`/images/${item.image}`} alt={item.title} loading="lazy" />
-              </a>
+  {categoryOrder.filter(cat => resolvedGroups[cat]).map(cat => (
+    <div class="box alt">
+      <p><h3>{categoryLabels[cat]}</h3></p>
+      <div class="row gtr-200 gtr-uniform">
+        {resolvedGroups[cat].map(item => (
+          <div class={categoryColClass[cat]} style="text-align: center;">
+            {item.imgSrc && (
+              <span class="image fit"><img src={item.imgSrc} alt={item.title} loading="lazy" /></span>
             )}
             <p>
               <a href={item.url} target="_blank" rel="noopener">{item.title}</a>
-              {item.source && <span style="font-size: 0.85em; color: rgba(255,255,255,0.5);"> — {item.source}</span>}
             </p>
+            {item.extra_url && (
+              <p><a href={item.extra_url} target="_blank" rel="noopener">{item.extra_label}</a></p>
+            )}
+            {item.description && <p>{item.description}</p>}
           </div>
         ))}
       </div>
-    </section>
+    </div>
   ))}
 </PageLayout>

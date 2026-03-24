@@ -19,7 +19,7 @@ const published = getPublished(allPubs);
 >
   {preprints.length > 0 && (
     <section>
-      <h3>Preprints</h3>
+      <h2>Preprints</h2>
       {preprints.map(pub => (
         <PublicationEntry pub={pub} />
       ))}
@@ -27,7 +27,7 @@ const published = getPublished(allPubs);
   )}
 
   <section style="margin-top: 3em;">
-    <h3>Published</h3>
+    <h2>Published</h2>
     {published.map(pub => (
       <PublicationEntry pub={pub} />
     ))}

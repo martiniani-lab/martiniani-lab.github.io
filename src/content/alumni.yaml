@@ -1,19 +1,67 @@
 # Alumni — Martiniani Lab
 
+# Postdocs and Research Scientists
+- category: postdoc
+  name: "Eric Fuemmeler"
+  year: 2025
+  institution: "UMN"
+  currentPosition: "Data Scientist at US Bank"
+
+- category: postdoc
+  name: "Amit Gupta"
+  year: 2025
+  institution: "UMN"
+  currentPosition: "Working with Statespace"
+
+- category: postdoc
+  name: "Maya Martirossyan"
+  year: 2025
+  institution: "NYU"
+  currentPosition: "Working at Lila Sciences"
+
+- category: postdoc
+  name: "Guanming Zhang"
+  year: 2025
+  institution: "NYU"
+  currentPosition: "KATL AI Lab, Hong Kong"
+
 # Ph.D. students
+- category: graduate
+  name: "Satyam Anand"
+  degree: "Ph.D."
+  field: "Mathematics"
+  year: 2025
+  institution: "NYU"
+  currentPosition: "Postdoc at University of Cambridge"
+
 - category: graduate
   name: "Aaron Shih"
   degree: "Ph.D."
-  field: "Physics"
+  field: "Mathematics"
   year: 2025
   institution: "NYU"
 
 - category: graduate
   name: "Shivang Rawat"
   degree: "Ph.D."
+  field: "Mathematics"
+  year: 2025
+  institution: "NYU"
+
+- category: graduate
+  name: "Mia Morrell"
+  degree: "Ph.D."
   field: "Physics"
   year: 2025
   institution: "NYU"
+  currentPosition: "Postdoc at CUNY"
+
+- category: graduate
+  name: "Zachary D. Schmitz"
+  degree: "Ph.D."
+  field: "Chemical Engineering"
+  year: 2025
+  institution: "UMN"
 
 - category: graduate
   name: "Alexander Golinski"
@@ -24,110 +72,6 @@
   currentPosition: "Research Biotechnologist at Cargill"
   linkedin: "https://www.linkedin.com/in/alexander-golinski/"
   image: "team/alex.jpg"
-
-# High school students
-- category: highschool
-  name: "Tom Zhang"
-  year: 2023
-  institution: "Staples High School"
-  currentPosition: "Physics student at Caltech"
-  linkedin: "https://www.linkedin.com/in/tom-zhang-99524a220/"
-
-- category: highschool
-  name: "Juhee Park"
-  year: 2023
-  institution: "Fort Lee High School"
-  note: "ColabFit intern"
-  currentPosition: "Chemical Engineering at Carnegie Mellon University"
-
-# Undergraduates
-- category: undergraduate
-  name: "Sandya Appiah"
-  degree: "B.S."
-  field: "Chemical Engineering"
-  year: 2021
-  institution: "UMN"
-  currentPosition: "Ph.D. Student in ChEn at Rensselaer Polytechnic Institute"
-  linkedin: "https://www.linkedin.com/in/sandhya-appiah/"
-
-- category: undergraduate
-  name: "Remie Bougie"
-  degree: "B.S. Hon"
-  field: "Chemical Engineering"
-  year: 2022
-  institution: "UMN"
-  currentPosition: "Engineer at Takeda"
-  linkedin: "https://www.linkedin.com/in/remi-bougie-41a547193/"
-
-- category: undergraduate
-  name: "Bryce Johnson"
-  degree: "B.S."
-  field: "Physics"
-  year: 2021
-  institution: "UMN"
-  currentPosition: "Ph.D. Student in CS at University of Wisconsin-Madison"
-  linkedin: "https://www.linkedin.com/in/brycejoh/"
-
-- category: undergraduate
-  name: "Jiwon Kim"
-  degree: "B.S. Hon"
-  field: "Chemical Engineering"
-  year: 2021
-  institution: "UMN"
-  currentPosition: "Lab Tech at 3M"
-  linkedin: "https://www.linkedin.com/in/jiwon-kim-108328198/"
-
-- category: undergraduate
-  name: "Kovic Odhiambo"
-  degree: "B.S."
-  field: "Statistics"
-  year: 2021
-  institution: "UMN"
-  currentPosition: "ML Engineer at Interos"
-  linkedin: "https://www.linkedin.com/in/kovic-odhiambo/"
-
-- category: undergraduate
-  name: "Daniel Ribeiro"
-  degree: "B.S."
-  field: "Chemical Engineering"
-  year: 2021
-  institution: "UMN"
-  currentPosition: "Automation Engineer at Atlas Prediction Control"
-  linkedin: "https://www.linkedin.com/in/daniel-ribeiro-748039193/"
-
-- category: undergraduate
-  name: "Diya Saha"
-  degree: "B.S."
-  field: "Chemical Engineering"
-  year: 2021
-  institution: "UMN"
-  currentPosition: "Engineering Intern at EcoWater Systems"
-  linkedin: "https://www.linkedin.com/in/diya-saha-572b5b171/"
-
-- category: undergraduate
-  name: "Vijay Vallurupalli"
-  degree: "B.S."
-  field: "Materials Science and Engineering"
-  year: 2022
-  institution: "UMN"
-  currentPosition: "R&D Engineer at HP"
-  linkedin: "https://www.linkedin.com/in/vijay-vallurupalli-695b26170/"
-
-- category: undergraduate
-  name: "Fei Xie"
-  degree: "B.A."
-  field: "Mathematics & Economics"
-  year: 2023
-  institution: "NYU"
-  currentPosition: "M.S. in Biostatistics at Yale"
-
-- category: undergraduate
-  name: "Carmel Pe'er"
-  degree: "B.A."
-  field: "Mathematics"
-  year: 2024
-  institution: "Harvey Mudd College"
-  linkedin: "https://www.linkedin.com/in/carmel-pe-er-baaaa51bb/"
 
 # Masters
 - category: masters
@@ -167,3 +111,159 @@
   institution: "UMN"
   note: "ColabFit intern"
   linkedin: "https://www.linkedin.com/in/alexander-tao-7a4782204/"
+
+# Undergraduates
+- category: undergraduate
+  name: "Zeshan Hulit"
+  year: 2025
+  institution: "NYU"
+  note: "Visiting Student"
+
+- category: undergraduate
+  name: "Kyle Lam"
+  year: 2024
+  institution: "NYU"
+  note: "SURP program"
+
+- category: undergraduate
+  name: "Stefan Rankovic"
+  year: 2024
+  institution: "NYU"
+
+- category: undergraduate
+  name: "Asaf Greenfield"
+  year: 2024
+  institution: "NYU"
+
+- category: undergraduate
+  name: "Carmel Pe'er"
+  degree: "B.A."
+  field: "Mathematics"
+  year: 2024
+  institution: "Harvey Mudd College"
+  linkedin: "https://www.linkedin.com/in/carmel-pe-er-baaaa51bb/"
+
+- category: undergraduate
+  name: "Orion Runjia Yang"
+  year: 2023
+  institution: "NYU"
+  note: "AM-SURE program"
+
+- category: undergraduate
+  name: "Charlie Chen"
+  year: 2023
+  institution: "NYU"
+  note: "AM-SURE program, co-authored 1 paper"
+
+- category: undergraduate
+  name: "Fei Xie"
+  degree: "B.A."
+  field: "Mathematics & Economics"
+  year: 2023
+  institution: "NYU"
+  currentPosition: "M.S. in Biostatistics at Yale"
+
+- category: undergraduate
+  name: "Kyrie Xie"
+  year: 2022
+  institution: "NYU"
+
+- category: undergraduate
+  name: "Vijay Vallurupalli"
+  degree: "B.S."
+  field: "Materials Science and Engineering"
+  year: 2022
+  institution: "UMN"
+  currentPosition: "R&D Engineer at HP"
+  linkedin: "https://www.linkedin.com/in/vijay-vallurupalli-695b26170/"
+
+- category: undergraduate
+  name: "Remie Bougie"
+  degree: "B.S. Hon"
+  field: "Chemical Engineering"
+  year: 2022
+  institution: "UMN"
+  currentPosition: "Engineer at Takeda"
+  linkedin: "https://www.linkedin.com/in/remi-bougie-41a547193/"
+
+- category: undergraduate
+  name: "Sandya Appiah"
+  degree: "B.S."
+  field: "Chemical Engineering"
+  year: 2021
+  institution: "UMN"
+  currentPosition: "Ph.D. Student in ChEn at Rensselaer Polytechnic Institute"
+  linkedin: "https://www.linkedin.com/in/sandhya-appiah/"
+
+- category: undergraduate
+  name: "Bryce Johnson"
+  degree: "B.S."
+  field: "Physics"
+  year: 2021
+  institution: "UMN"
+  currentPosition: "Ph.D. Student in CS at University of Wisconsin-Madison"
+  linkedin: "https://www.linkedin.com/in/brycejoh/"
+
+- category: undergraduate
+  name: "Diya Saha"
+  degree: "B.S."
+  field: "Chemical Engineering"
+  year: 2021
+  institution: "UMN"
+  currentPosition: "Engineering Intern at EcoWater Systems"
+  linkedin: "https://www.linkedin.com/in/diya-saha-572b5b171/"
+
+- category: undergraduate
+  name: "Daniel Ribeiro"
+  degree: "B.S."
+  field: "Chemical Engineering"
+  year: 2021
+  institution: "UMN"
+  currentPosition: "Automation Engineer at Atlas Prediction Control"
+  linkedin: "https://www.linkedin.com/in/daniel-ribeiro-748039193/"
+
+- category: undergraduate
+  name: "Jiwon Kim"
+  degree: "B.S. Hon"
+  field: "Chemical Engineering"
+  year: 2021
+  institution: "UMN"
+  currentPosition: "Lab Tech at 3M"
+  linkedin: "https://www.linkedin.com/in/jiwon-kim-108328198/"
+
+- category: undergraduate
+  name: "Kovic Odhiambo"
+  degree: "B.S."
+  field: "Statistics"
+  year: 2021
+  institution: "UMN"
+  currentPosition: "ML Engineer at Interos"
+  linkedin: "https://www.linkedin.com/in/kovic-odhiambo/"
+
+# High school students
+- category: highschool
+  name: "Milan Lustig"
+  year: 2024
+  institution: "NYU"
+  note: "Regeneron Science Talent Search Scholar Semifinalist and Top 300 Scholar (2025)"
+  currentPosition: "Computer Science and Electrical Engineering at Harvard"
+
+- category: highschool
+  name: "Gabriel Magnasco-Farinas"
+  year: 2023
+  institution: "NYU"
+  currentPosition: "Mathematics and Economics at University of Colorado Boulder"
+
+- category: highschool
+  name: "Tom Zhang"
+  year: 2023
+  institution: "NYU"
+  currentPosition: "Computer Science student at Caltech"
+  linkedin: "https://www.linkedin.com/in/tom-zhang-99524a220/"
+
+- category: highschool
+  name: "Juhee Park"
+  year: 2023
+  institution: "NYU"
+  note: "ColabFit intern"
+  currentPosition: "Chemical Engineering at Carnegie Mellon University"

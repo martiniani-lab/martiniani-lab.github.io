@@ -48,6 +48,9 @@ export interface PressItem {
   url: string;
   source: string;
   date?: string;
+  description?: string;
+  extra_url?: string;
+  extra_label?: string;
 }
 
 export interface AlumniMember {
@@ -64,9 +67,12 @@ export interface FundingItem {
   name: string;
   image?: string;
   amount?: string;
-  role: string;
-  years: string;
+  role?: string;
+  years?: string;
   description?: string;
+  url?: string;
+  awardNumber?: string;
+  announcementOnly?: boolean;
 }
 
 export interface Course {

@@ -18,32 +18,49 @@ const roleLabels: Record<string, string> = {
 // Find PI for the spotlight section
 const pi = groups['pi']?.[0];
 const otherGroups = Object.entries(groups).filter(([role]) => role !== 'pi');
+
+// Resolve team images via import.meta.glob
+const teamImages = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/team/*.{jpg,jpeg,png,webp}');
+
+async function resolveTeamImage(filename: string): Promise<string> {
+  const fullPath = `/src/assets/images/team/${filename}`;
+  if (teamImages[fullPath]) {
+    const mod = await teamImages[fullPath]();
+    return mod.default.src;
+  }
+  return '';
+}
+
+const groupImgSrc = await resolveTeamImage('group.jpg');
+const piImgSrc = pi?.image ? await resolveTeamImage(pi.image) : '';
 ---
 
 <PageLayout
   title="Team — Martiniani Lab"
-  description="Meet the ~20 researchers at Martiniani Lab, NYU — led by Stefano Martiniani, working across AI for materials, world models, neural circuit theory, and statistical physics."
+  description="Meet the ~26 researchers at Martiniani Lab, NYU — led by Stefano Martiniani, working across AI for materials, world models, neural circuit theory, and statistical physics."
   heading="The Team"
 >
   <!-- Group photo -->
-  <div style="margin-bottom: 2em;">
-    <img src="/images/team/group.jpg" alt="Martiniani Lab group photo" style="width: 100%; border-radius: 4px;" loading="eager" />
-  </div>
+  {groupImgSrc && (
+    <span class="image fit" style="margin-bottom: 2em;">
+      <img src={groupImgSrc} alt="Martiniani Lab group photo" loading="eager" />
+    </span>
+  )}
 
   <!-- PI Spotlight -->
   {pi && (
-    <section class="spotlights" style="margin-bottom: 3em;">
+    <section class="spotlights">
       <section>
         <div class="image">
-          <img src="/images/team/stefano.jpg" alt="Stefano Martiniani" />
+          <img src={piImgSrc} alt={pi.name} />
         </div>
         <div class="content">
           <div class="inner">
             <header class="minor">
               <h3>Principal Investigator</h3>
             </header>
-            <p>{pi.bio || `Dr. Martiniani is an Assistant Professor of Physics, Chemistry, Mathematics, and Neural Science at New York University from 2022. He is a core member of NYU's Center for Soft Matter Research and the Simons Center for Computational Physical Chemistry, and an affiliate of the Center for Data Science. He holds a Ph.D. in Chemistry and an M.Phil in Scientific Computing from the Cavendish Laboratory at the University of Cambridge (advisor: Daan Frenkel), and a B.Sc. in Chemistry from Imperial College London.`}</p>
-            <p>Prior to joining NYU, Stefano was an assistant professor of Chemical Engineering and Materials Science at the University of Minnesota (2019-2021), and a postdoc jointly with Paul Chaikin (NYU) and Dov Levine (Technion) (2017-2019). His awards include the AFOSR YIP Award, NSF CAREER Award, Chan-Zuckerberg Initiative Neuroscience Pair Pilot Award, the inaugural Interdisciplinary Early Career Scientist Prize from IUPAP, Simons Foundation Faculty Fellowship, Gates Cambridge Scholarship, and the Outstanding Ph.D. Thesis Award from the University of Cambridge. For details, see <a href="/pdf/cv.pdf" target="_blank">CV</a>.</p>
+            <p>{pi.bio}</p>
+            <p>For details, see <a href="/pdf/cv.pdf" target="_blank">CV</a>.</p>
           </div>
         </div>
       </section>
@@ -52,9 +69,9 @@ const otherGroups = Object.entries(groups).filter(([role]) => role !== 'pi');
 
   <!-- Team groups -->
   {otherGroups.map(([role, members]) => (
-    <section style="margin-bottom: 3em;">
+    <section>
       <h3>{roleLabels[role] || role}</h3>
-      <div class="team-grid">
+      <div class="row gtr-200 gtr-uniform">
         {members.map(m => (
           <TeamMember name={m.name} image={m.image} title={m.title} />
         ))}

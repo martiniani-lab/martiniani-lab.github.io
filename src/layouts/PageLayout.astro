@@ -13,16 +13,12 @@ const { title, description, heading, ogImage } = Astro.props;
 
 <BaseLayout title={title} description={description} ogImage={ogImage}>
   <slot name="head" slot="head" />
-  <main>
-    <div class="page-banner">
-      <div class="inner">
-        <header class="major">
-          <h1>{heading}</h1>
-        </header>
-      </div>
-    </div>
+  <div id="main" class="alt">
     <div class="inner">
+      <header class="major">
+        <h1>{heading}</h1>
+      </header>
       <slot />
     </div>
-  </main>
+  </div>
 </BaseLayout>

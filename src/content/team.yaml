@@ -30,58 +30,38 @@
   image: mathias.jpg
   order: 1
 
-- name: "Eric Fuemmeler"
-  role: postdoc
-  image: eric.jpg
-  order: 2
-
-- name: "Amit Gupta"
-  role: postdoc
-  image: amit.jpg
-  order: 3
-
 - name: "JiYeon Han"
   role: postdoc
   image: ""
-  order: 4
+  order: 2
 
 - name: "Philipp Hoellmer"
   role: postdoc
   image: philipp.jpg
-  order: 5
+  order: 3
 
 - name: "Tianhao Li"
   role: postdoc
   image: ""
   title: "Simons Center Fellow"
-  order: 6
-
-- name: "Maya Martirossyan"
-  role: postdoc
-  image: maya-crop.jpg
-  order: 7
+  order: 4
 
 - name: "Kathryn Mcclain"
   role: postdoc
   image: ""
-  order: 8
+  order: 5
 
 - name: "Flaviano Morone"
   role: postdoc
   image: flaviano-crop.jpg
   title: "Research Scientist"
-  order: 9
+  order: 6
 
 - name: "Rishabh Sharma"
   role: postdoc
   image: ""
   title: "Simons Center Fellow"
-  order: 10
-
-- name: "Guanming Zhang"
-  role: postdoc
-  image: guanming.jpg
-  order: 11
+  order: 7
 
 # --- Graduate Students (alphabetical) ---
 - name: "Jacob Abraham"
@@ -89,68 +69,47 @@
   image: ""
   order: 1
 
-- name: "Satyam Anand"
-  role: graduate
-  image: satyam.jpg
-  order: 2
-
 - name: "Huijie Chen"
   role: graduate
   image: ""
-  order: 3
+  order: 2
 
 - name: "Tom Egg"
   role: graduate
   image: tom.jpg
-  order: 4
+  order: 3
 
 - name: "Elijah House"
   role: graduate
   image: ""
-  order: 5
-
-- name: "Ben Johnston"
-  role: graduate
-  image: ""
-  order: 6
-
-- name: "Mia Morrell"
-  role: graduate
-  image: ""
-  title: "co-advised"
-  order: 7
+  order: 4
 
 - name: "Asit Pal"
   role: graduate
   image: asit.jpg
-  order: 8
+  order: 5
 
 - name: "Akshada Pradhan"
   role: graduate
   image: ""
-  order: 9
-
-- name: "Zach Schmidt"
-  role: graduate
-  image: ""
-  order: 10
+  order: 6
 
 - name: "Praharsh Suryadevara"
   role: graduate
   image: praharsh.jpg
-  order: 11
+  order: 7
 
 - name: "Shannon Yu"
   role: graduate
   image: ""
   title: "co-advised"
-  order: 12
+  order: 8
 
-- name: "Shenga Zhao"
-  role: graduate
+# --- Undergraduates ---
+- name: "Kosta Dubovskiy"
+  role: undergraduate
   image: ""
-  title: "MS student"
-  order: 13
+  order: 1
 
 # --- Research Staff ---
 - name: "Gregory Wolfe"

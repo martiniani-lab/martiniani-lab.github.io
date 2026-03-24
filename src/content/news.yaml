@@ -1,17 +1,68 @@
+- date: 2026-02-18
+  text: "New paper by Rishabh is out on arXiv! [\"Cross-View World Models\"](https://arxiv.org/abs/2602.07277) introduces cross-view prediction as a self-supervised objective for embodied AI."
+
+- date: 2026-02-01
+  text: "New paper by Philipp is out on arXiv! [\"Open Materials Generation with Stochastic Interpolants and Inference-Time Reinforcement Learning\"](https://arxiv.org/abs/2602.00424) — first application of inference-time RL to crystal structure prediction."
+
 - date: 2026-01-15
   text: "Stefano is Program Chair for the AI4Mat Workshop at ICLR 2026."
 
 - date: 2026-01-01
   text: "PropMolFlow published in Nature Computational Science."
 
+- date: 2026-01-01
+  text: "Congratulations to Satyam and Guanming whose paper \"Emergent universal long-range structure in random-organizing systems\" has been accepted at [Nature Communications](https://doi.org/10.1038/s41467-026-68601-2)."
+
+- date: 2025-12-14
+  text: "Spotlight talk at AI4Mat NeurIPS 2025 on [\"Inverse Design of Novel Superconductors via Guided Diffusion\"](https://arxiv.org/abs/2509.25186)."
+
+- date: 2025-11-01
+  text: "New paper by Mathias is out on arXiv! [\"Spatial and Temporal Cluster Tomography of Active Matter\"](https://arxiv.org/abs/2511.09444)."
+
+- date: 2025-10-15
+  text: "Stefano delivers an invited talk at the MIT Mathematics in Physics Seminar."
+
+- date: 2025-10-10
+  text: "Stefano delivers a seminar at Vassar College."
+
 - date: 2025-10-01
   text: "Stefano is an invited moderator at the National Academies \"Frontiers of Materials That Learn\" workshop."
+
+- date: 2025-09-25
+  text: "Two papers accepted at NeurIPS 2025! Guanming's [\"Contrastive Self-Supervised Learning As Neural Manifold Packing\" (CLAMP)](https://arxiv.org/abs/2506.13717) and Maya, Tom, and Philipp's [\"All that structure matches does not glitter\"](https://arxiv.org/abs/2509.12178)."
+
+- date: 2025-09-15
+  text: "Stefano delivers a seminar at the Flatiron Institute Center for Computational Biology on \"Learning as Manifold Packing\"."
+
+- date: 2025-09-15
+  text: "New paper on arXiv! [\"Guided Diffusion for the Discovery of New Superconductors\"](https://arxiv.org/abs/2509.25186) — 9 of 18 candidates show superconductivity."
+
+- date: 2025-09-01
+  text: "Rishabh Sharma, Tianhao Li, and Kathryn Mcclain join the lab."
+
+- date: 2025-09-01
+  text: "Stefano is a member of the International Program Committee for the 2027 International Soft Matter Conference."
+
+- date: 2025-09-01
+  text: "Stefano delivers an invited talk at the CAFE Workshop, AutoML Conference in New York."
 
 - date: 2025-09-01
   text: "Gyromorphs accepted at Physical Review Letters."
 
 - date: 2025-08-01
   text: "Robot-swarm cohesion published in PNAS."
+
+- date: 2025-07-21
+  text: "Workshop paper at GenBio ICML 2025: [\"MolGuidance: A Comparative Study of Guidance Methods for Conditional Molecule Generation\"](https://arxiv.org/abs/2505.21469)."
+
+- date: 2025-07-15
+  text: "Stefano delivers an invited talk at StatPhys29 in Florence on \"Emergent universal long-range structure in random-organizing systems\"."
+
+- date: 2025-07-15
+  text: "New preprint by Flaviano on bioRxiv! [\"Hierarchical Neural Circuit Theory of Normalization and Inter-areal Communication\"](https://doi.org/10.1101/2025.07.15.664935)."
+
+- date: 2025-07-02
+  text: "New paper by Barrows, Guanming, Satyam, and Zhongkai is out on arXiv! [\"A unifying approach to self-organizing systems interacting via conservation laws\"](https://arxiv.org/abs/2507.02575)."
 
 - date: 2025-07-01
   text: "OMatG accepted at ICML 2025."
@@ -22,14 +73,44 @@
 - date: 2025-06-01
   text: "Stefano is Program Chair for the AI4Mat Workshop at NeurIPS 2025."
 
+- date: 2025-05-16
+  text: "New preprint by Flaviano on bioRxiv! [\"Stabilization of RNNs through divisive normalization\"](https://doi.org/10.1101/2025.05.16.654567)."
+
+- date: 2025-05-15
+  text: "Congratulations to Aaron Shih, Shivang Rawat, Satyam Anand, and Praharsh Suryadevara on successfully defending their Ph.D. theses!"
+
 - date: 2025-05-01
   text: "FReSCo is published as an Editor's Suggestion in Physical Review E and wins the APS DSOFT Gallery Prize."
+
+- date: 2025-04-28
+  text: "New preprint on bioRxiv! [\"PKMzeta organization in persistent memory and non-memory identified spines\"](https://doi.org/10.1101/2025.04.28.651143)."
+
+- date: 2025-04-28
+  text: "OMatG Spotlight at AI4Mat ICLR 2025! [\"Open Materials Generation with Stochastic Interpolants\"](https://arxiv.org/abs/2501.02364)."
+
+- date: 2025-04-01
+  text: "Stefano delivers a talk at the Italian Trade Agency in New York on \"Towards the AI Industrial Revolution\"."
+
+- date: 2025-03-15
+  text: "Stefano delivers an invited talk at the University of Pennsylvania AI in Science Seminar on \"Learning as Manifold Packing\"."
 
 - date: 2025-03-15
   text: "Stefano receives the Entropy Young Investigator Award (2025)."
 
+- date: 2025-03-01
+  text: "Review paper [\"On the design space between molecular mechanics and machine learning force fields\"](https://doi.org/10.1063/5.0237876) published in Applied Physics Reviews."
+
 - date: 2025-02-28
   text: "Stefano is a recipient of the 2025 Air Force Office of Scientific Research Young Investigator Program (AFOSR YIP) Award."
+
+- date: 2025-02-15
+  text: "Stefano delivers a seminar in the Department of Chemistry at the University of Florida."
+
+- date: 2025-02-10
+  text: "Stefano delivers an invited talk at the 64th Sanibel Symposium on \"Open Materials Generation with Stochastic Interpolants\"."
+
+- date: 2025-02-01
+  text: "Review paper [\"A Practical Guide to Machine Learning Interatomic Potentials\"](https://doi.org/10.1016/j.cossms.2025.101214) published in Current Opinion in Solid State and Materials Science."
 
 - date: 2025-01-11
   text: "Stefano delivers an invited lecture at the 2025 Berkeley Statistical Mechanics meeting."
@@ -117,6 +198,12 @@
 
 - date: 2024-07-08
   text: "Amit's workshop paper is accepted at AI4Mat Vienna 2024! [\"KUSP: Python server for deploying ML interatomic potentials\"](https://openreview.net/forum?id=lQAnpCF7nq)."
+
+- date: 2024-07-01
+  text: "The Martiniani Lab receives a 5-year multi-PI NIH NIMH R01 ($3.67M) with David Heeger on \"Oscillatory Recurrent Gated Neural Integrator Circuits (ORGaNICs): a unified framework for neural dynamics and human cognition\"."
+
+- date: 2024-06-01
+  text: "Stefano receives the Martin de Segura Prize for Artistic and Cultural Contributions from the City of Martinsicuro, Italy."
 
 - date: 2024-03-06
   text: "Aaron, Mathias and Stefano win the 2024 APS Gallery of Soft Matter Prize describing the [FReSCo algorithm](https://arxiv.org/abs/2305.15693). See the [video](https://www.youtube.com/watch?v=A-CNb0IMXQw) and Physics magazine [article](https://physics.aps.org/articles/v17/41)."

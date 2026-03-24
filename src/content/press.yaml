@@ -3,27 +3,27 @@
 # Covers
 - category: cover
   title: "PRL Vol 129 Issue 22"
-  image: "prl-cover.jpg"
+  image: "press/prl-cover.jpg"
   url: "https://journals.aps.org/prl/covers/129/22"
   source: "Physical Review Letters"
 
 - category: cover
   title: "PCCP Vol 19 Issue 20"
-  image: "pccp-cover.jpg"
+  image: "press/pccp-cover.jpg"
   url: "https://pubs.rsc.org/en/content/articlelanding/2017/cp/c7cp90109g#!divAbstract"
   source: "Physical Chemistry Chemical Physics"
 
 # Editorials, Columns, Viewpoints
 - category: editorial
   title: "Physics 17, 134 (2024)"
-  image: "physics-train.jpg"
+  image: "press/physics-train.jpg"
   url: "https://physics.aps.org/articles/v17/134"
   source: "Physics Magazine"
   date: "2024-01-01"
 
 - category: editorial
   title: "Physics 17, 41 (2024)"
-  image: "mind_pic10.jpg"
+  image: "research/mind_pic10.jpg"
   url: "https://physics.aps.org/articles/v17/41"
   source: "Physics Magazine"
   date: "2024-01-01"
@@ -32,7 +32,7 @@
 
 - category: editorial
   title: "Physics 15, 179 (2022)"
-  image: "mind_pic1.png"
+  image: "research/mind_pic1.png"
   url: "https://physics.aps.org/articles/v15/179"
   source: "Physics Magazine"
   date: "2022-01-01"

@@ -1,0 +1,758 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+---
+
+<PageLayout
+  title="Curriculum Vitae — Stefano Martiniani"
+  description="Curriculum Vitae of Stefano Martiniani, Assistant Professor at New York University. Research in statistical mechanics, machine learning, soft matter, neuroscience, and materials science."
+  heading="Curriculum Vitae"
+>
+  <style is:global>
+    .cv-download {
+        margin-bottom: 2em;
+        text-align: right;
+      }
+      .cv-section {
+        margin-bottom: 2.5em;
+      }
+      .cv-section h2 {
+        color: #9bf1ff;
+        font-size: 1.3em;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        border-bottom: 2px solid rgba(155, 241, 255, 0.3);
+        padding-bottom: 0.3em;
+        margin-bottom: 1em;
+      }
+      .cv-entry {
+        margin-bottom: 1.2em;
+      }
+      .cv-entry-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        flex-wrap: wrap;
+        gap: 0.5em;
+      }
+      .cv-entry-header .title {
+        font-weight: 600;
+        color: #ffffff;
+      }
+      .cv-entry-header .date {
+        color: rgba(255, 255, 255, 0.6);
+        white-space: nowrap;
+        font-size: 0.95em;
+      }
+      .cv-entry .institution {
+        color: rgba(255, 255, 255, 0.8);
+      }
+      .cv-entry .details {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 0.95em;
+        padding-left: 1.5em;
+      }
+      .cv-summary-grid {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 0.4em 1.5em;
+        font-size: 0.95em;
+      }
+      .cv-summary-grid dt {
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.8);
+        white-space: nowrap;
+      }
+      .cv-summary-grid dd {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.7);
+      }
+      .cv-pub-list {
+        list-style: none;
+        padding: 0;
+        counter-reset: none;
+      }
+      .cv-pub-list li {
+        margin-bottom: 0.8em;
+        padding-left: 2.5em;
+        text-indent: -2.5em;
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 0.95em;
+        line-height: 1.6;
+      }
+      .cv-pub-list .pub-number {
+        display: inline-block;
+        width: 2em;
+        text-align: right;
+        margin-right: 0.5em;
+        color: rgba(255, 255, 255, 0.5);
+        font-weight: 600;
+      }
+      .cv-pub-list .pub-highlight {
+        display: block;
+        padding-left: 2.5em;
+        text-indent: 0;
+        color: rgba(155, 241, 255, 0.7);
+        font-size: 0.9em;
+        margin-top: 0.2em;
+      }
+      .cv-funding-list {
+        list-style: none;
+        padding: 0;
+      }
+      .cv-funding-list li {
+        margin-bottom: 0.8em;
+        padding-left: 2.5em;
+        text-indent: -2.5em;
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 0.95em;
+        line-height: 1.6;
+      }
+      .cv-teaching-group {
+        margin-bottom: 1.5em;
+      }
+      .cv-teaching-group h3 {
+        font-size: 1em;
+        color: rgba(255, 255, 255, 0.9);
+        margin-bottom: 0.5em;
+      }
+      .cv-teaching-group ul {
+        list-style: none;
+        padding-left: 1.5em;
+      }
+      .cv-teaching-group li {
+        margin-bottom: 0.3em;
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 0.95em;
+      }
+      .cv-service-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.95em;
+      }
+      .cv-service-table td {
+        padding: 0.3em 0.5em;
+        color: rgba(255, 255, 255, 0.7);
+        vertical-align: top;
+        border: none;
+      }
+      .cv-service-table td:first-child {
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.8);
+        white-space: nowrap;
+        width: 12em;
+      }
+      .cv-service-table td:last-child {
+        text-align: right;
+        white-space: nowrap;
+        width: 8em;
+      }
+      .cv-talks-list {
+        list-style: none;
+        padding: 0;
+      }
+      .cv-talks-list li {
+        margin-bottom: 0.6em;
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 0.95em;
+        line-height: 1.5;
+      }
+      .cv-talks-list .talk-title {
+        font-style: italic;
+        color: rgba(255, 255, 255, 0.6);
+      }
+      .cv-trainee-section {
+        margin-bottom: 1.5em;
+      }
+      .cv-trainee-section h3 {
+        font-size: 1.05em;
+        color: rgba(155, 241, 255, 0.8);
+        margin-bottom: 0.5em;
+      }
+      .cv-trainee {
+        margin-bottom: 1em;
+        font-size: 0.95em;
+        color: rgba(255, 255, 255, 0.7);
+        line-height: 1.5;
+      }
+      .cv-trainee strong {
+        color: rgba(255, 255, 255, 0.9);
+      }
+      .cv-note {
+        font-size: 0.85em;
+        color: rgba(255, 255, 255, 0.5);
+        margin-top: 0.5em;
+      }
+      .cv-pub-annotation {
+        font-size: 0.9em;
+        color: rgba(255, 255, 255, 0.5);
+        margin-bottom: 1em;
+        font-style: italic;
+      }
+      @media (max-width: 736px) {
+        .cv-entry-header {
+          flex-direction: column;
+          gap: 0.2em;
+        }
+        .cv-summary-grid {
+          grid-template-columns: 1fr;
+          gap: 0.2em 0;
+        }
+        .cv-summary-grid dt {
+          margin-top: 0.5em;
+        }
+        .cv-service-table td:first-child {
+          white-space: normal;
+        }
+      }
+    </style>
+
+  <div class="cv-download">
+    <a href="/pdf/cv.pdf" target="_blank" class="button primary">Download PDF</a>
+  </div>
+
+  <!-- Academic Positions -->
+  <section class="cv-section">
+    <h2>Academic Positions</h2>
+
+    <div class="cv-entry">
+      <div class="cv-entry-header">
+        <span class="title">Assistant Professor</span>
+        <span class="date">2022 – present</span>
+      </div>
+      <div class="institution">New York University</div>
+      <div class="details">
+        Dept. of Physics, Center for Soft Matter Research<br/>
+        Dept. of Chemistry, Simons Center for Computational Physical Chemistry<br/>
+        Courant Institute of Mathematical Sciences<br/>
+        Center for Neural Science<br/>
+        Center for Data Science (Affiliated)
+      </div>
+    </div>
+
+    <div class="cv-entry">
+      <div class="cv-entry-header">
+        <span class="title">Assistant Professor</span>
+        <span class="date">2019 – 2021</span>
+      </div>
+      <div class="institution">University of Minnesota – Twin Cities</div>
+      <div class="details">
+        Dept. of Chemical Engineering and Materials Science<br/>
+        Dept. of Physics (Affiliated)<br/>
+        Data Science (Affiliated)
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section class="cv-section">
+    <h2>Education</h2>
+
+    <div class="cv-entry">
+      <div class="cv-entry-header">
+        <span class="title">Postdoctoral – Physics</span>
+        <span class="date">2017 – 2019</span>
+      </div>
+      <div class="institution">New York University</div>
+    </div>
+
+    <div class="cv-entry">
+      <div class="cv-entry-header">
+        <span class="title">PhD Chemistry <span style="color: rgba(155,241,255,0.7);">(Outstanding Thesis Prize)</span></span>
+        <span class="date">2017</span>
+      </div>
+      <div class="institution">University of Cambridge</div>
+    </div>
+
+    <div class="cv-entry">
+      <div class="cv-entry-header">
+        <span class="title">MPhil Scientific Computing <span style="color: rgba(155,241,255,0.7);">(Distinction)</span></span>
+        <span class="date">2013</span>
+      </div>
+      <div class="institution">University of Cambridge</div>
+    </div>
+
+    <div class="cv-entry">
+      <div class="cv-entry-header">
+        <span class="title">BSc Chemistry <span style="color: rgba(155,241,255,0.7);">(First Class Honors)</span></span>
+        <span class="date">2012</span>
+      </div>
+      <div class="institution">Imperial College London</div>
+    </div>
+  </section>
+
+  <!-- Academic Summary -->
+  <section class="cv-section">
+    <h2>Academic Summary</h2>
+    <dl class="cv-summary-grid">
+      <dt>Selected Awards</dt>
+      <dd>AFOSR YIP, NSF CAREER, IUPAP Interdisciplinary Early Career Scientist Prize, CZI Neuroscience Pairs Pilot Award, Simons Foundation Faculty Fellowship, Outstanding PhD Thesis Prize</dd>
+
+      <dt>Publications</dt>
+      <dd>43 research articles (8 lead author, 25 corresponding author, 22 led by trainees), 6 workshop papers (3 spotlight), 5 extended abstracts, 1 commentary, 1 editorial, 2 provisional US patents.</dd>
+
+      <dt>Presentations</dt>
+      <dd>79 past talks (59 invited), 11 posters.</dd>
+
+      <dt>Funding</dt>
+      <dd>Total PI/co-PI extramural funding: $12,803,189 ($11,573,999 as PI).</dd>
+
+      <dt>Leadership</dt>
+      <dd>Lead PI of <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2311632&HistoricalAwards=false">FERMat</a> project, involving 8 investigators across 4 universities (NYU, UMN, UF, BYU) and 1 industry partner (AWS); co-PI of <a href="https://colabfit.org">ColabFit Exchange</a>; Program Chair <a href="https://sites.google.com/view/ai4mat">AI4Mat Workshop</a> (NeurIPS &times;2, ICLR &times;2); Organizer NYC AI4Chemistry Summit (2025, 2026); Co-founder and member of organizing committee <a href="https://kimreview.org/">KIMReview</a>.</dd>
+
+      <dt>Teaching Innovation</dt>
+      <dd>Developed UMN's first non-CS/Stats ML course "Machine Learning for Chemical Sciences" and graduate course "Physics of Neural Systems" at NYU.</dd>
+
+      <dt>Mentorship</dt>
+      <dd>Currently leading a group of 8 graduate students, 9 postdocs/research scientists, 1 software developer, 1 MS, 1 UG. Past trainees: 2 PhDs in ChEn, 3 PhDs in Mathematics, 1 PhD Physics, 2 Postdoc, 1 master, 15 undergraduates (3 published), 4 high-school students (1 published), 3 ColabFit interns (2 published).</dd>
+
+      <dt>Media</dt>
+      <dd>Research highlighted on <a href="https://journals.aps.org/prl/covers/129/22">PRL cover</a>, <a href="https://pubs.rsc.org/en/content/articlelanding/2017/cp/c7cp90109g#!divAbstract">PCCP cover</a>, <a href="https://www.nature.com/news/intuition-harnessed-in-the-name-of-particle-packing-1.22199">Nature</a>, <a href="https://www.nature.com/articles/nmat4817">Nature Materials</a>, Physics (<a href="https://physics.aps.org/articles/v17/134">1</a>, <a href="https://physics.aps.org/articles/v17/41">2</a>, <a href="https://physics.aps.org/articles/v15/179">3</a>), Physics Today (<a href="https://physicstoday.scitation.org/doi/10.1063/PT.3.3682">1</a>, <a href="https://physicstoday.scitation.org/do/10.1063/PT.6.1.20190301a/full/">2</a>), <a href="https://www.newscientist.com/article/2075593-number-of-ways-to-arrange-128-balls-exceeds-atoms-in-universe/">New Scientist</a>, <a href="https://www.science-et-vie.com/article/les-tas-de-sable-ont-enfin-leur-loi-universelle-9038">Science &amp; Vie</a>, <a href="https://news.sky.com/story/tennis-ball-experiment-could-predict-avalanches-10147474">Sky News</a>, <a href="http://www.ansa.it/scienza/notizie/rubriche/fisica/2016/02/01/dagli-universi-paralleli-alle-valanghe-le-prime-misure-impossibili_64b85171-dd0b-4799-9ba3-5fa7eed58486.html">ANSA</a>.</dd>
+    </dl>
+  </section>
+
+  <!-- Honors & Awards -->
+  <section class="cv-section">
+    <h2>Honors &amp; Awards</h2>
+
+    <div class="cv-entry">
+      <div class="cv-entry-header"><span class="title">Entropy Young Investigator Award</span><span class="date">2025</span></div>
+      <div class="institution">MDPI Entropy</div>
+    </div>
+    <div class="cv-entry">
+      <div class="cv-entry-header"><span class="title">AFOSR YIP Award</span><span class="date">2025</span></div>
+      <div class="institution">AFOSR/RTB</div>
+    </div>
+    <div class="cv-entry">
+      <div class="cv-entry-header"><span class="title">NSF CAREER Award</span><span class="date">2024</span></div>
+      <div class="institution">NSF DMR-CMMT</div>
+    </div>
+    <div class="cv-entry">
+      <div class="cv-entry-header"><span class="title">The David Iakobachvili Interdisciplinary Science Research Award</span><span class="date">2024</span></div>
+      <div class="institution">New York University</div>
+    </div>
+    <div class="cv-entry">
+      <div class="cv-entry-header"><span class="title">Gallery of Soft Matter Prize</span><span class="date">2024</span></div>
+      <div class="institution">APS Division of Soft Matter</div>
+    </div>
+    <div class="cv-entry">
+      <div class="cv-entry-header"><span class="title">Neuroscience Pairs Pilot Project Award</span><span class="date">2024</span></div>
+      <div class="institution">Chan Zuckerberg Initiative</div>
+    </div>
+    <div class="cv-entry">
+      <div class="cv-entry-header"><span class="title">Interdisciplinary Early Career Scientist Prize</span><span class="date">2023</span></div>
+      <div class="institution">Int. Union of Pure and Applied Physics</div>
+    </div>
+    <div class="cv-entry">
+      <div class="cv-entry-header"><span class="title">Simons Foundation Faculty Fellowship</span><span class="date">2022 – 2025</span></div>
+      <div class="institution">New York University</div>
+    </div>
+    <div class="cv-entry">
+      <div class="cv-entry-header"><span class="title">Outstanding Thesis Prize</span><span class="date">2017</span></div>
+      <div class="institution">Dept. of Chemistry, University of Cambridge</div>
+    </div>
+    <div class="cv-entry">
+      <div class="cv-entry-header"><span class="title">Gates Cambridge Scholarship</span><span class="date">2013 – 2017</span></div>
+      <div class="institution">University of Cambridge</div>
+    </div>
+    <div class="cv-entry">
+      <div class="cv-entry-header"><span class="title">Benefactors Scholarship</span><span class="date">2013 – 2017</span></div>
+      <div class="institution">St. John's College, University of Cambridge</div>
+    </div>
+    <div class="cv-entry">
+      <div class="cv-entry-header"><span class="title">Prize for Best Physical Chemistry Research Project (BS/MS Thesis)</span><span class="date">2012</span></div>
+      <div class="institution">Dept. of Chemistry, Imperial College</div>
+    </div>
+    <div class="cv-entry">
+      <div class="cv-entry-header"><span class="title">Undergraduate Research Fellowship</span><span class="date">2012</span></div>
+      <div class="institution">Imperial College London</div>
+    </div>
+  </section>
+
+  <!-- Extramural Funding -->
+  <section class="cv-section">
+    <h2>Extramural Funding</h2>
+    <ol class="cv-funding-list">
+      <li>Role: PI; PD/PI: Martiniani; Title: "Advancing Light Manipulation and Optical Computing with Engineered Disordered Photonic Metamaterials"; Program: AFOSR YIP; Funds: $449,420; Duration: Sept 2025 – Sept 2028; Award number: FA9550-25-1-0359.</li>
+      <li>Role: PI; PD/PI: Martiniani; Title: "CAREER: Quantifying the Complexity of Materials Landscapes by Basin Sampling"; Program: NSF DMR-CMMT; Funds: $700,000; Duration: 5 years (Mar 2025 – Feb 2030); Award number: <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2443027">2443027</a>.</li>
+      <li>Role: PI; PD/PI: Heeger (contact), Martiniani; Title: "Oscillatory Recurrent Gated Neural Integrator Circuits (ORGaNICs): a unified framework for neural dynamics and human cognition"; Program: NIH NIMH R01 (multi-PI); Funds: $3,670,550; Duration: 5 years (Jul 2024 – Jun 2029); Award number: <a href="https://reporter.nih.gov/search/lb0PLOH9vky__wl3fnxuig/project-details/10944348">R01MH137669</a>.</li>
+      <li>Role: PI; PD/PI: Martiniani; Title: "Theme 2: AI Institute for Extreme Computing Materials (AI-XCoM)"; Program: NYU Mega Grants Initiative Seed Fund; Funds: $25,000; Duration: 11 months (Feb 2024 – Dec 2024).</li>
+      <li>Role: PI; PD/PI: Martiniani (contact), Fenton; Title: "Machine Learning the Biomolecular Basis of Memory Persistence"; Program: CZI Neuroscience Pairs Pilot Project Awards; Funds: $200,000; Duration: 2 years (March 2024 – March 2025); Award number: <a href="#">2024-338565</a>.</li>
+      <li>Role: PI; PD/PI: Martiniani; Title: "GOALI: Frameworks: At-Scale Heterogeneous Data based Adaptive Development Platform for Machine-Learning Models for Material and Chemical Discovery"; Program: NSF OAC; Funds: $4,500,000; Duration: 5 years (Oct 2023 – Sept 2028); Award number: <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2311632&HistoricalAwards=false">2311632</a>.</li>
+      <li>Role: PI; PD/PI: Heeger (contact), Martiniani; Title: "Recurrent circuit model of neural response dynamics in V1"; Program: NIH NEI R01 (multi-PI); Funds: $1,879,804; Duration: 4 years (Sept 2023 – Sept 2027); Award number: <a href="https://reporter.nih.gov/search/AWgJvopI20qtWeaN6mIRHA/project-details/10710967">R01EY035242</a>.</li>
+      <li>Role: PI; PD/PI: Martiniani; Title: "EAGER: Quantifying the error landscape of deep neural networks"; Program: NSF III; Funds: $149,225; Duration: 2 years (Oct 2021 – Aug 2024); Award number: <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2132995&HistoricalAwards=false">2132995</a>.</li>
+      <li>Role: co-PI; PD/PI: Tadmor; Title: "Data CI Pilot: CI-Based Collaborative Development of Data-Driven Interatomic Potentials for Predictive Molecular Simulations"; Program: NSF CESER; Funds: $1,127,993; Duration: 2 years (Oct 2020 – Sept 2024); Award number: <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2039575">2039575</a>.</li>
+      <li>Role: co-I; PD/PI: Kumar, Fenton; Title: "PKMzeta organization in persistent memory and non-memory identified spines"; Program: CZI Neuroscience Collaboration Supplements; Funds: $30,000; Duration: 1 year (Dec 2024 – Dec 2025); Award number: NS-CS-39.</li>
+      <li>Role: co-I; PD/PI: Hackel; Title: "Engineering Protein Developability"; Program: NIH GM R01; Funds: subaward $71,197 (total $1,815,456); Duration: 4 years (Oct 2022 – 2026); Award number: <a href="https://reporter.nih.gov/search/4_7AlxKWlkqXSvhvaE_G1w/project-details/10681310">GM146372</a>.</li>
+    </ol>
+  </section>
+
+  <!-- Publications -->
+  <section class="cv-section">
+    <h2>Publications</h2>
+    <p class="cv-pub-annotation">*trainee, †contributed equally, (co-)corresponding author</p>
+
+    <h3 style="color: rgba(155,241,255,0.8); font-size: 1.05em; margin-bottom: 0.8em;">Preprints/Submitted</h3>
+    <ul class="cv-pub-list">
+      <li><span class="pub-number">43.</span> R. Sharma*, G. Hogervorst, W.E. Mackey, D.J. Heeger, S. Martiniani, "Cross-View World Models", arXiv:2602.07277 (2026)</li>
+      <li><span class="pub-number">42.</span> P. Hoellmer*, S. Martiniani, "Open Materials Generation with Inference-Time Reinforcement Learning", arXiv:2602.00424 (2026)</li>
+      <li><span class="pub-number">41.</span> L.V. Luzzatto, M. Casiulis*, S. Martiniani, I. Kovacs, "Spatial and Temporal Cluster Tomography of Active Matter", arXiv:2511.09444 (2025)</li>
+      <li><span class="pub-number">40.</span> P. Prakash, J.B. Gibson, Z. Li, G. Di Gianluca, J. Esquivel, E. Fuemmeler*, B. Geisler, J.S. Kim, A. Roitberg, E.B. Tadmor, M. Liu, S. Martiniani, G.R. Stewart, J.J. Hamlin, P.J. Hirschfeld, R.G. Hennig, "Guided Diffusion for the Discovery of New Superconductors", arXiv:2509.25186 (2025)</li>
+      <li><span class="pub-number">39.</span> F. Barrows, G. Zhang*, S. Anand*, Z. Chen*, J. Lin, A. Desai, S. Martiniani, F. Caravelli, "A unifying approach to self-organizing systems interacting via conservation laws", arXiv:2507.02575 (2025)</li>
+      <li><span class="pub-number">38.</span> A. Pal*, S. Rawat*, D.J. Heeger, S. Martiniani, "Hierarchical Neural Circuit Theory of Normalization and Inter-areal Communication", bioRxiv 2025.07.15.664935 (2025)</li>
+      <li><span class="pub-number">37.</span> F. Morone*, S. Rawat*, D.J. Heeger, S. Martiniani, "Stabilization of recurrent neural networks through divisive normalization", bioRxiv 2025.05.16.654567 (2025)</li>
+      <li><span class="pub-number">36.</span> J. Han*, A. Grau-Perales, R.M. Harris, H. Kao, A. Pal*, J.M. Alarcon, T. Sacktor, S. Martiniani, H.A. Hofmann, A.A. Fenton, "Persistently increased expression of PKMς and unbiased gene expression profiles identify hippocampal molecular traces of a long-term active place avoidance memory and 'shadow' proteins", bioRxiv 2025.04.28.651143 (2025)</li>
+      <li><span class="pub-number">35.</span> G. Zhang*, S. Martiniani, "Absorbing state dynamics of stochastic gradient descent", arXiv:2411.11834 (2024)</li>
+      <li><span class="pub-number">34.</span> P. Suryadevara*, M. Casiulis*, S. Martiniani, "The Basins of Attraction of Soft Sphere Packings are Not Fractal", arXiv:2409.12113 (2024)</li>
+      <li><span class="pub-number">33.</span> T.V. Phan, S. Li, D. Ferreris, R. Morris, J. Bos, B. Guo, S. Martiniani, P. Chaikin, Y.G. Kevrekidis, R.H. Austin, "Social Physics of Bacteria: Avoidance of an Information Black Hole", arXiv:2401.16691 (2024)</li>
+    </ul>
+
+    <h3 style="color: rgba(155,241,255,0.8); font-size: 1.05em; margin: 1.5em 0 0.8em;">Peer-Reviewed Articles</h3>
+    <ul class="cv-pub-list">
+      <li><span class="pub-number">32.</span> S. Anand*, G. Zhang*, S. Martiniani, "Emergent universal long-range structure in random-organizing systems", Nat. Comm., accepted (arXiv:2505.22933) (2026)</li>
+      <li><span class="pub-number">31.</span> C. Zeng, J. Jin, G. Karypis, M. Transtrum, E.B. Tadmor, R.G. Hennig, A. Roitberg, S. Martiniani, M. Liu, "PropMolFlow: Property-guided Molecule Generation with Geometry-Complete Flow Matching", Nat. Comp. Sci. (2026)</li>
+      <li><span class="pub-number">30.</span> G. Zhang*, D.J. Heeger*, S. Martiniani, "Contrastive Self-Supervised Learning As Neural Manifold Packing", NeurIPS 2025, accepted (arXiv:2506.13717) (2025)</li>
+      <li><span class="pub-number">29.</span> M. Martirossyan*, T. Egg*, P. Höllmer*, G. Karypis, M. Transtrum, A. Roitberg, M. Liu, R. Hennig, E.B. Tadmor, S. Martiniani, "All that structure matches does not glitter", NeurIPS 2025, accepted (arXiv:2509.12178) (2025)</li>
+      <li><span class="pub-number">28.</span> M. Casiulis*, A. Shih*, S. Martiniani, "Gyromorphs: a new class of functional disordered materials", Phys. Rev. Lett., 135, 196101 (2025)</li>
+      <li><span class="pub-number">27.</span> M. Casiulis*, E. Arbel, Y. Lahini, S. Martiniani, N. Oppenheimer, M. Yah Ben Zion, "A geometric condition for robot-swarm cohesion and cluster-flock transition", Proc. Natl. Acad. Sci., 122(37) e2502211122 (2025)</li>
+      <li><span class="pub-number">26.</span> P. Hoellmer*, T. Egg*, M.M. Martirossyan*, E. Fuemmeler*, Z. Shui, A. Gupta*, P. Prakash, A. Roitberg, M. Liu, G. Karypis, M. Transtrum, R.G. Hennig, E.B. Tadmor, S. Martiniani, "Open Materials Generation with Stochastic Interpolants", Proc. 42nd Int. Conf. Mach. Learn. (ICML), PMLR 267 (2025)</li>
+      <li><span class="pub-number">25.</span> Y. Wang, K. Takaba, M.S. Chen, M. Wieder, Y. Xu, T. Zhu, J.Z.H. Zhang, A. Nagle, K. Yu, X. Wang, D.J. Cole, J.A. Rackers, K. Cho, J.G. Greener, P. Eastman, S. Martiniani, M.E. Tuckerman, "On the design space between molecular mechanics and machine learning force fields", Appl. Phys. Rev. 12, 021304 (2025)</li>
+      <li><span class="pub-number">24.</span> R. Jacobs, D. Morgan, S. Attarian, J. Meng, C. Shen, Z. Wu, C. Xie, J.H. Yang, N. Artrith, B. Blaiszik, G. Ceder, K. Choudhary, G. Csanyi, B. Deng, R. Drautz, J. Godwin, V. Honavar, O. Isayev, A. Johansson, S. Martiniani, S.P. Ong, I. Poltavsky, K.J. Schmidt, S. Takamoto, A. Thompson, J. Westermayr, "A Practical Guide to Machine Learning Interatomic Potentials–Status and Future", Curr. Opin. Solid State Mater. Sci., 35, 101214 (2025)</li>
+      <li><span class="pub-number">23.</span> S. Anand*, X. Ma, S. Guo, S. Martiniani<sup>†</sup>, X. Cheng<sup>†</sup>, "Transport and Energetics of Bacterial Rectification", Proc. Natl. Acad. Sci., 121(52), e2411608121 (2024)</li>
+      <li><span class="pub-number">22.</span> S. Rawat*, D. Heeger, S. Martiniani, "Unconditional stability of a recurrent neural circuit implementing divisive normalization", Adv. Neural. Inf. Process. Syst. 38 (NeurIPS 2024), (arXiv:2409.18946) (2024)</li>
+      <li><span class="pub-number">21.</span> S. Rawat*, S. Martiniani, "Element-wise and Recursive Solutions for the Power Spectral Density of Biological Stochastic Dynamical Systems at Fixed Points", Phys. Rev. Res., 6, 043179 (2024)</li>
+      <li>
+        <span class="pub-number">20.</span> A. Shih*, M. Casiulis*, S. Martiniani, "Fast Generation of Spectrally-Shaped Disorder", Phys. Rev. E 110, 034122 (2024)
+        <span class="pub-highlight">– Editor's Suggestion in Phys. Rev. E</span>
+        <span class="pub-highlight">– Awarded Gallery of Soft Matter Prize; highlighted in Physics, 17, 41 (2024)</span>
+        <span class="pub-highlight">– Highlighted in "Old Movie Demos New Tech", Physics, 17, 134 (2024)</span>
+      </li>
+      <li><span class="pub-number">19.</span> J.A. Vita*, E.G. Fuemmeler*, A. Gupta*, G.P. Wolfe*, A.Q. Tao*, R.S. Elliott, S. Martiniani, E.B. Tadmor, "ColabFit Exchange: open-access datasets for data-driven interatomic potentials", J. Chem. Phys. 159, 154802 (2023)</li>
+      <li><span class="pub-number">18.</span> A.W. Golinski*, Z.D. Schmitz*, G.H. Nielsen, B. Johnson*, D. Saha*, S. Appiah*, B.J. Hackel, S. Martiniani, "Predicting and Interpreting Protein Developability via Transfer of Convolutional Sequence Representation", ACS Synth. Biol. 12, 9, 2600 (2023)</li>
+      <li><span class="pub-number">17.</span> M. Casiulis*, S. Martiniani, "When you can't count sample! Computable entropies beyond equilibrium from basin volumes", Papers in Physics, 15, 150001 (2023)
+        <span class="pub-highlight">– Invited perspective in "Focus Series on Challenges in Granular Matter"</span>
+      </li>
+      <li><span class="pub-number">16.</span> C. Anzivino, M. Casiulis*, T. Zhang*, A.S. Moussa, S. Martiniani, A. Zaccone, "Estimating random close packing in polydisperse and bidisperse hard spheres via an equilibrium model of crowding", J. Chem. Phys., 158, 044901 (2023)</li>
+      <li>
+        <span class="pub-number">15.</span> S. Ro, B. Guo, A. Shih*, T.V. Phan, R.H. Austin, D. Levine, P.M. Chaikin, S. Martiniani, "Model-Free Measurement of Local Entropy Production and Extractable Work in Active Matter", Phys. Rev. Lett. 129, 220601 (2022)
+        <span class="pub-highlight">– Cover article for Phys. Rev. Lett.</span>
+        <span class="pub-highlight">– Editor's Suggestion in Phys. Rev. Lett.</span>
+        <span class="pub-highlight">– Highlighted in "Measuring Entropy in Active-Matter Systems", Physics 15, 179 (2022)</span>
+      </li>
+      <li><span class="pub-number">14.</span> A.W. Golinski*, K.M. Mischler, S. Laxminarayan, N. Neurock, M. Fossing, H. Pichman, S. Martiniani, B.J. Hackel, "High-Throughput Developability Assays Enable Library-Scale Identification of Producible Protein Scaffold Variants", Proc. Natl. Acad. Sci., 118, 23 (2021)</li>
+      <li><span class="pub-number">13.</span> A. Cavagna, P.M. Chaikin, D. Levine, S. Martiniani, A. Puglisi, M. Viale, "Vicsek Model by Time-Interlaced Compression: a Dynamical Computable Information Density", Phys. Rev. E 103, 062141 (2021)</li>
+      <li><span class="pub-number">12.</span> S. Martiniani, Y. Lemberg, P.M. Chaikin, D. Levine, "Correlation lengths in the language of computable information", Phys. Rev. Lett., 125, 170601 (2020)</li>
+      <li>
+        <span class="pub-number">11.</span> S. Martiniani, P.M. Chaikin, D. Levine, "Quantifying hidden order out of equilibrium", Phys. Rev. X, 9, 011031 (2019)
+        <span class="pub-highlight">– Highlighted in "File compression uncovers hidden order", Physics Today (2019)</span>
+      </li>
+      <li>
+        <span class="pub-number">10.</span> S. Martiniani, K.J. Schrenk, K. Ramola, B. Chakraborty, D. Frenkel, "Numerical test of the Edwards conjecture shows that all packings become equally probable at jamming", Nature Physics, 13, 848–851 (2017)
+        <span class="pub-highlight">– Highlighted in "Intuition harnessed in the name of particle packing", Nature, 546, 575 (2017)</span>
+        <span class="pub-highlight">– Highlighted in "A thermodynamic theory of granular materials endures", Physics Today 70, 9 (2017)</span>
+        <span class="pub-highlight">– Highlighted in "Material Witness: A jammy guess?", Nature Materials, 15, 1227 (2016)</span>
+      </li>
+      <li><span class="pub-number">9.</span> D. Frenkel, K.J. Schrenk, S. Martiniani, "Monte Carlo sampling for stochastic weight functions", Proc. Natl. Acad. Sci., 114, 27 (2017)</li>
+      <li>
+        <span class="pub-number">8.</span> A.J. Ballard, R. Das, S. Martiniani, D. Mehta, L. Sagun, J.D. Stevenson, D.J. Wales, "Energy Landscapes for Machine Learning", Phys. Chem. Chem. Phys., 19, 12585 (2017)
+        <span class="pub-highlight">– Cover article for Phys. Chem. Chem. Phys.</span>
+      </li>
+      <li><span class="pub-number">7.</span> S. Martiniani, K.J. Schrenk, J.D. Stevenson, D.J. Wales, D. Frenkel, "Structural analysis of high dimensional basins of attraction", Phys. Rev. E 94, 031301 (2016)</li>
+      <li><span class="pub-number">6.</span> S. Martiniani, K.J. Schrenk, J.D. Stevenson, D.J. Wales, D. Frenkel, "Turning intractable counting into sampling: computing the configurational entropy of three-dimensional jammed packings", Phys. Rev. E 93, 012906 (2016)</li>
+      <li><span class="pub-number">5.</span> A.J. Ballard, S. Martiniani, J.D. Stevenson, S. Somani, D.J. Wales, "Exploiting the potential energy landscape to sample free energy", WIREs Comput. Mol. Sci. 5, 273 (2015)</li>
+      <li><span class="pub-number">4.</span> S. Martiniani, J.D. Stevenson, D.J. Wales, D. Frenkel, "Superposition Enhanced Nested Sampling", Phys. Rev. X 4, 031034 (2014)</li>
+      <li><span class="pub-number">3.</span> C. Magistris<sup>†</sup>, S. Martiniani<sup>†</sup>, N. Barbero, J. Park, C. Benzi, A. Anderson, C.H. Law, C. Barolo, B.C. O'Regan, "Near-infrared absorbing squaraine dye with extended π conjugation for dye-sensitized solar cells", Renewable Energy 60, 672 (2013)</li>
+      <li><span class="pub-number">2.</span> C.E. Richards, A.Y. Anderson, S. Martiniani, C. Law, B.C. O'Regan, "The Mechanism of Iodine Reduction by TiO<sub>2</sub> Electrons and the Kinetics of Recombination in Dye-Sensitized Solar Cells", J. Phys. Chem. Lett. 3, 1980 (2012)</li>
+      <li><span class="pub-number">1.</span> S. Martiniani, A.Y. Anderson, C. Law, B.C. O'Regan and C. Barolo, "New insight into the regeneration kinetics of dye sensitized solar cells", Chem. Commun. 48, 2406 (2012)</li>
+    </ul>
+
+    <h3 style="color: rgba(155,241,255,0.8); font-size: 1.05em; margin: 1.5em 0 0.8em;">Peer-Reviewed Workshop Papers</h3>
+    <ul class="cv-pub-list">
+      <li><span class="pub-number">6.</span> P. Prakash, J.B. Gibson, Z. Li, G. Di Gianluca, J. Esquivel, E. Fuemmeler, B. Geisler, A. Roitberg, E.B. Tadmor, M. Liu, S. Martiniani, G.R. Stewart, J. Hamlin, P. Hirschfeld, R. Hennig, "Inverse Design of Novel Superconductors via Guided Diffusion", AI for Accelerated Materials Design – NeurIPS 2025 <em>(Spotlight)</em></li>
+      <li><span class="pub-number">5.</span> C. Zeng, J. Jin, P. Prakash, G. Karypis, M. Transtrum, E.B. Tadmor, R. Hennig, A. Roitberg, S. Martiniani, M. Liu, "MolGuidance: A Comparative Study of Guidance Methods for Conditional Molecule Generation", Generative AI and Biology (GenBio) Workshop – ICML 2025</li>
+      <li><span class="pub-number">4.</span> P. Hoellmer*, T. Egg*, M.M. Martirossyan*, E. Fuemmeler*, Z. Shui, A. Gupta*, P. Prakash, A. Roitberg, M. Liu, G. Karypis, M. Transtrum, R.G. Hennig, E.B. Tadmor, S. Martiniani, "Open Materials Generation with Stochastic Interpolants", AI for Accelerated Materials Design – ICLR 2025 <em>(Spotlight)</em></li>
+      <li><span class="pub-number">3.</span> E. Fuemmeler*, G. Wolfe*, A. Gupta*, J.A. Vita, E.B. Tadmor, S. Martiniani, "Advancing the ColabFit Exchange towards a Web-scale Data Source for Machine Learning Interatomic Potentials", AI for Accelerated Materials Design – NeurIPS 2024 <em>(Spotlight)</em></li>
+      <li><span class="pub-number">2.</span> C. Gonzales, E. Fuemmeler*, E.B. Tadmor, S. Martiniani, S. Miret, "Benchmarking of Universal Machine Learning Interatomic Potentials for Structural Relaxation", AI for Accelerated Materials Design – NeurIPS 2024</li>
+      <li><span class="pub-number">1.</span> A. Gupta*, E.B. Tadmor, S. Martiniani, "KUSP: Python server for deploying ML interatomic potentials", AI for Accelerated Materials Design – Vienna 2024</li>
+    </ul>
+
+    <h3 style="color: rgba(155,241,255,0.8); font-size: 1.05em; margin: 1.5em 0 0.8em;">Peer-Reviewed Extended Abstracts</h3>
+    <ul class="cv-pub-list">
+      <li><span class="pub-number">5.</span> A. Pal*, S. Rawat*, D. Heeger, S. Martiniani, "Multi-stage Cortical Recurrent Circuit Implementing Normalization", CCN Abstracts (2024)</li>
+      <li><span class="pub-number">4.</span> S. Rawat*, D. Heeger, S. Martiniani, "A comprehensive large-scale model of primary visual cortex (V1)", CCN Abstracts (2024)</li>
+      <li><span class="pub-number">3.</span> G. Zhang*, S. Martiniani, "Neural manifold packing by stochastic gradient descent", CCN Abstracts (2024)</li>
+      <li><span class="pub-number">2.</span> S. Rawat*, D. Heeger, S. Martiniani, "A comprehensive large-scale model of primary visual cortex (V1)", Cosyne Abstracts (2024)</li>
+      <li><span class="pub-number">1.</span> S. Rawat*, D. Heeger, S. Martiniani, "Coherence influences the dimensionality of communication subspaces", Cosyne Abstracts (2023)</li>
+    </ul>
+
+    <h3 style="color: rgba(155,241,255,0.8); font-size: 1.05em; margin: 1.5em 0 0.8em;">Commentaries &amp; Editorials</h3>
+    <ul class="cv-pub-list">
+      <li><span class="pub-number">1.</span> S. Martiniani, "Bit-propelled Active Matter", Journal Club for Condensed Matter Physics (2023)</li>
+      <li><span class="pub-number">1.</span> S. Miret, M. Skreta, G. Wellawatte, S. Martiniani, N.M.A. Krishnan, G. Karypis, K.M. Jablonka, "Perspective on Artificial Intelligence for Accelerated Materials Design (AI4Mat) Workshops in 2024", Mach. Learn.: Sci. Technol., 6(4), 040201 (2025)</li>
+    </ul>
+
+    <h3 style="color: rgba(155,241,255,0.8); font-size: 1.05em; margin: 1.5em 0 0.8em;">PhD Thesis</h3>
+    <ul class="cv-pub-list">
+      <li>S. Martiniani, "On the complexity of energy landscapes: algorithms and a direct test of the Edwards conjecture", University of Cambridge (2017)
+        <span class="pub-highlight">– Awarded "Outstanding Thesis Prize", Dept. of Chemistry, University of Cambridge</span>
+      </li>
+    </ul>
+
+    <h3 style="color: rgba(155,241,255,0.8); font-size: 1.05em; margin: 1.5em 0 0.8em;">Patents</h3>
+    <ul class="cv-pub-list">
+      <li><span class="pub-number">1.</span> A. Shih, M. Casiulis, S. Martiniani, "System, Method and Computer-Accessible Medium for Accelerated Generation of Statistically Correlated Point Structures", Provisional Patent Application 63/651,613 (May 2024)</li>
+      <li><span class="pub-number">2.</span> A. Shih, M. Casiulis, S. Martiniani, "System, Method, and Computer-Accessible Medium for Generating Functional Correlated Disordered Materials", Provisional Patent Application 63/811,349 (May 2025)</li>
+    </ul>
+  </section>
+
+  <!-- Teaching -->
+  <section class="cv-section">
+    <h2>Teaching</h2>
+
+    <div class="cv-teaching-group">
+      <h3>2022 – 2025 (NYU)</h3>
+      <ul>
+        <li>CHEM-UA 652 "Thermodynamics &amp; Kinetics" (Fall 2022, Fall 2024, Fall 2025)</li>
+        <li>PHYS-UA 2061 "Mathematical Physics" (Spring 2024)</li>
+        <li>PHYS-GA 2061 "Physics of Neural Systems" (Spring 2023)</li>
+      </ul>
+    </div>
+
+    <div class="cv-teaching-group">
+      <h3>2019 – 2021 (UMN)</h3>
+      <ul>
+        <li>CHEN 3201 "Numerical Methods for Chemical Engineering" (Spring 2020, co-instructor; Spring 2021, Fall 2021 lead instructor)</li>
+        <li>CHEN 8754 "Quantitative Analysis, Design and Synthesis of Biotechnological Systems" – 2.5h on "Information theory for biochemical signal pathways" (Spring 2021, contributing lecturer)</li>
+        <li>CHEN 5595 "Data Driven Discovery for the Chemical Sciences" (Fall 2020)</li>
+        <li>MATS 3001 "Thermodynamics of Materials" (Fall 2019, co-instructor)</li>
+        <li>Departmental Workshop (year-long) on Machine Learning for Science</li>
+      </ul>
+    </div>
+
+    <div class="cv-teaching-group">
+      <h3>2013 – 2015 (Cambridge)</h3>
+      <ul>
+        <li>Mathematics tutor for natural sciences and computer science students in the Tripos IA (first year) at Magdalene College. Year-long 1-hour weekly meetings with 3–4 groups of 2 students each.</li>
+        <li>Laboratory demonstrator for Tripos IA (first year) organic chemistry practicals (2013).</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- University Service -->
+  <section class="cv-section">
+    <h2>University Service</h2>
+
+    <table class="cv-service-table">
+      <tr><td>NYU FAS</td><td>Member, Computational Science Initiative Committee</td><td>2023</td></tr>
+      <tr><td>NYU Chemistry</td><td>Member, DEI Committee</td><td>2024 – 2025</td></tr>
+      <tr><td></td><td>Member, Awards Committee</td><td>2024 – 2025</td></tr>
+      <tr><td></td><td>Member, Simons Center Core Team</td><td>2022 – 2025</td></tr>
+      <tr><td></td><td>Member, Colloquium Committee</td><td>2022 – 2024</td></tr>
+      <tr><td></td><td>Member, Theory Faculty Search Committee</td><td>2022 – 2023</td></tr>
+      <tr><td></td><td>Member, Graduate Admission Committee</td><td>2023</td></tr>
+      <tr><td></td><td>Member, Simons Center Administrator Search Committee</td><td>2022</td></tr>
+      <tr><td>NYU Physics</td><td>Member, Colloquium Committee</td><td>2023 – 2024</td></tr>
+      <tr><td></td><td>Member, Graduate Admission Committee</td><td>2024</td></tr>
+      <tr><td></td><td>Member, Grant Administrator Search Committee</td><td>2024</td></tr>
+      <tr><td></td><td>Member, CSMR Faculty Search Committee</td><td>2022</td></tr>
+    </table>
+  </section>
+
+  <!-- Other Service -->
+  <section class="cv-section">
+    <h2>Other Service</h2>
+
+    <table class="cv-service-table">
+      <tr><td>Conference reviewer</td><td>AI4Mat ICLR; AI4Mat NeurIPS; NeurIPS</td><td>2025</td></tr>
+      <tr><td></td><td>AI4Mat NeurIPS; AI4Mat Vienna</td><td>2024</td></tr>
+      <tr><td></td><td>COSYNE</td><td>2023</td></tr>
+      <tr><td>Journal reviewer</td><td colspan="2">PRL, PRX, PRE, PNAS, Nat. Neuroscience, J. Chem. Phys., J. Stat. Phys, J. Comp. Phys.</td></tr>
+      <tr><td>Editorial roles</td><td>Co-founder and member of organizing committee of KIMReview</td><td>2023 – present</td></tr>
+      <tr><td>Study sections</td><td>NSF Molecular Foundations for Biotechnology</td><td>2022</td></tr>
+      <tr><td>Other</td><td>Gates Cambridge Junior Treasurer, University of Cambridge</td><td>2016 – 2017</td></tr>
+    </table>
+  </section>
+
+  <!-- Mentorship & Training -->
+  <section class="cv-section">
+    <h2>Mentorship &amp; Training</h2>
+
+    <div class="cv-trainee-section">
+      <h3>PhD Students</h3>
+
+      <div class="cv-trainee">
+        <strong>Satyam Anand</strong> — Ph.D. Mathematics, 2025, Courant Institute of Mathematical Sciences<br/>
+        Thesis: "Transport, Energetics, and Self-organization in Non-equilibrium Systems"<br/>
+        Awards: Rising Stars in Soft and Biological Matter (UC San Diego); Finalist, APS DSNP graduate student speaker award; Martin and Sarah Leibowitz Graduate Prize for Quantitative Biology 2025 (Courant Institute); Division of Soft Matter Future Investigator Travel Award, APS (2025); Dean's Conference Travel Award, NYU (2022, 2024).
+      </div>
+
+      <div class="cv-trainee">
+        <strong>Aaron Shih</strong> — Ph.D. Mathematics, 2025, Courant Institute of Mathematical Sciences<br/>
+        Thesis: "A Never-Before-Seen World of Correlated Disorder: Functional Metamaterials For Wave Scattering."<br/>
+        Awards: Gallery of Soft Matter Prize 2024 (APS DSOFT); Division of Soft Matter Future Investigator Travel Award, APS (2023); Dean's Conference Travel Award, NYU (2023).
+      </div>
+
+      <div class="cv-trainee">
+        <strong>Shivang Rawat</strong> — Ph.D. Mathematics, 2025, Courant Institute of Mathematical Sciences<br/>
+        Thesis: "Divisive Normalization as a Mechanism for Stable and Efficient Recurrent Neural Computation."<br/>
+        Awards: Wilhelm T. Magnus Memorial Prize 2025 for significant contributions to the mathematical sciences (Courant Institute); Division of Biological Physics Future Investigator Travel Award, APS (2024).
+      </div>
+
+      <div class="cv-trainee">
+        <strong>Alexander Golinski</strong> — Ph.D. Chemical Engineering, 2021, University of Minnesota, co-advised with Ben Hackel (primary)<br/>
+        Thesis: "Data-Driven Approach to Engineering Protein Evolvability and Developability."<br/>
+        Awards: NSF GRFP.
+      </div>
+
+      <div class="cv-trainee">
+        <strong>Zachary D. Schmitz</strong> — Ph.D. Chemical Engineering, 2025, University of Minnesota, co-advised through year 3 with Ben Hackel (primary)<br/>
+        Thesis: "Data Driven Protein Scaffold Developability Engineering."
+      </div>
+
+      <div class="cv-trainee">
+        <strong>Praharsh Suryadevara</strong> — Physics Ph.D. student, anticipated graduation 2026.<br/>
+        Thesis: "Structure of Basins of Attraction of Soft Sphere Packings"<br/>
+        Awards: Dean's Conference Travel Award, NYU (2024).
+      </div>
+      <div class="cv-trainee"><strong>Mia Morrell</strong> — Physics Ph.D. student, co-advised with David Grier (primary), anticipated graduation 2026.</div>
+      <div class="cv-trainee"><strong>Asit Pal</strong> — Chemistry Ph.D. student, anticipated graduation 2027. Awards: Dean's Conference Travel Award, NYU (2024).</div>
+      <div class="cv-trainee"><strong>Tom Egg</strong> — Chemistry Ph.D. student, anticipated graduation 2028. Awards: Spotlight Talk, AI4Mat Workshop (ICML 2025); GAAN Crystal Science Fellowship, NYU; Predoc Fellowship, Initiative for Computational Catalysis – Simons Foundation.</div>
+      <div class="cv-trainee"><strong>Elijah House</strong> — Physics Ph.D. student, anticipated graduation 2028.</div>
+      <div class="cv-trainee"><strong>Akshada Pradhan</strong> — Chemistry Ph.D. student, anticipated graduation 2029.</div>
+      <div class="cv-trainee"><strong>Jacob Abraham</strong> — Physics Ph.D. student, anticipated graduation 2030.</div>
+      <div class="cv-trainee"><strong>Huijie Chen</strong> — Physics Ph.D. student, anticipated graduation 2030.</div>
+      <div class="cv-trainee"><strong>Shannon Yu</strong> — Cognition and Perception Ph.D. student, anticipated graduation 2030, co-advised with J.A. Winawer and D. Heeger (primary).</div>
+    </div>
+
+    <div class="cv-trainee-section">
+      <h3>Postdoctoral &amp; Research Scientists</h3>
+      <div class="cv-trainee"><strong>Philipp Höllmer</strong> — Simons Center Fellow, Dept. of Chemistry, NYU, 2024 – present. Awards: Spotlight Talk, AI4Mat Workshop (ICML 2025).</div>
+      <div class="cv-trainee"><strong>Jiyeon Han</strong> — Postdoctoral Associate, Dept. of Physics/CNS, NYU, 2024 – present.</div>
+      <div class="cv-trainee"><strong>Maya Martirossyan</strong> — Postdoctoral Associate, Dept. of Physics/Chemistry, NYU, 2024 – 2025. Awards: Spotlight Talk, AI4Mat Workshop (ICML 2025); NYU Arts &amp; Science Postdoctoral Travel Award (2025).</div>
+      <div class="cv-trainee"><strong>Kathryn Mcclain</strong> — Postdoctoral Associate, Dept. of Physics/CNS, NYU, 2025 – present.</div>
+      <div class="cv-trainee"><strong>Rishabh Sharma</strong> — Simons Center Fellow, Dept. of Chemistry, NYU, 2025 – present.</div>
+      <div class="cv-trainee"><strong>Tianhao Li</strong> — Simons Center Fellow, Dept. of Chemistry, NYU, 2025 – present.</div>
+      <div class="cv-trainee"><strong>Flaviano Morone</strong> — Research Scientist, Dept. of Physics/CNS, NYU, 2024 – present.</div>
+      <div class="cv-trainee"><strong>Mathias Casiulis</strong> — Research Scientist, Dept. of Physics/Chemistry, NYU, 2022 – present. Awards: Poster Prize 9th Edwards Symposium, U. Cambridge (2025); Gallery of Soft Matter Prize 2024 (APS DSOFT).</div>
+      <div class="cv-trainee"><strong>Eric Fuemmeler</strong> — Research Scientist, Dept. of Aerospace Engineering &amp; Mechanics, UMN, 2021 – 2025 (co-advised with Ellad Tadmor). Awards: Spotlight Talk, AI4Mat Workshop (NeurIPS 2024).</div>
+      <div class="cv-trainee"><strong>Guanming Zhang</strong> — Postdoctoral Associate, Dept. of Physics/Chemistry, NYU, 2022 – 2025.</div>
+      <div class="cv-trainee"><strong>Amit Gupta</strong> — Research Scientist, Dept. of Aerospace Engineering &amp; Mechanics, UMN, 2021 – 2025 (co-advised with Ellad Tadmor).</div>
+    </div>
+
+    <div class="cv-trainee-section">
+      <h3>Other Research Assistants</h3>
+      <div class="cv-trainee"><strong>Gregory Wolfe</strong> — Software Developer, Dept. of Physics, NYU, 2023 – present.</div>
+      <div class="cv-trainee"><strong>Josh Vita</strong> — PhD Research Intern, UMN, 2021–2022 (co-advised with Ryan Elliot and Ellad Tadmor).</div>
+      <div class="cv-trainee"><strong>Alexander Tao</strong> — Research Intern, UMN, Summer 2022 (co-advised with Ellad Tadmor).</div>
+      <div class="cv-trainee"><strong>Dylan Bruesehoff</strong> — Research Intern, UMN, Summer 2022 (co-advised with Ellad Tadmor).</div>
+    </div>
+
+    <div class="cv-trainee-section">
+      <h3>Master Students</h3>
+      <div class="cv-trainee"><strong>Shenga Zhao</strong> — Physics MS student, anticipated graduation 2027.</div>
+      <div class="cv-trainee"><strong>Zayyam Mohammed</strong> — Financial Mathematics MS student, UMN, 2020–2021.</div>
+    </div>
+
+    <div class="cv-trainee-section">
+      <h3>Undergraduate Students</h3>
+      <div class="cv-trainee"><strong>Zeshan Hulit</strong> — Visiting Student, Dept. of Physics, NYU, Summer 2025.</div>
+      <div class="cv-trainee"><strong>Kosta Dubovskiy</strong> — Student, Dept. of Physics, NYU, Summer 2025.</div>
+      <div class="cv-trainee"><strong>Kyle Lam</strong> — SURP Student, Dept. of Chemistry, NYU, Summer 2024.</div>
+      <div class="cv-trainee"><strong>Stefan Rankovic</strong> — Student, Dept. of Physics, NYU, Summer 2024.</div>
+      <div class="cv-trainee"><strong>Asaf Greenfield</strong> — Student, Dept. of Physics, NYU, Summer 2024.</div>
+      <div class="cv-trainee"><strong>Kyrie Xie</strong> — Student, Courant Institute, NYU, Summer 2022.</div>
+      <div class="cv-trainee"><strong>Carmel Pe'er</strong> — AM-SURE Student, Courant Institute, NYU, Summer 2023.</div>
+      <div class="cv-trainee"><strong>Orion Runjia Yang</strong> — AM-SURE Student, Courant Institute, NYU, Summer 2023.</div>
+      <div class="cv-trainee"><strong>Charlie Chen</strong> — AM-SURE Student, Courant Institute, NYU, Summer 2023. Co-authored 1 paper.</div>
+      <div class="cv-trainee"><strong>Bryce Johnson</strong> — Student, Dept. of Physics, UMN, 2020–2021. Co-authored 1 paper; delivered talk at APS March Meeting 2021.</div>
+      <div class="cv-trainee"><strong>Diya Saha</strong> — Student, UMN, Summer 2020. Co-authored 1 paper.</div>
+      <div class="cv-trainee"><strong>Sandya Appiah</strong> — Student, UMN, Summer 2020. Co-authored 1 paper.</div>
+      <div class="cv-trainee"><strong>Daniel Ribeiro</strong> — Student, UMN, 2020–2021.</div>
+      <div class="cv-trainee"><strong>Jiwon Kim</strong> — Honors Thesis Student, UMN, 2020–2021.</div>
+      <div class="cv-trainee"><strong>Remi Bougie</strong> — Honors Thesis Student, UMN, 2020–2021.</div>
+      <div class="cv-trainee"><strong>Vijay Vallurupalli</strong> — Student, UMN, Summer 2021.</div>
+      <div class="cv-trainee"><strong>Kovic Odhiambo</strong> — Student, UMN, Summer 2020.</div>
+    </div>
+
+    <div class="cv-trainee-section">
+      <h3>High School Students</h3>
+      <div class="cv-trainee"><strong>Tom Zhang</strong> — NYU, Summer 2022. Co-authored 1 paper. Gone to Caltech (Computer Science).</div>
+      <div class="cv-trainee"><strong>Juhee Park</strong> — NYU, Summer 2022. Gone to Carnegie Mellon University (Chemical Engineering).</div>
+      <div class="cv-trainee"><strong>Gabriel Magnasco-Farinas</strong> — NYU, Summer 2023. Gone to University of Colorado Boulder (Mathematics and Economics).</div>
+      <div class="cv-trainee"><strong>Milan Lustig</strong> — NYU, Summer 2024. Regeneron Science Talent Search Scholar Semifinalist and Regeneron STS Top 300 Scholar (2025). Gone to Harvard (Computer Science and Electrical Engineering).</div>
+    </div>
+
+    <div class="cv-trainee-section">
+      <h3>2014 – 2019 (Cambridge)</h3>
+      <div class="cv-trainee">Day-to-day supervisor for 2 Physics Part III final year projects (one awarded Part III prize for best computational physics project); 1 exchange master student (awarded distinction from TU-Munich).</div>
+    </div>
+  </section>
+
+  <!-- Public Engagement & Media -->
+  <section class="cv-section">
+    <h2>Public Engagement &amp; Media</h2>
+
+    <div class="cv-trainee-section">
+      <h3>Outreach</h3>
+      <ul class="cv-talks-list">
+        <li>Organizer of Public Lectures in Foreign Languages, NYU (2025)</li>
+        <li>Public School 3, grade K science hour, New York, NY (2024)</li>
+        <li>Member of Public School 3 STEAM committee, New York, NY (2023 – 2024)</li>
+        <li>NYU Proud to Be First Advocate and Proud to Be First Mentor</li>
+        <li>Host for high-school students seeking research experience (2022, 2023)</li>
+        <li>Jury member for "Science Court", interdisciplinary course in the University of Minnesota Honors Program (2020)</li>
+        <li>Public School 154 STEM Professionals Day, Brooklyn, NY (2019)</li>
+      </ul>
+    </div>
+
+    <div class="cv-trainee-section">
+      <h3>Dissemination</h3>
+      <ul class="cv-talks-list">
+        <li>Video entry at APS-DSOFT Gallery 2024 – awarded jury prize.</li>
+        <li>Video entry at APS-DSOFT Gallery 2022.</li>
+      </ul>
+    </div>
+
+    <div class="cv-trainee-section">
+      <h3>Open Science</h3>
+      <ul class="cv-talks-list">
+        <li>Lead PI of FERMat project, developing Machine Learning "foundation" models for materials and molecular discovery, and associated cyberinfrastructure.</li>
+        <li>co-PI of ColabFit Exchange project, providing the most diverse public database of first principle data for training ML Interatomic Potentials.</li>
+      </ul>
+    </div>
+
+    <div class="cv-trainee-section">
+      <h3>Media</h3>
+      <ul class="cv-talks-list">
+        <li>Research highlighted by scientific and news media worldwide, including in Nature, Nature Materials, Physics (1, 2, 3), Physics Today (1, 2), New Scientist, Science &amp; Vie, Sky News, ANSA.</li>
+        <li>Press-release by U.S. Senate Majority Leader Chuck Schumer and U.S. Senator Kirsten Gillibrand announcing the FERMat project.</li>
+      </ul>
+    </div>
+
+    <div class="cv-trainee-section">
+      <h3>Interviews</h3>
+      <ul class="cv-talks-list">
+        <li>Main guest on the program "Si può fare" by Radio24 (radio station of the leading Italian financial newspaper "Il Sole 24 Ore", 2.2M listeners per day) to discuss Artificial Intelligence and foundation models for materials discovery.</li>
+      </ul>
+    </div>
+
+    <div class="cv-trainee-section">
+      <h3>Public Awards</h3>
+      <ul class="cv-talks-list">
+        <li>"Martin de Segura Prize for Artistic and Cultural Contributions", City of Martinsicuro, Italy (2024)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Other Professional Experience -->
+  <section class="cv-section">
+    <h2>Other Professional Experience</h2>
+    <div class="cv-entry">
+      <div class="cv-entry-header">
+        <span class="title">Cadet (active duty)</span>
+        <span class="date">2005 – 2008</span>
+      </div>
+      <div class="institution">Italian Army, "Scuola Militare Teulié", Milan</div>
+    </div>
+  </section>
+
+</PageLayout>

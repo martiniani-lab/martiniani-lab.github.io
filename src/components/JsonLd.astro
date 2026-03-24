@@ -10,6 +10,7 @@ const jsonLd = {
       "parentOrganization": {
         "@type": "EducationalOrganization",
         "name": "New York University",
+        "sameAs": "https://www.wikidata.org/wiki/Q49210",
         "department": [
           { "@type": "Organization", "name": "Department of Physics" },
           { "@type": "Organization", "name": "Department of Chemistry" },
@@ -23,41 +24,122 @@ const jsonLd = {
       "@type": "Person",
       "@id": "https://martinianilab.org/#stefano",
       "name": "Stefano Martiniani",
-      "jobTitle": "Assistant Professor",
+      "givenName": "Stefano",
+      "familyName": "Martiniani",
+      "honorificPrefix": "Dr.",
+      "jobTitle": "Assistant Professor of Physics, Chemistry, Mathematics, and Neural Science",
+      "description": "Physicist and AI researcher at NYU developing AI for materials discovery, world models, and a theory of intelligence grounded in physical principles. Leads the FERMat project and ColabFit Exchange.",
+      "image": "https://martinianilab.org/images/team/stefano.jpg",
       "affiliation": { "@id": "https://martinianilab.org/#org" },
       "email": "sm7683@nyu.edu",
       "url": "https://martinianilab.org",
+      "alumniOf": [
+        {
+          "@type": "EducationalOrganization",
+          "name": "University of Cambridge",
+          "sameAs": "https://www.wikidata.org/wiki/Q35794"
+        },
+        {
+          "@type": "EducationalOrganization",
+          "name": "Imperial College London",
+          "sameAs": "https://www.wikidata.org/wiki/Q189022"
+        }
+      ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "PhD in Chemistry",
+          "recognizedBy": { "@type": "EducationalOrganization", "name": "University of Cambridge" }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "MPhil in Scientific Computing",
+          "recognizedBy": { "@type": "EducationalOrganization", "name": "University of Cambridge" }
+        }
+      ],
+      "hasOccupation": {
+        "@type": "Occupation",
+        "name": "Professor of Physics, Chemistry, and Mathematics",
+        "occupationalCategory": "25-1051.00"
+      },
+      "award": [
+        "AFOSR Young Investigator Program Award (2025)",
+        "Entropy Young Investigator Award (2025)",
+        "NSF CAREER Award (2024)",
+        "David Iakobachvili Interdisciplinary Science Research Award, NYU (2024)",
+        "APS DSOFT Gallery of Soft Matter Prize (2024)",
+        "CZI Neuroscience Pairs Pilot Project Award (2024)",
+        "IUPAP Interdisciplinary Early Career Scientist Prize (2023)",
+        "Simons Foundation Faculty Fellowship",
+        "Gates Cambridge Scholarship",
+        "Outstanding PhD Thesis Award, University of Cambridge"
+      ],
       "sameAs": [
         "https://scholar.google.com/citations?user=pxSj9JkAAAAJ",
         "https://orcid.org/0000-0003-2028-2175",
         "https://github.com/martiniani-lab",
         "https://www.linkedin.com/in/smartiniani/",
-        "https://www.researchgate.net/profile/Stefano-Martiniani"
+        "https://www.researchgate.net/profile/Stefano-Martiniani",
+        "https://twitter.com/SteMartiniani",
+        "https://bsky.app/profile/stemartiniani.bsky.social",
+        "https://as.nyu.edu/faculty/stefano-martiniani.html"
       ],
       "knowsAbout": [
         "Generative AI for Materials",
         "World Models",
         "Statistical Physics",
+        "Nonequilibrium Statistical Mechanics",
         "Machine Learning Interatomic Potentials",
         "AI for Science",
         "Crystal Structure Prediction",
         "Molecular Generation",
         "Active Matter",
         "Information Theory",
+        "Entropy Production",
+        "Entropy Estimation",
+        "Lossless Compression",
         "Embodied AI",
         "Neural Circuit Theory",
         "Divisive Normalization",
         "Energy Landscapes",
+        "Hyperuniformity",
+        "Sphere Packings",
+        "Granular Physics",
+        "Inverse Design",
         "Disordered Photonic Materials",
         "Self-Supervised Learning",
-        "Stochastic Gradient Descent Theory"
+        "Stochastic Gradient Descent Theory",
+        "Computational Neuroscience",
+        "neuroAI",
+        "Computational Chemistry",
+        "Protein Engineering",
+        "Biomolecular Memory"
       ]
+    },
+    {
+      "@type": "ResearchProject",
+      "@id": "https://martinianilab.org/#fermat",
+      "name": "FERMat: Foundation Models for Materials Discovery",
+      "description": "Multi-institutional project developing foundation models for materials science, funded by $4.5M NSF GOALI grant spanning 4 universities and AWS.",
+      "funder": { "@type": "Organization", "name": "National Science Foundation" },
+      "member": [{ "@id": "https://martinianilab.org/#stefano" }],
+      "url": "https://github.com/FERMat-ML"
+    },
+    {
+      "@type": "ResearchProject",
+      "@id": "https://martinianilab.org/#colabfit",
+      "name": "ColabFit Exchange",
+      "description": "The largest open-access database for machine learning interatomic potentials, with tools adopted by Intel and Lawrence Livermore National Lab.",
+      "funder": { "@type": "Organization", "name": "National Science Foundation" },
+      "member": [{ "@id": "https://martinianilab.org/#stefano" }],
+      "url": "https://colabfit.org"
     },
     {
       "@type": "ScholarlyArticle",
       "name": "Open Materials Generation with Stochastic Interpolants",
       "author": [{ "@id": "https://martinianilab.org/#stefano" }],
       "datePublished": "2025",
+      "dateModified": "2025",
       "isPartOf": { "@type": "PublicationEvent", "name": "ICML 2025, PMLR 267" }
     },
     {
@@ -65,6 +147,7 @@ const jsonLd = {
       "name": "Cross-View World Models",
       "author": [{ "@id": "https://martinianilab.org/#stefano" }],
       "datePublished": "2026",
+      "dateModified": "2026",
       "sameAs": "https://arxiv.org/abs/2602.07277"
     },
     {
@@ -72,6 +155,7 @@ const jsonLd = {
       "name": "PropMolFlow: Property-guided Molecule Generation with Geometry-Complete Flow Matching",
       "author": [{ "@id": "https://martinianilab.org/#stefano" }],
       "datePublished": "2026",
+      "dateModified": "2026",
       "isPartOf": { "@type": "Periodical", "name": "Nature Computational Science" }
     },
     {
@@ -79,6 +163,7 @@ const jsonLd = {
       "name": "Model-Free Measurement of Local Entropy Production and Extractable Work in Active Matter",
       "author": [{ "@id": "https://martinianilab.org/#stefano" }],
       "datePublished": "2022",
+      "dateModified": "2022",
       "isPartOf": { "@type": "Periodical", "name": "Physical Review Letters" },
       "sameAs": "https://doi.org/10.1103/PhysRevLett.129.220601"
     },
@@ -87,8 +172,59 @@ const jsonLd = {
       "name": "Numerical test of the Edwards conjecture shows that all packings become equally probable at jamming",
       "author": [{ "@id": "https://martinianilab.org/#stefano" }],
       "datePublished": "2017",
+      "dateModified": "2017",
       "isPartOf": { "@type": "Periodical", "name": "Nature Physics" },
       "sameAs": "https://doi.org/10.1038/nphys4168"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Learning as Manifold Packing (CLAMP)",
+      "author": [{ "@id": "https://martinianilab.org/#stefano" }],
+      "datePublished": "2025",
+      "dateModified": "2025",
+      "sameAs": "https://arxiv.org/abs/2506.13717"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Emergent universal long-range structure in multidimensional random-organizing systems",
+      "author": [{ "@id": "https://martinianilab.org/#stefano" }],
+      "datePublished": "2026",
+      "dateModified": "2026",
+      "isPartOf": { "@type": "Periodical", "name": "Nature Communications" }
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Gyromorphs: a new class of functional disordered materials",
+      "author": [{ "@id": "https://martinianilab.org/#stefano" }],
+      "datePublished": "2025",
+      "dateModified": "2025",
+      "isPartOf": { "@type": "Periodical", "name": "Physical Review Letters" },
+      "sameAs": "https://doi.org/10.1103/PhysRevLett.135.196101"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "FReSCo: Fast Reciprocal Space Correlator for inverse design of point patterns",
+      "author": [{ "@id": "https://martinianilab.org/#stefano" }],
+      "datePublished": "2024",
+      "dateModified": "2024",
+      "isPartOf": { "@type": "Periodical", "name": "Physical Review E" },
+      "sameAs": "https://doi.org/10.1103/PhysRevE.110.034122"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Unconditional stability of a recurrent neural circuit implementing divisive normalization",
+      "author": [{ "@id": "https://martinianilab.org/#stefano" }],
+      "datePublished": "2024",
+      "dateModified": "2024",
+      "isPartOf": { "@type": "PublicationEvent", "name": "NeurIPS 2024" }
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Theory of bacterial rectification and organization",
+      "author": [{ "@id": "https://martinianilab.org/#stefano" }],
+      "datePublished": "2024",
+      "dateModified": "2024",
+      "isPartOf": { "@type": "Periodical", "name": "Proceedings of the National Academy of Sciences" }
     },
     {
       "@type": "SoftwareSourceCode",

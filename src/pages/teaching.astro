@@ -13,7 +13,7 @@ const teaching = loadTeaching(join(process.cwd(), 'src/content/teaching.yaml'));
 >
   {teaching.map(inst => (
     <section style="margin-bottom: 3em;">
-      <h3>{inst.institution}</h3>
+      <h2>{inst.institution}</h2>
       <p style="font-size: 0.85em; color: rgba(255,255,255,0.5);">{inst.years}</p>
       <ul style="list-style: disc; padding-left: 1.5em;">
         {inst.courses.map(course => (

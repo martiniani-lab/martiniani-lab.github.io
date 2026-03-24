@@ -1,0 +1,16 @@
+{
+  "name": "Martiniani Lab",
+  "short_name": "Martiniani Lab",
+  "description": "Martiniani Lab at NYU — AI for materials, world models, and a theory of intelligence grounded in physical principles.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#242943",
+  "theme_color": "#242943",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    }
+  ]
+}

@@ -35,7 +35,7 @@ const navLinks = [
     ))}
   </ul>
   <ul class="actions stacked">
-    <li><a href="/pdf/cv.pdf" target="_blank" class="button primary fit">CV</a></li>
+    <li><a href="/cv" class="button primary fit">CV</a></li>
   </ul>
 </nav>
 
@@ -63,6 +63,11 @@ const navLinks = [
   toggle.addEventListener('click', openMenu);
   close.addEventListener('click', closeMenu);
   overlay.addEventListener('click', closeMenu);
+
+  // Close menu when any menu link is clicked
+  menu.querySelectorAll('.links a').forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
 
   // Header transparency on scroll (replaces jQuery scrollex)
   const header = document.getElementById('header');

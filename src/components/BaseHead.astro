@@ -9,7 +9,7 @@ interface Props {
 const {
   title,
   description,
-  ogImage = '/images/og-default.jpg',
+  ogImage = '/images/banner.jpg',
   canonicalUrl,
 } = Astro.props;
 
@@ -20,13 +20,20 @@ const ogImageUrl = ogImage.startsWith('http') ? ogImage : new URL(ogImage, siteU
 
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="google-site-verification" content="sYz2ydI5rHEwAsF8sICBgdELJrx1SBgATP7to2JnL8g" />
 <title>{title}</title>
 <meta name="description" content={description} />
 <link rel="canonical" href={canonical} />
 
-<!-- Favicon -->
+<!-- Favicon & Manifest -->
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="manifest" href="/manifest.json" />
+<meta name="theme-color" content="#242943" />
+
+<!-- LLM discovery -->
+<link rel="llms-txt" href="/llms.txt" />
+<link rel="llms-txt" href="/llms-full.txt" />
 
 <!-- Open Graph -->
 <meta property="og:type" content="website" />
@@ -35,6 +42,7 @@ const ogImageUrl = ogImage.startsWith('http') ? ogImage : new URL(ogImage, siteU
 <meta property="og:description" content={description} />
 <meta property="og:image" content={ogImageUrl} />
 <meta property="og:site_name" content="Martiniani Lab" />
+<meta property="og:locale" content="en_US" />
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image" />
